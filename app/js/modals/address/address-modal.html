@@ -1,0 +1,82 @@
+<ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button
+            class="button button-clear button-primary"
+            ng-click="cancel()" translate>button.cancel</button>
+        <h1 class="title">{{ 'modal.address.title' | translate }}</h1>
+
+        <button
+            ng-if="chosenAddress"
+            class="button button-clear button-primary"
+            ng-click="done()" translate>button.done</button>
+
+    </ion-header-bar>
+
+    <ion-header-bar class="header-modal-address bar-subheader bar-positive no-padding height-auto">
+        <div class="header-modal-address-inner">
+            <div class="position-relative">
+
+                <div
+                    class="fake-modal-input top-input"
+                    ng-if="!editing"
+                    ng-click="edit()">
+                    <div class="fake-modal-input-inner">
+                        {{ getInputLabel() }}
+                    </div>
+                </div>
+
+
+                <label
+                    ng-if="editing"
+                    class="real-modal-input item item-input search-box">
+                    <input
+                        type="search"
+                        focus-me="editing"
+                        placeholder="{{ ('search' ) | translate }}"
+                        autocomplete="off"
+                        autocorrect="off"
+                        ng-change="search()"
+                        autocapitalize="off"
+                        spellcheck="false"
+                        ng-model="parameters.name">
+                    <i class="icon ion-search placeholder-icon"></i>
+                </label>
+
+            </div>
+
+        </div>
+    </ion-header-bar>
+
+    <div ng-show="!editing" id="modal-address-map"></div>
+
+    <div ng-click="centerOnMe()"
+         class="icon ion-navigate center-on-me center-on-me-address">
+    </div>
+
+    <ion-content class="padding has-search-header" ng-click="stopEdit()">
+
+        <list-loader loading="loading"></list-loader>
+
+        <ion-list ng-show="editing">
+            <ion-item
+                ng-repeat="address in addresses"
+                ng-click="choose(address)">
+                <p>
+                    <span style="padding-right: 8px;">
+                        <i ng-if="!address.streetNumber" class="icon icon-circle-close color-yellow-star"></i>
+                        <i ng-if="address.streetNumber" class="icon icon-circle-check color-tastd-green"></i>
+                    </span>
+                    {{ address.formattedAddress }}</p>
+            </ion-item>
+        </ion-list>
+
+
+
+    </ion-content>
+
+    <div class="map-pan-loading">
+        <div class="bar"></div>
+    </div>
+
+</ion-modal-view>

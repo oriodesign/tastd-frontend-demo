@@ -1,0 +1,51 @@
+<ion-view class="quick-add-restaurants">
+
+    <div class="bar-subheader-inside-view bg-silver">
+            <label class="item item-input search-box">
+                <input
+                    type="search"
+                    placeholder="{{ctrl.placeholder}}"
+                    ng-change="ctrl.search()"
+                    autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                    ng-model="ctrl.searchCriteria.name">
+                <i class="icon ion-search placeholder-icon"></i>
+            </label>
+    </div>
+
+    <ion-content class="has-footer has-subheader-inside-view">
+        <div ng-if="!ctrl.restaurants.length && !ctrl.loading">
+            <div class="text-center padding color-oil"
+                ng-if="ctrl.searchCriteria.name.trim() === ''"
+                translate="on_boarding.no_restaurants">
+            </div>
+
+            <ion-list ng-if="ctrl.searchCriteria.name.trim() !== ''">
+                <ion-item class="bg-silver color-gray">
+                    <span>{{ 'no.results' | translate }}</span>
+                </ion-item>
+            </ion-list>
+        </div>
+
+        <ion-list class="padless list-restaurants">
+            <restaurant item="rest"
+                        page="on_boarding"
+                        ng-repeat="rest in ctrl.restaurants"
+                        show-address="true"
+                        prevent-select="true">
+            </restaurant>
+
+        </ion-list>
+
+        <ion-infinite-scroll
+            ng-if="ctrl.restaurants.$metadata.hasNextPage"
+            on-infinite="ctrl.loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+    <button ng-click="ctrl.done()" class="button standard-bottom-button">
+        {{ 'button.next' | translate }}
+    </button>
+
+</ion-view>

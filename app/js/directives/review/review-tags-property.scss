@@ -1,0 +1,19 @@
+.review-tags-property {
+    line-height: 12px;
+    .row {
+        padding: 10px 0;
+    }
+    .col {
+        padding: 0;
+    }
+    .title {
+        font-weight: bold;
+        display: block;
+    }
+    .title-wrapper{
+        padding: 10px 0 0 15px;
+    }
+    .tags-wrapper{
+        padding: 5px 15px;
+    }
+}

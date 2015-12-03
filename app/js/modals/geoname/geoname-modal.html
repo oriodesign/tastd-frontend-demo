@@ -1,0 +1,51 @@
+<ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button
+            class="button button-clear button-primary"
+            ng-click="cancel()" translate>button.cancel</button>
+        <h1 class="title">Search</h1>
+    </ion-header-bar>
+
+    <ion-header-bar class="bar-subheader bg-silver no-padding height-auto">
+        <div class="standard-search-box">
+            <label class="item item-input search-box">
+                <input
+                    type="search"
+                    placeholder="{{ ('search' ) | translate }}"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    ng-change="search()"
+                    spellcheck="false"
+                    ng-model="parameters.name">
+                <i class="icon ion-search placeholder-icon"></i>
+            </label>
+        </div>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <list-loader loading="loading"></list-loader>
+
+        <ion-list>
+            <ion-item ng-if="allCities" ng-click="chooseAll()">
+                {{ 'button.all_cities'  | translate}}
+            </ion-item>
+
+            <ion-item
+                ng-repeat="geoname in geonames"
+                ng-click="choose(geoname)">
+                {{geoname.formattedName}}
+            </ion-item>
+        </ion-list>
+
+        <ion-infinite-scroll
+            ng-if="geonames.$metadata.hasNextPage"
+            on-infinite="loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+</ion-modal-view>

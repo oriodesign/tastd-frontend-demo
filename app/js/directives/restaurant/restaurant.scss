@@ -1,0 +1,122 @@
+$padding-quickadd-container: ($restaurant-avatar-side - $font-size-base)/2;
+
+.edit-ranking-button{
+    color: $slate;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+    width: 50px;
+    text-align: center;
+    line-height: 36px;
+    height: 36px;
+}
+
+restaurant {
+    .item {
+        .badge {
+            right: 10px;
+            top: 0px !important;
+            padding: $padding-quickadd-container;
+        }
+        &.quickadd-block {
+            .icon:first-child {
+                padding-left: $font-size-base;
+            }
+        }
+    }
+    .item-wrapper.border-color-cuisine {
+        border-left-style: solid;
+        border-left-width: 5px;
+    }
+    .resto-address {
+        font-size: $font-size-small;
+        padding-right: 50px;
+    }
+    .resto-name {
+        padding-right: 50px;
+        .distance {
+            font-size: $font-size-small;
+        }
+    }
+    .with-distance {
+        .resto-address {
+            font-size: $font-size-small;
+            line-height: $font-size-small;
+        }
+        .resto-name {
+            padding-top: 4px;
+            height: 22px;
+        }
+        .distance {
+            font-size: $font-size-small - 2px;
+            line-height: $font-size-small - 2px;
+            color: $slate;
+        }
+    }
+
+}
+
+restaurant-list{
+    .item.item-divider {
+        @extend .list-item-divider;
+        border-bottom: 0px solid #FFF !important;
+        @include no-box-shadow;
+    }
+}
+
+$name-address-skip: -4px;
+
+ion-list.padless.list-restaurants {
+    .item-content, .item {
+        padding: 0px;
+        &.item-divider{
+            padding-left : 20px;
+        }
+    }
+}
+
+.resto-avatar, .resto-avatar-places {
+    float: left;
+    display: block;
+    height: $restaurant-avatar-side;
+    width: $restaurant-avatar-side;
+    margin-left: $font-size-base;
+    margin-right: $font-size-base;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.resto-avatar-places {
+    background-image: url(../img/default_restaurant.png)
+}
+
+.resto-name {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    padding-top: 10px;
+}
+
+.resto-address, .resto-cuisine {
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    margin-top: $name-address-skip;
+
+
+}
+
+.resto-address{
+    color: $gray;
+}
+
+.resto-not-in-list {
+    line-height: $restaurant-avatar-side;
+}
+
+ion-list.list-restaurants ion-option-button {
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 30px;
+    padding-top: 2px;
+}

@@ -1,0 +1,59 @@
+<div class="gallery-container">
+    <ion-list ng-if="photos.length == 0">
+
+        <ion-item class="display-block add-item-link" ng-click="ctrl.uploadPhoto()">
+
+            <div style="padding-left: 5px;">
+                <div class="add-item-icon ion-plus-circled resto-avatar">  </div>
+                <div class="add-item-label">{{'Add photo' | translate}}</div>
+            </div>
+            <div>
+                <div class="row" style="padding: 0 10px;">
+                    <div class="col col-33" style="padding: 0 5px;">
+                        <div class='square-box'>
+                            <div class='square-content'><div><span><i class="icon icon-camera"></i></span></div></div>
+                        </div>
+                    </div>
+
+                    <div class="col col-33" style="padding: 0 5px;">
+                        <div class='square-box'>
+                            <div class='square-content'><div><span><i class="icon icon-camera"></i></span></div></div>
+                        </div>
+                    </div>
+
+                    <div class="col col-33" style="padding: 0 5px;">
+                        <div class='square-box'>
+                            <div class='square-content'><div><span><i class="icon icon-camera"></i></span></div></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="space-10"></div>
+            </div>
+
+        </ion-item>
+
+    </ion-list>
+
+    <div class="photo-block" ng-repeat="(key, group) in ctrl.groupedPhotos track by $index">
+        <span class="photo-container"
+              ng-class="{'selected' : ctrl.selected[(key*3)+$index], 'photo-l' : ($index==0), 'photo-r' : ($index==2), 'add-remove' : photo._isAddRemove}"
+              on-hold="ctrl.select((key*3)+$index)"
+              ng-repeat="photo in group track by $index"
+              ng-click="ctrl.onClick((key*3)+$index)">
+            <img ng-if="!photo._isAddRemove" class="gallery-photo" ng-src="{{photo.src}}">
+            <span ng-if="!photo._isAddRemove" class="icon-circle-check"></span>
+
+            <span ng-if="photo._isAddRemove" class="gallery-add-button">
+              <span class="add-button-background">
+                <span ng-class="{'icon-circle-add' : ctrl.numberSelected == 0, 'icon-delete' : ctrl.numberSelected > 0}"> </span>
+              </span>
+            </span>
+        </span>
+
+        <span ng-if="ctrl.needFakeBlock(key)" class="photo-container"> </span>
+    </div>
+
+    <div style="clear:both"></div>
+
+</div>

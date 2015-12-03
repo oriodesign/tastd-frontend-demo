@@ -1,0 +1,31 @@
+<div class="restaurant-list-wrapper">
+
+
+    <div ng-repeat="(cuisine, group) in list | purgeScope | groupBy:'cuisineName' | toArray:true | orderBy: '$key' track by $index">
+
+        <ion-item ng-if="group" class="item-divider">
+            <span ng-style="{color: '#'+group[0].color }">
+              {{group.$key}}
+            </span>
+
+            <span class="edit-ranking-button" ng-if="reorder && group.length > 1" ui-sref="rankingReorder({cityId: geoname.id, cuisineId: group[0].cuisineId})">
+                <i class="icon icon-edit"></i>
+            </span>
+
+        </ion-item>
+
+        <restaurant item="rest"
+                    page="{{page}}"
+                    ng-repeat="rest in group track by $index"
+                    show-address="showAddress"
+                    hide-quickadd="hideQuickadd"
+                    show-fallback-picture="showFallbackPicture"
+                    prevent-select="preventSelect">
+        </restaurant>
+
+
+    </div>
+
+
+
+</div>

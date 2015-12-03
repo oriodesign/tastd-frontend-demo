@@ -1,0 +1,238 @@
+//
+// ionic-variables
+//
+// Use this file only to override ionic default variables
+// Please keep the same sections of the original ionic file
+//
+
+// Colors
+// -------------------------------
+
+$dark:                            $oil !default;           // Main Dark Bg Color
+$positive:                        $tastd-green !default;   // Main Tastd Color
+
+// Other ionic colors (not used)
+$light:                           #fff !default;
+$stable:                          #444444 !default;
+$calm:                            #43cee6 !default;
+$balanced:                        #66cc33 !default;
+$energized:                       #f0b840 !default;
+$assertive:                       #ef4e3a !default;
+$royal:                           #8a6de9 !default;
+
+
+// Base
+// -------------------------------
+
+$font-family-sans-serif:          "Montserrat", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-family-light-sans-serif:    "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-family-serif:               Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:           Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+$font-family-base:                $font-family-sans-serif !default;
+$font-size-large:                 15px !default;
+$font-size-base:                  13px !default;
+$font-size-small:                 11px !default;
+$font-size-xsmall:                 9px !default;
+
+$line-height-large:               1.33 !default;
+$line-height-base:                1.428571429 !default; // 20/14
+$line-height-small:               1.5 !default;
+
+$headings-font-family:            $font-family-base !default;
+$headings-font-weight:            500 !default;
+$headings-line-height:            1.2 !default;
+
+$base-background-color:           #fff !default;
+$base-color:                      $oil !default;
+
+$link-color:                      $positive !default;
+$link-hover-color:                darken($link-color, 15%) !default;
+
+$content-padding:                 10px !default;
+
+$padding-base-vertical:           6px !default;
+$padding-base-horizontal:         12px !default;
+
+$padding-large-vertical:          10px !default;
+$padding-large-horizontal:        16px !default;
+
+$padding-small-vertical:          5px !default;
+$padding-small-horizontal:        10px !default;
+
+$border-radius-base:              4px !default;
+$border-radius-large:             6px !default;
+$border-radius-small:             3px !default;
+
+
+// Bars
+// -------------------------------
+
+$bar-height:                      44px !default;
+$bar-title-font-size:             $font-size-large;
+$bar-padding-portrait:            5px !default;
+$bar-padding-landscape:           5px !default;
+$bar-transparency:                1 !default;
+
+// Buttons
+// -------------------------------
+
+$button-color:                    $light !default;
+$button-block-margin:             10px !default;
+$button-clear-padding:            6px !default;
+$button-border-radius:            0px !default;
+$button-border-width:             0px !default;
+
+$button-light-bg:                 $light !default;
+$button-light-text:               $oil !default;
+$button-light-border:             $silver !default;
+$button-light-active-bg:          $slate !default;
+$button-light-active-border:      $silver !default;
+
+$button-height:                   42px !default;
+$button-padding:                  12px !default;
+$button-icon-size:                18px !default;
+
+$button-large-font-size:          $font-size-large !default;
+$button-large-height:             54px !default;
+$button-large-padding:            16px !default;
+$button-large-icon-size:          32px !default;
+
+$button-small-font-size:          $font-size-small !default;
+$button-small-height:             28px !default;
+$button-small-padding:            4px !default;
+$button-small-icon-size:          16px !default;
+
+$button-bar-button-font-size:     $font-size-base !default;
+$button-bar-button-height:        32px !default;
+$button-bar-button-padding:       8px !default;
+$button-bar-button-icon-size:     20px !default;
+
+$button-stable-bg:                $oil !default;
+$button-stable-text:              $light !default;
+$button-stable-border:            #b2b2b2 !default;
+$button-stable-active-bg:         #e5e5e5 !default;
+$button-stable-active-border:     #a2a2a2 !default;
+
+$button-default-bg:               $button-stable-bg !default;
+$button-default-text:             $button-stable-text !default;
+$button-default-border:           $button-stable-border !default;
+$button-default-active-bg:        $button-stable-active-bg !default;
+$button-default-active-border:    $button-stable-active-border !default;
+
+// Checkbox
+// -------------------------------
+
+$checkbox-off-border-default:		  $dark;
+$checkbox-on-bg-default:		  	  $dark;
+$checkbox-on-border-default:		  $dark;
+$checkbox-border-width: 3px;
+$checkbox-check-width: 2px;
+
+// Items
+// -------------------------------
+
+$item-font-size:                  $font-size-base !default;
+$item-border-width:               1px !default;
+$item-padding:                    16px !default;
+
+$item-button-font-size:           $font-size-base !default !default;
+$item-button-line-height:         32px !default;
+$item-icon-font-size:             32px !default;
+$item-icon-fill-font-size:        28px !default;
+
+$item-icon-accessory-color:       #ccc !default;
+$item-icon-accessory-font-size:   16px !default;
+
+$item-avatar-width:               40px !default;
+$item-avatar-height:              40px !default;
+$item-avatar-border-radius:       30px !default;
+
+$item-thumbnail-width:            80px !default;
+$item-thumbnail-height:           80px !default;
+$item-thumbnail-margin:           10px !default;
+
+$item-divider-bg:                 $silver !default;
+$item-divider-color:              #222 !default;
+$item-divider-padding:            5px 15px !default;
+
+$item-light-bg:                   $button-light-bg !default;
+$item-light-border:               $button-light-border !default;
+$item-light-text:                 $button-light-text !default;
+$item-light-active-bg:            $slate !default;
+$item-light-active-border:        $button-light-active-border !default;
+
+$item-default-bg:                 $item-light-bg !default;
+$item-default-border:             $item-light-border !default;
+$item-default-text:               $item-light-text !default;
+$item-default-active-bg:          $item-light-active-bg !default;
+$item-default-active-border:      $item-light-active-border !default;
+
+
+// Item Editing
+// -------------------------------
+
+$item-edit-transition-duration:   250ms !default;
+$item-edit-transition-function:   ease-in-out !default;
+
+$item-left-edit-left:             8px !default;  // item's left side edit's "left" property
+
+$item-right-edit-open-width:      70px !default;
+$item-left-edit-open-width:       50px !default;
+
+$item-delete-icon-size:           24px !default;
+$item-delete-icon-color:          $assertive !default;
+
+$item-reorder-icon-size:          32px !default;
+$item-reorder-icon-color:         $silver !default;
+
+
+// Loading
+// -------------------------------
+
+$loading-text-color:              $tastd-green;
+$loading-bg-color:                transparent;
+$loading-padding:                 20px !default;
+$loading-border-radius:           5px !default;
+$loading-font-size:               15px !default;
+
+$loading-backdrop-fadein-duration:0.3s !default;
+$loading-backdrop-bg-color:       rgba(0,0,0,0.4) !default;
+
+// Menus
+// -------------------------------
+
+$menu-bg:                         $dark;
+$menu-width:                      275px !default;
+$menu-animation-speed:            200ms !default;
+$menu-side-shadow:                -1px 0px 2px rgba(0, 0, 0, 0.2), 1px 0px 2px rgba(0,0,0,0.2) !default;
+
+// Range
+// -------------------------------
+
+$range-default-track-bg:          $dark;
+
+
+// Tabs
+// -------------------------------
+
+$tabs-height:                     44px !default;
+$tabs-text-font-size:             $font-size-base !default;
+$tabs-text-font-size-side-icon:   12px !default;
+$tabs-icon-size:                  32px !default;
+$tabs-badge-padding:              1px 6px !default;
+$tabs-badge-font-size:            12px !default;
+$tabs-text-font-size:             $font-size-base !default;
+
+$tabs-light-bg:                   $button-light-bg !default;
+$tabs-light-border:               $button-light-border !default;
+$tabs-light-text:                 $button-light-text !default;
+
+$tabs-striped-off-color: #000;
+$tabs-striped-off-opacity: 0.4;
+$tabs-striped-border-width: 2px;
+
+
+// Transitions
+
+$ios-transition-container-bg-color: white !default;

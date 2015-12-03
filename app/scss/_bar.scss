@@ -1,0 +1,46 @@
+//
+// Bar
+//
+// Ionic Bar element override
+//
+
+.bar {
+    border: 0px solid #FFF !important;
+    background-image: none !important;
+}
+
+
+ion-header-bar.shadow{
+      box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
+      border-bottom: 2px solid $tastd-green !important;
+}
+
+.bar-stable.subheader-cuisine h1.title,
+.bar-dark.subheader-cuisine h1.title {
+    color: white;
+}
+
+ion-footer-bar.footer-button-bar {
+    padding: 0;
+    button {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-weight: bold;
+        font-size: $font-size-small;
+        background-color: $tastd-green;
+        color: white;
+        line-height: 42px;
+        text-transform: uppercase;
+        border: 0px solid white;
+        &.last-child {
+            margin-left: 1px;
+        }
+    }
+}
+
+.platform-android .bar .title {
+    font-size: $font-size-large;
+}

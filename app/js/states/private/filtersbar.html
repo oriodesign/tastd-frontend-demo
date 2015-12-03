@@ -1,0 +1,27 @@
+<div class="bar filters-bar" ng-class="{'filter-list-active':ctrl.flagParametersBag.isDirty()}">
+    <div class="filters-bar-inner">
+        <div
+            ng-click="ctrl.toggleReviewFilter()"
+            ng-class="{ 'active': ctrl.flagParametersBag.reviewedBy }"
+            class="filter-bar-button favourite-button">
+            <i class="icon icon-heart"></i>
+        </div>
+        <div
+            ng-click="ctrl.toggleWishFilter()"
+            ng-class="{ 'active': ctrl.flagParametersBag.wishedBy }"
+            class="filter-bar-button wishlist-button">
+            <i class="icon icon-bookmark"></i>
+        </div>
+        <div
+            ng-click="ctrl.openFiltersModal()"
+            class="filter-bar-button filter-button">
+            <i class="icon icon-filter"></i>
+        </div>
+
+        <div class="filters-recap-wrapper">
+            {{ ctrl.flagParametersBag.getFiltersLabel() }}
+        </div>
+
+    </div>
+</div>
+

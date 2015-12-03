@@ -1,0 +1,125 @@
+//
+// Typography
+//
+// Define here general typographic rules
+//
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: normal;
+    src: url("../img/fonts/Montserrat-Regular.otf");
+}
+
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: bold;
+    src: url("../img/fonts/Montserrat-Bold.otf");
+}
+
+
+@font-face {
+    font-family: Montserrat;
+    font-weight: 200;
+    src: url("../img/fonts/Montserrat-Light.otf");
+}
+
+a {
+    color: $tastd-green;
+    text-decoration: none;
+    &:hover {
+        color: $oil;
+    }
+}
+
+.oblique{
+    font-style: oblique !important;
+}
+
+.font-size-base {
+    font-size: $font-size-base !important;
+}
+
+.font-size-button{
+    font-size: $font-size-small !important;
+}
+
+.font-size-small {
+    font-size: $font-size-small !important;
+}
+
+.font-size-xsmall {
+    font-size: $font-size-xsmall !important;
+}
+
+.line-height-base {
+    line-height: $line-height-base !important;
+}
+
+.line-height-small {
+    line-height: $line-height-small !important;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid $positive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+ion-nav-bar div.title {
+    text-transform: none;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.secondary-link{
+    color: $gray;
+    font-size: $font-size-small;
+    text-decoration: underline;
+}
+
+.text-decoration-underline{
+    text-decoration: underline !important;
+}
+
+.text-divider {
+  overflow: hidden;
+  text-align: center;
+  color: #6f6f6f;
+  text-transform: uppercase;
+}
+
+.white-space-nowrap{
+    white-space: nowrap !important;
+}
+
+.white-space-normal {
+    white-space: normal !important;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+body small {
+    font-size: $font-size-xsmall;
+}
+
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.modal-field-title{
+    font-size: $font-size-base;
+    font-weight: bold;
+    color: $gray;
+}
+
+.vertical-align-middle{
+    vertical-align: middle !important;
+}

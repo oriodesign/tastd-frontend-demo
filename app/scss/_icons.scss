@@ -1,0 +1,264 @@
+//
+// Icons
+//
+// Tastd icons and Ionic Icons element override
+//
+
+$iconFontSize: 22px;
+
+
+.button .icon{
+    &.icon-star{
+        padding: 5px;
+        &:before{
+            font-size: $font-size-base;
+        }
+    }
+}
+
+.navbar-edit-button .icon:before {
+    font-size: 17px !important;
+}
+
+.icon-right-space {
+    width: 20px;
+    display: inline-block;
+}
+
+.icon-heart{
+    -webkit-text-stroke: 1px $gray;
+    color: transparent;
+    &.active{
+        -webkit-text-stroke: inherit;
+        color: $red;
+    }
+}
+
+.icon-bookmark{
+    -webkit-text-stroke: 1px $gray;
+    color: transparent;
+    &.active{
+        -webkit-text-stroke: inherit;
+        color: $yellow-star;
+    }
+}
+
+.tastd-icon {
+    border: 0px;
+    background-color: none;
+}
+
+.square-medium-button .icon:before {
+    font-size: 17px !important;
+    left: -2px;
+}
+
+.item-icon-left .icon.small:before, .item-icon-right .icon.small:before {
+    height: 24px;
+    width: 24px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+.item-icon-left .icon, .item-icon-right .icon{
+    font-size: $iconFontSize;
+}
+
+.bar .button {
+    .icon:before, &.button-icon .icon:before{
+        font-size: $iconFontSize;
+    }
+    .icon.icon-text:before{
+        font-size: $font-size-base;
+    }
+}
+
+.tutorial ion-header-bar .button.button-clear .icon-filter:before, .bar .button .icon-filter:before{
+    font-size: $iconFontSize - 4px !important;
+}
+
+.item-icon-left .icon-message, .item-icon-right .icon-message{
+    font-size: $iconFontSize - 4px;
+}
+
+.cuisine-avatar .icon-cuisine, .cuisine-avatar .icon-checkmark-round {
+    color: $light;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 26px;
+    &:before{
+        position: relative;
+        top: -2px;
+    }
+}
+
+.cuisine-avatar .icon-checkmark-round {
+    font-size: 18px !important;
+}
+
+
+//
+// Tastd Icons
+//
+
+@font-face {
+    font-family: 'icomoon';
+    src:url('../img/fonts/icomoon.eot?u1q1kr');
+    src:url('../img/fonts/icomoon.eot?u1q1kr#iefix') format('embedded-opentype'),
+    url('../img/fonts/icomoon.ttf?u1q1kr') format('truetype'),
+    url('../img/fonts/icomoon.woff?u1q1kr') format('woff'),
+    url('../img/fonts/icomoon.svg?u1q1kr#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-location:before {
+    content: "\e901";
+}
+.icon-dish:before {
+    content: "\e902";
+}
+.icon-email:before {
+    content: "\e900";
+}
+.icon-world:before {
+    content: "\e800";
+}
+.icon-tips:before {
+    content: "\e801";
+}
+.icon-stroke-add-gurus:before {
+    content: "\e802";
+}
+.icon-three-points:before {
+    content: "\e803";
+}
+.icon-share:before {
+    content: "\e804";
+}
+.icon-send:before {
+    content: "\e805";
+}
+.icon-settings:before {
+    content: "\e806";
+}
+.icon-search:before {
+    content: "\e807";
+}
+.icon-plus:before {
+    content: "\e808";
+}
+.icon-profile:before {
+    content: "\e809";
+}
+.icon-notifications:before {
+    content: "\e80a";
+}
+.icon-minus:before {
+    content: "\e80b";
+}
+.icon-news:before {
+    content: "\e80c";
+}
+.icon-marker:before {
+    content: "\e80d";
+}
+.icon-map:before {
+    content: "\e80e";
+}
+.icon-locate:before {
+    content: "\e80f";
+}
+.icon-list:before {
+    content: "\e810";
+}
+.icon-helm:before {
+    content: "\e811";
+}
+.icon-gurus:before {
+    content: "\e812";
+}
+.icon-heart:before {
+    content: "\e813";
+}
+.icon-filter:before {
+    content: "\e814";
+}
+.icon-edit:before {
+    content: "\e815";
+}
+.icon-facebook:before {
+    content: "\e816";
+}
+.icon-dollar:before {
+    content: "\e817";
+}
+.icon-delete:before {
+    content: "\e818";
+}
+.icon-direction:before {
+    content: "\e819";
+}
+.icon-cuisine:before {
+    content: "\e81a";
+}
+.icon-crown:before {
+    content: "\e81b";
+}
+.icon-close:before {
+    content: "\e81c";
+}
+.icon-contacts:before {
+    content: "\e81d";
+}
+.icon-circle-check:before {
+    content: "\e81e";
+}
+.icon-circle-close:before {
+    content: "\e81f";
+}
+.icon-circle-add:before {
+    content: "\e820";
+}
+.icon-chevron-right:before {
+    content: "\e821";
+}
+.icon-circle-add-guru:before {
+    content: "\e822";
+}
+.icon-checkmark-round:before {
+    content: "\e823";
+}
+.icon-call:before {
+    content: "\e824";
+}
+.icon-camera:before {
+    content: "\e825";
+}
+.icon-bookmark:before {
+    content: "\e826";
+}
+.icon-add-gurus:before {
+    content: "\e827";
+}
+.icon-back:before {
+    content: "\e828";
+}
+

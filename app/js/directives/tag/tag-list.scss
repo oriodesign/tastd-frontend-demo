@@ -1,0 +1,10 @@
+.tag-list{
+	.item-transparent{
+		@extend .item;
+		background: transparent;
+		padding: 0;
+	}
+	.tag-group{
+		display: block;
+	}
+}

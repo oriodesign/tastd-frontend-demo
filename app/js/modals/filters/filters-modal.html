@@ -1,0 +1,85 @@
+<ion-modal-view class="filters-modal">
+
+    <ion-nav-bar class="bar bar-positive">
+        <ion-nav-title>{{ 'home.filter' | translate }}</ion-nav-title>
+
+        <ion-nav-buttons side="left" replace="true">
+            <a ng-click="cancel()"
+               class="button button-clear">
+                {{ 'button.cancel' | translate }}
+            </a>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right" replace="true">
+            <a ng-click="done()"
+               class="button button-clear">
+                {{ 'button.done' | translate }}
+            </a>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+
+    <ion-content class="has-header has-footer">
+        <div class="padding color-oil font-size-small">
+
+
+            <!-- cuisine -->
+            <div ng-click="chooseCuisines()">
+                <div>
+                    <span class="header-text">{{'home.filter.cuisine' | translate}}</span>
+                    <span class="color-gray">({{'button.tap.to.change' | translate}})</span>
+                </div>
+                <div class="space-10"></div>
+                <div ng-if="getCuisinesString()" class="padding cuisines-list padding-top-10">
+                    {{ getCuisinesString() }}
+                </div>
+                <div ng-if="!getCuisinesString()" class="padding cuisines-list padding-top-10">
+                    {{ 'filter.all_cuisines' | translate }}
+                </div>
+            </div>
+
+            <div class="divider padding-bt-10">
+                <div class="slate-blue-line"></div>
+            </div>
+
+            <!-- price -->
+            <p translate class="no-margin header-text">home.average_cost_per_person</p>
+
+            <div class="padding-top padding-bottom">
+                <rzslider
+                    rz-slider-floor="0"
+                    rz-slider-ceil="200"
+                    rz-slider-step="1"
+                    rz-slider-model="filters.minCost"
+                    rz-slider-high="filters.maxCost"
+                    rz-slider-translate="translate"></rzslider>
+            </div>
+
+            <div class="divider padding-top-10">
+                <div class="slate-blue-line"></div>
+            </div>
+
+        </div>
+
+        <!-- tags -->
+        <p class="no-margin padding-lr-10 header-text">
+            {{ 'home.filter.tags' | translate }}
+        </p>
+
+        <!-- Tag selector -->
+        <tag-selector
+            tags="filters.proposedTags"
+            selected-tags="filters.tags">
+        </tag-selector>
+
+
+    </ion-content>
+
+    <ion-footer-bar class="padless">
+        <button
+            ng-click="resetAll()"
+            class="button button-block bg-gray">
+            {{"button.reset_all" | translate}}
+        </button>
+    </ion-footer-bar>
+
+</ion-modal-view>

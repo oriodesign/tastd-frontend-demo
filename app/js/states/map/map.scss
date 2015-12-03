@@ -1,0 +1,176 @@
+//
+// MAP
+//
+
+.map-global-wrapper {
+    position: absolute;
+    top: 88px;
+    width: 100%;
+    height: calc(100% - 88px);
+    z-index: 3;
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+.platform-ios.platform-cordova{
+    .map-global-wrapper {
+        top: 108px;
+        height: calc(100% - 108px);
+    }
+}
+
+.map-fake-shadow{
+    @include base-box-shadow;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    top: -5px;
+}
+
+.map-has-header{
+    top: $bar-height;
+}
+
+.filter-list-active ion-content {
+    top: 64px;
+}
+
+#map-spinner {
+    z-index: 1000;
+    top: 15px;
+    left: 15px;
+    position: absolute;
+}
+
+.map-list-no-results {
+    .no-results-inner{
+        padding: 15px;
+    }
+    p {
+        color: $oil;
+        text-align: center;
+        font-size: $font-size-base;
+    }
+}
+
+.change-geoname{
+    display: block;
+    height: 100%;
+}
+
+
+.center-on-me {
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    background: white;
+    text-align: center;
+    font-size: 22px;
+    color: $dark;
+    &::before {
+        position:relative;
+        left: -2px;
+    }
+}
+
+#loadMoreBtn {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: $light;
+    color: $oil;
+    text-decoration: underline;
+    font-size: $font-size-small;
+    font-style: italic;
+    line-height: $line-height-small;
+    padding: 5px 10px;
+    @include base-box-shadow;
+}
+
+
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+
+//
+// Filters common
+//
+
+.search-box {
+    border-radius: 40px;
+    height: 40px;
+
+    .placeholder-icon {
+        margin-right: 20px;
+        font-size: 20px;
+    }
+}
+
+.resetBtnContainer {
+    text-transform: uppercase;
+    color: $oil;
+
+    .icon {
+        font-size: 24px;
+        margin-right: 4px;
+        vertical-align: sub;
+    }
+}
+
+.tab-item {
+    text-transform: uppercase;
+}
+
+//
+// Cuisine
+//
+
+.item-selected {
+    background-color: $slate;
+    color: $light;
+}
+
+//
+// TAG
+//
+
+span.tag {
+    display: inline-block;
+    margin: 0 6px 6px 0;
+    text-align: center;
+    background-color: $light;
+    color: $oil;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+
+    &.tag-selected {
+        background-color: $slate;
+        color: $light;
+    }
+
+}
+
+//
+// Footer bar with block button
+//
+
+ion-footer-bar.padless {
+    padding: 0px;
+    border: none;
+}
+
+ion-footer-bar .button.button-block {
+    margin-top: 0px;
+    height: 100%;
+}

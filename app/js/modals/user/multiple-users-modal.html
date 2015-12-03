@@ -1,0 +1,64 @@
+<ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button
+            class="button button-clear button-primary"
+            ng-click="cancel()" translate>button.cancel</button>
+
+        <h1 class="title">Search</h1>
+
+        <button
+            class="button button-clear button-primary"
+            ng-click="done()" translate>button.done</button>
+    </ion-header-bar>
+
+    <ion-header-bar class="bar-subheader bg-silver no-padding height-auto">
+        <div class="standard-search-box">
+            <label class="item item-input search-box">
+                <input
+                    type="search"
+                    placeholder="{{ ('search' ) | translate }}"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    ng-change="search()"
+                    spellcheck="false"
+                    ng-model="parameters.name">
+                <i class="icon ion-search placeholder-icon"></i>
+            </label>
+        </div>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <list-loader loading="loading"></list-loader>
+
+        <ion-list>
+            <ion-item ng-click="reset()">
+                {{ 'button.reset'  | translate}}
+            </ion-item>
+
+            <div
+                class="user-select-wrapper"
+                ng-class="{ 'selected': isSelected(user) }"
+                ng-repeat="user in users"
+                ng-click="toggle(user)">
+                <user-signature
+                    user="user"
+                    hide-quick-follow="true">
+                </user-signature>
+                <div class="user-selected-overlay">
+                    <i class="icon-checkmark-round icon"></i>
+                </div>
+            </div>
+        </ion-list>
+
+        <ion-infinite-scroll
+            ng-if="users.$metadata.hasNextPage"
+            on-infinite="loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+</ion-modal-view>

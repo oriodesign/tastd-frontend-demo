@@ -1,0 +1,13 @@
+
+.action-sheet {
+    .button{
+        font-size: $font-size-base;
+        color: $tastd-green;
+        &:hover {
+            color: $tastd-green;
+        }
+    }
+    .button.active, .button.activated {
+        color: $tastd-green;
+    }
+}

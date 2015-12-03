@@ -1,0 +1,48 @@
+.flash-messages-container {
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: $silver;
+    @include inverse-base-box-shadow;
+}
+
+.flash-messages-container-inner {
+    padding: 15px;
+    position: relative;
+}
+
+.flash-messages-reset {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 20px;
+    color: $gray;
+    .icon {
+        background-color: white;
+        border-radius: 25px;
+    }
+}
+
+.flash-message {
+    background-color: white;
+    color: $gray;
+    border: 1px solid $light-gray;
+    margin-bottom: 5px;
+    font-size: $font-size-small;
+    padding: 5px 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.success {
+        color: $tastd-green;
+    }
+    &.warning {
+        color: $yellow-star;
+    }
+    &.error {
+        color: $red;
+    }
+}

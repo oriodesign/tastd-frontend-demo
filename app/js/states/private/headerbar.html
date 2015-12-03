@@ -1,0 +1,77 @@
+<!-- NAV BAR -->
+<div class="main-header">
+
+    <!-- LEFT -->
+    <div class="left-block">
+
+        <!-- BACK BUTTON -->
+        <back class="header-button navbar-back-button"></back>
+
+        <div
+            class="header-button navbar-settings-button"
+            ui-sref="settings">
+            <i class="icon icon-settings"></i>
+        </div>
+
+    </div>
+
+    <div class="center-block">
+
+        <div class="header-title navbar-page-title">{{ layoutManager.title }}</div>
+
+        <div
+            ng-click="changeGeoGuru()"
+            class="header-title navbar-geo-guru">
+            <div class="navbar-geo-guru-inner">
+                {{ flagParametersBag.getGeoGuruLabel() }}
+            </div>
+        </div>
+
+        <div
+            class="header-title navbar-ranking-title">
+            <div class="geoname">{{ flagParametersBag.getGeonameTitle() }}</div>
+            <div class="guru">{{ flagParametersBag.getGuruTitle() }}</div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right-block">
+
+        <div
+            class="header-button navbar-done-button"
+            ng-click="done()">
+            {{ 'button.done' | translate }}
+        </div>
+
+        <div
+            class="header-button navbar-share-button"
+            ng-click="share()">
+            <i class="icon icon-share"></i>
+        </div>
+
+        <div
+            class="header-button navbar-edit-button"
+            ng-click="edit()">
+            <i class="icon icon-edit"></i>
+        </div>
+
+        <div
+            class="header-button navbar-map-button"
+            ng-click="map()">
+            <i ng-if="!mapMode" class="icon icon-map"></i>
+            <i ng-if="mapMode" class="icon icon-list"></i>
+        </div>
+
+        <div
+            class="header-button navbar-notification-button"
+            ui-sref="notifications">
+            <div ng-if="notificationBadge.counter > 0" class="notification-badge-counter">
+                {{notificationBadge.counter}}
+            </div>
+            <i class="icon icon-notifications"></i>
+        </div>
+
+    </div>
+
+</div>

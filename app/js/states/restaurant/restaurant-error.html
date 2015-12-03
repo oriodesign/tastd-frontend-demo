@@ -1,0 +1,34 @@
+<ion-view>
+
+    <ion-content >
+
+
+
+      <div class="padding">
+        <form name="newError"
+              ionic-validate-on-submit="sendError()">
+
+            <div class="list">
+                <!-- error feedback -->
+                <label class="item item-input">
+                    <textarea
+                           class="textarea-height-base"
+                           name="error description"
+                           ng-model="error.content"
+                           ng-required="true"
+                           placeholder="{{ 'restaurant.report_error.description' | translate }}"></textarea>
+                </label>
+
+            </div>
+
+              <button translate class="button button-block button-positive button-width-base bg-gray"
+                      type="submit">restaurant.report_error.send</button>
+        </form>
+
+        <div debug-json="error"></div>
+
+
+      </div>
+    </ion-content>
+
+</ion-view>

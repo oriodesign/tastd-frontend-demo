@@ -1,0 +1,16 @@
+// extend _grid.scss
+
+.col-15 {
+	@include flex(0, 0, 15%);
+	max-width: 15%;
+}
+
+.col-70 {
+	@include flex(0, 0, 70%);
+	max-width: 70%;
+}
+
+@mixin col-width($width) {
+	@include flex(0, 0, $width);
+	max-width: $width;
+}

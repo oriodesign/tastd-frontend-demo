@@ -1,0 +1,37 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        <div class="buttons">
+            <button
+                class="button"
+                ng-click="cancel()">{{'button.cancel' | translate }}
+            </button>
+        </div>
+        <h1 class="title">{{'restaurant.edit_price' | translate}}</h1>
+        <div class="buttons">
+            <button
+                class="button"
+                ng-click="done()">{{'button.done' | translate }}
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content >
+        <div class="padding">
+
+            <div id="cost-box-input-label">
+                <span translate class="input-label-full font-size-base">restaurant.review.cost_per_person</span><br/>
+                <span translate class="font-size-small color-gray">restaurant.review.whole_meal_including_tax</span>
+            </div>
+
+            <div class="space"></div>
+
+            <rzslider
+                rz-slider-floor="0"
+                rz-slider-ceil="200"
+                rz-slider-step="1"
+                rz-slider-model="review.cost"
+                rz-slider-translate="translateSliderValue">
+            </rzslider>
+
+        </div>
+    </ion-content>
+</ion-modal-view>

@@ -1,0 +1,20 @@
+<div>
+    <ion-item
+        class="review-tags-property no-padding"
+        ng-if="visible || review[field.propertyName].length > 0"
+        ng-click="edit()">
+        <div>
+            <div class="title-wrapper white-space-normal">
+                <span class="title">{{ field.title }}</span>
+            </div>
+            <div class="tags-wrapper white-space-normal">
+                <span
+                    class="new-tastd-tag tag-group-{{ field.key }}"
+                    ng-repeat="tag in review[field.propertyName] track by tag.id">{{ tag.name }}</span>
+                <span ng-if="visible && review[field.propertyName].length === 0" class="color-gray">
+                    {{ field.description }}
+                </span>
+            </div>
+        </div>
+    </ion-item>
+</div>

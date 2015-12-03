@@ -1,0 +1,364 @@
+<ion-view class="restaurant-view">
+
+    <div>{{ctrl.restaurant.name}}</div>
+
+    <ion-content >
+
+        <ion-list ng-if="ctrl.restaurant">
+
+            <!-- QUICKADD -->
+
+            <ion-item class="no-padding">
+                <quickadd class="badge quickadd-center"
+                          restaurant="ctrl.restaurant"
+                          page="restaurant_detail"
+                          extended-version="true">
+                </quickadd>
+            </ion-item>
+
+            <!-- INFO -->
+
+            <section>
+                <div class="list-section-title">
+                    <h1>{{'restaurant.info' | translate }}</h1>
+                    <a translate ui-sref="restaurantError({restaurantId: ctrl.restaurant.id})"
+                       class="list-section-title-aside secondary-link">restaurant.report_an_error</a>
+                </div>
+
+                <div class="restaurant-info-wrapper">
+
+
+                    <!-- Address -->
+                    <ion-item ng-click="ctrl.goToGoogleMaps()">
+                        <i class="icon icon-right-space icon-marker color-tastd-green"></i>
+                        <span>{{::ctrl.getAddressWithCity() || "No address"}}</span>
+                        <i ng-if="::ctrl.restaurant.address" class="icon icon-direction icon-right"></i>
+                    </ion-item>
+
+                    <!-- Map -->
+                    <ion-item
+                        class="map"
+                        ng-click="mapExpanded=!mapExpanded"
+                        ng-class="{expanded : mapExpanded}">
+                        <static-map
+                            size="1024x300"
+                            color="{{ctrl.restaurant.cuisine.color}}"
+                            lat="{{ctrl.restaurant.lat}}"
+                            lng="{{ctrl.restaurant.lng}}">
+                        </static-map>
+                    </ion-item>
+
+                    <ion-item ng-if="ctrl.restaurant.phone || ctrl.restaurant.website" class="no-padding">
+                        <div class="row ion-item-row">
+                            <!-- Phone -->
+                            <div class="col" ng-if="ctrl.restaurant.phone">
+                                <i class="icon icon-right-space icon-call color-tastd-green"></i>
+                                <span>{{::ctrl.restaurant.phone}}</span>
+                            </div>
+                            <!-- Website -->
+                            <div class="col" ng-if="ctrl.restaurant.website" ng-click="ctrl.goToWebsite()">
+                                <i class="icon icon-right-space icon-world color-tastd-green"></i>
+                                <span>{{ ::ctrl.restaurant.website | cleanUrl }}</span>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item class="no-padding">
+                        <div class="row ion-item-row">
+                            <!-- CUISINE -->
+                            <div class="col" ng-if="ctrl.restaurant.cuisine">
+                                <i class="icon icon-right-space icon-cuisine color-tastd-green"></i>
+                                <span>{{::ctrl.restaurant.cuisine.name }}</span>
+                            </div>
+                            <!-- AVERAGE COST -->
+                            <div class="col" ng-if="ctrl.restaurant.averageCost">
+                                <i class="icon icon-right-space icon-dollar color-tastd-green"></i>
+                                <span ng-if="ctrl.restaurant.averageCost">
+                                    {{ ctrl.getRangeLabel() }}</span>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <ion-item ng-if="ctrl.restaurant.chef || ctrl.restaurant.instagram" class="no-padding">
+                        <div class="row ion-item-row">
+                            <!-- CHEF -->
+                            <div class="col" ng-if="ctrl.restaurant.chef">
+                                <i class="icon icon-right-space icon-chef color-tastd-green"></i>
+                                <span>{{ ::ctrl.restaurant.chef }}</span>
+                            </div>
+                            <!-- INSTAGRAM -->
+                            <div class="col" ng-if="ctrl.restaurant.instagram">
+                                <i class="icon icon-right-space icon-instagram color-tastd-green"></i>
+                                <span>{{ ::ctrl.restaurant.instagram }}</span>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <!-- Awards -->
+                    <ion-item ng-if="ctrl.restaurant.awards">
+                        <i class="icon icon-right-space icon-awards color-tastd-green"></i>
+                        <span>{{:: ctrl.restaurant.awards }}</span>
+                    </ion-item>
+
+                </div>
+            </section>
+
+
+            <!-- MY REVIEW -->
+            <section ng-if="ctrl.myReview">
+                <div class="list-section-title">
+                    <h1>{{'restaurant.my_review' | translate }}</h1>
+                </div>
+
+                <div>
+
+
+
+                    <!-- BEST FOR -->
+                    <review-tags-property
+                        review="ctrl.myReview"
+                        visible="true"
+                        field="ctrl.getField('best_for')">
+                    </review-tags-property>
+
+                    <!-- VISIT -->
+                    <ion-item class="review-visit-item">
+                        <div class="row ion-item-row">
+                            <!-- LAST VISITED -->
+                            <div class="col" ng-click="ctrl.editLastVisited()">
+                                <div
+                                    class="review-text-property last-visited">
+                                    <div class="title">{{ 'restaurant.review.last_visited' | translate }}</div>
+                                    <div class="date">{{ ctrl.myReview.lastVisited }}</div>
+                                </div>
+                            </div>
+                            <!-- VISIT COUNT -->
+                            <div
+                                class="col">
+                                <div class="review-text-property visit-count">
+                                    <div class="">
+                                        <div class="title">{{ 'restaurant.review.visit_count' | translate }}</div>
+                                    </div>
+                                    <div>
+                                        <div class="control" ng-click="ctrl.decrementVisitCount()">-</div>
+                                        <div class="number">{{ ctrl.myReview.visitCount }}</div>
+                                        <div class="control" ng-click="ctrl.incrementVisitCount()">+</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+
+
+
+                    <!-- photo -->
+                    <ion-item class="no-padding">
+                        <gallery
+                            photos="ctrl.myReview.photos"
+                            restaurant-id="ctrl.restaurant.id"
+                            on-upload-photo="ctrl.onPhotoUpload"
+                            on-delete-photo="ctrl.onPhotoDelete">
+                        </gallery>
+                    </ion-item>
+
+
+                    <ion-item class="no-padding">
+                        <div class="row ion-item-row">
+                            <!-- POSITION -->
+                            <div class="col" ng-click="ctrl.goToRanking()">
+                                <div class="review-text-property">
+                                    <div class="title">
+                                        {{ 'restaurant.review.my_opinion' | translate }}
+                                    </div>
+                                    <div class="text">
+                                        <span ng-style="{color : '#' + ctrl.myReview.cuisine.color}">
+                                            {{ctrl.myReview.position}}{{ctrl.myReview.position | ordinal}}
+                                         {{ 'restaurant.place' | translate }}
+                                         </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CUISINE -->
+                            <div
+                                ng-click="ctrl.changeCuisine()"
+                                class="col">
+                                <div class="review-text-property">
+                                    <div class="title">
+                                        {{ 'restaurant.ranked_in' | translate }}
+                                    </div>
+                                    <div class="text" ng-style="{color : '#' + ctrl.myReview.cuisine.color}">
+                                         {{ctrl.myReview.cuisine.name}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                    <!-- cost -->
+                    <ion-item class="review-text-property no-padding" ng-click="ctrl.editPrice()">
+                        <div class="title-wrapper ">
+                            <span class="title">{{'restaurant.review.cost_per_person' | translate }}</span>
+                        </div>
+                        <div class="text-wrapper">
+                            <span class="text" ng-if="!ctrl.getReviewCost()">N/A</span>
+                            <span class="text" ng-if="ctrl.getReviewCost()">{{ ctrl.getReviewCost() }}{{ ctrl.restaurant.geoname.currencySymbol }}</span>
+                        </div>
+                    </ion-item>
+
+                    <!-- Tag a friend -->
+                    <ion-item
+                        class="tag-friends-wrapper"
+                        ng-click="ctrl.tagFriends()">
+                        <div class="review-item-inner-wrapper">
+                            <div class="review-item-label">
+                                {{ 'restaurant.review.tag_friends' | translate }}
+                            </div>
+                            <div class="review-item-content">
+                                <span
+                                    ng-if="ctrl.myReview.taggedFriends.length === 0">
+                                    {{ 'restaurant.review.tag_friends_placeholder' | translate }}
+                                </span>
+                                <ion-user-avatar
+                                    ng-repeat="friend in ctrl.myReview.taggedFriends"
+                                    user="friend">
+                                </ion-user-avatar>
+                            </div>
+                        </div>
+
+                    </ion-item>
+
+
+                    <!-- MUST HAVE -->
+                    <review-text-property
+                        textarea="false"
+                        review="ctrl.myReview"
+                        field="ctrl.getField('must_have')">
+                    </review-text-property>
+
+                    <!-- PLACE -->
+                    <review-text-property
+                        textarea="false"
+                        review="ctrl.myReview"
+                        field="ctrl.getField('place')">
+                    </review-text-property>
+
+                    <!-- DRESS CODE -->
+                    <review-text-property
+                        textarea="false"
+                        review="ctrl.myReview"
+                        field="ctrl.getField('dress_code')">
+                    </review-text-property>
+
+                    <!-- DISCOVERED ON -->
+                    <review-text-property
+                        textarea="false"
+                        review="ctrl.myReview"
+                        field="ctrl.getField('discovered_on')">
+                    </review-text-property>
+
+                    <!-- DISHES -->
+                    <review-text-property
+                        textarea="true"
+                        review="ctrl.myReview"
+                        field="ctrl.getField('dishes')">
+                    </review-text-property>
+
+                    <!-- DISCOVERED ON -->
+                    <review-text-property
+                        textarea="true"
+                        review="ctrl.myReview"
+                        field="ctrl.getField('comment')">
+                    </review-text-property>
+
+                    <!-- DRINKS -->
+                    <review-tags-property
+                        review="ctrl.myReview"
+                        field="ctrl.getField('drinks')">
+                    </review-tags-property>
+
+                    <!-- LOCATION -->
+                    <review-tags-property
+                        review="ctrl.myReview"
+                        field="ctrl.getField('location')">
+                    </review-tags-property>
+
+                    <!-- VIBE -->
+                    <review-tags-property
+                        review="ctrl.myReview"
+                        field="ctrl.getField('vibe')">
+                    </review-tags-property>
+
+                    <!-- ENTERTAINMENT -->
+                    <review-tags-property
+                        review="ctrl.myReview"
+                        field="ctrl.getField('entertainment')">
+                    </review-tags-property>
+
+                    <!-- SPECIAL MENTION -->
+                    <review-tags-property
+                        review="ctrl.myReview"
+                        field="ctrl.getField('special_mention')">
+                    </review-tags-property>
+
+                    <!-- OTHER TAGS-->
+                    <review-tags-property
+                        review="ctrl.myReview"
+                        field="ctrl.getField('other_tags')">
+                    </review-tags-property>
+
+                    <!-- ADD REVIEW EXTRA FIELDS -->
+                    <ion-item class="add-extra-field-button" ng-click="ctrl.addReviewExtraFields()">
+                        <div>
+                            <span class="vertical-align-middle plus">+</span>
+                            <span class="vertical-align-middle">{{ 'restaurant.review.add_field' | translate }}</span>
+                        </div>
+                    </ion-item>
+
+                </div>
+            </section>
+
+
+            <!-- GURUS REVIEW -->
+
+            <section ng-if="ctrl.myLeadersReviews.length > 0">
+                <div class="list-section-title">
+                    <h1>{{'restaurant.gurus_who_like_this' | translate }}</h1>
+                </div>
+
+                <div>
+
+                    <ion-item
+                        ng-click="ctrl.goToReviews()" class="guru-images">
+                        <img
+                            ng-repeat="review in ctrl.myLeadersReviews | limitTo:6"
+                            class="user-avatar"
+                            ng-src="{{ review.user.avatar }}"/>
+                        <img
+                            ng-if="ctrl.myLeadersReviews.length == 7"
+                            class="user-avatar"
+                            ng-src="{{ ctrl.myLeadersReviews[6].user.avatar }}"/>
+                      <span
+                          ng-if="ctrl.myLeadersReviews.length > 7"
+                          class="more-avatar user-avatar">
+                          <i class="icon icon-three_points"/></i>
+                      </span>
+                    </ion-item>
+                </div>
+            </section>
+
+            <!-- EDITOR EDIT BUTTON -->
+
+            <button has-roles="ROLE_EDITOR" class="button button-positive button-block bg-gray"
+                    ui-sref="restaurantEdit({restaurantId: ctrl.restaurant.id})">
+                {{'restaurant.edit_restaurant' | translate}}
+            </button>
+
+        </ion-list>
+
+
+        <div style="height: 88px;"></div>
+
+    </ion-content>
+
+</ion-view>

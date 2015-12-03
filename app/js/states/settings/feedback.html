@@ -1,0 +1,43 @@
+<ion-view>
+
+    <ion-content >
+
+              <div class="padding">
+              <form name="newFeedback"
+                    ionic-validate-on-submit="sendFeedback()">
+
+                  <div class="list">
+                      <!-- title -->
+                      <label class="item item-input">
+
+                          <input type="text"
+                                 name="title"
+                                 ng-model="feedback.title"
+                                 ng-required="true"
+                                 placeholder="{{'settings.feedback.message_title' | translate }}">
+
+                      </label>
+
+                      <!-- feedback -->
+                      <label class="item item-input">
+
+                          <textarea
+                              class="textarea-height-base"
+                              name="feedback"
+                              ng-model="feedback.content"
+                              ng-required="true"
+                              placeholder="{{'settings.feedback.message_content' | translate }}">
+                          </textarea>
+                      </label>
+
+                  </div>
+
+                  <button class="button button-block button-positive button-width-base bg-gray"
+                          type="submit">{{'button.send' | translate }}</button>
+              </form>
+
+            </div>
+
+    </ion-content>
+
+</ion-view>

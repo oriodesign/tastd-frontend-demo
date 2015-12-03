@@ -1,0 +1,92 @@
+<!-- TABS -->
+<div
+    style="z-index: 10;"
+    class="tabs-striped position-relative tabs-only-icons tabs-top tabs-background-light tabs-color-positive">
+    <div class="tabs tabs-static no-border">
+        <a class="tab-item" ng-click="ctrl.search()" ng-class="{active: ctrl.isTastdSearch }">
+            <i class="icon icon-crown"></i>
+        </a>
+        <a class="tab-item" ng-click="ctrl.searchFriends()" ng-class="{active: ctrl.isFacebookSearch }">
+            <i class="icon icon-facebook"></i>
+        </a>
+        <a class="tab-item" ng-click="ctrl.searchContacts()" ng-class="{active: ctrl.isContactsSearch }">
+            <i class="icon icon-contacts"></i>
+        </a>
+    </div>
+</div>
+
+<ion-view class="user-search-view">
+
+    <ion-content class="has-subheader-inside-view has-double-footer">
+        <!-- GEONAME FILTER -->
+        <ion-list
+            ng-if="ctrl.isTastdSearch"
+            style="z-index: 9;"
+            class="standard-list position-relative">
+            <ion-item class="standard-item no-border" ng-click="ctrl.changeGeoname()">
+                <span>
+                {{ctrl.searchCriteria.geoname.formattedName || ('button.all_cities' | translate) }}
+                </span>
+                <span class="tastd-item-title">
+                ({{'button.city.change' | translate}})
+                </span>
+            </ion-item>
+        </ion-list>
+
+        <!-- SEARCH BY NAME -->
+        <div
+            ng-if="ctrl.isTastdSearch"
+            class="standard-search-box">
+            <label class="item item-input search-box">
+                <input type="search"
+                       autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                       placeholder="{{ 'user.type_guru_name' | translate }}"
+                       ng-model="ctrl.searchCriteria.query"
+                       ng-change="ctrl.search()">
+                  <i class="icon ion-search placeholder-icon"></i>
+            </label>
+        </div>
+
+        <!-- RESULTS -->
+        <ion-list class="padless new-list list-users">
+
+            <list-loader loading="ctrl.loading && !ctrl.isContactsSearch"></list-loader>
+
+            <progress-bar
+                ng-if="ctrl.loading && ctrl.isContactsSearch"
+                progress="ctrl.getProgress()">
+            </progress-bar>
+
+            <ion-item
+                ng-if="ctrl.users.length === 0 && !ctrl.loading"
+                translate="no.results">
+            </ion-item>
+
+            <user-signature
+                class="bottom-border"
+                ng-class="{'item-selected': isSelectAll.b, 'medal': ctrl.isPodium(user)}"
+                light-theme="isSelectAll.b"
+                ng-repeat="user in ctrl.users"
+                ng-click="ctrl.$state.go('user', {userId : user.id })"
+                user="user"
+                current-geoname="ctrl.searchCriteria.geoname">
+            </user-signature>
+
+        </ion-list>
+
+        <ion-infinite-scroll
+            ng-if="ctrl.users.$metadata.hasNextPage"
+            on-infinite="ctrl.loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+
+
+
+    </ion-content>
+
+    <button ng-click="ctrl.publishOnFb()" class="button standard-bottom-button with-bar-below">
+        {{ 'button.invite' | translate }}
+    </button>
+
+</ion-view>

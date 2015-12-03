@@ -1,0 +1,73 @@
+<span>
+  <div class="wall-element color-oil"
+       ng-repeat="review in reviews">
+
+      <div class="wall-inner" ng-style="{'border-left-color': '#' + review.cuisine.color}">
+
+          <div ng-if="!hideSignature">
+              <div ng-if="$index === 0 || (reviews[$index-1].user.id !== review.user.id)" class="wall-user">
+                  <user-signature
+                      user="review.user"
+                      me="me"
+                      hide-quick-follow="true"
+                      class="no-item"
+                      ui-sref="user({userId : review.user.id })">
+                  </user-signature>
+              </div>
+          </div>
+
+          <div class="wall-event">
+              <span ng-if="hideSignature">
+                  <span ng-if="me.id === review.user.id">{{'notification.you_added' | translate}}</span>
+                  <span ng-if="me.id !== review.user.id">{{review.user.firstName}} {{'notification.added' | translate}} </span>
+              </span>
+              <span ng-if="!hideSignature">{{ 'notification.added' | translate }}</span>
+              <a ui-sref="restaurantView({restaurantId: review.restaurant.id})">{{::review.restaurant.name}}</a>
+              in {{::review.geoname.formattedName}}
+              <br>
+              <span
+                  class="color-gray font-size-xsmall"
+                  am-time-ago="::review.created"></span>
+          </div>
+
+          <div ng-if="review.photos.length" class="space-10"></div>
+
+          <div class="clearfix">
+              <dynlayout-gallery ng-if="review.photos.length"
+                                 photos="review.photos"
+                                 user="review.user"></dynlayout-gallery>
+          </div>
+
+          <p class="wall-position" ng-style="{'color': '#' + review.cuisine.color}">
+              {{::review.position}}{{::review.position | ordinal}}
+              {{'restaurant.place_in' | translate}}
+              {{::review.cuisine.name}}
+          </p>
+
+          <tag-list tags="review.tags"
+                    list-class="'wall-tags'">
+          </tag-list>
+
+          <p ng-if="review.comment !== ''"
+               class="wall-comment">
+              {{::review.comment}}
+          </p>
+
+          <div class="divider">
+            <div class="silver-line"></div>
+          </div>
+          <quickadd
+              restaurant="review.restaurant"
+              page="{{page}}"
+              extended-version="true">
+          </quickadd>
+
+    </div>
+  </div>
+
+  <ion-infinite-scroll
+      ng-if="reviews.$metadata.hasNextPage"
+      on-infinite="ctrl.loadMore()"
+      distance="1%">
+  </ion-infinite-scroll>
+</span>

@@ -1,0 +1,40 @@
+<ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button
+            class="button button-clear button-primary"
+            ng-click="cancel()" translate>button.cancel</button>
+        <h1 class="title">Search</h1>
+    </ion-header-bar>
+
+    <ion-header-bar class="bar-subheader bg-silver no-padding height-auto">
+        <div class="standard-search-box">
+            <label class="item item-input search-box">
+                <input
+                    type="search"
+                    placeholder="{{ ('search' ) | translate }}"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    ng-model="parameters.name">
+                <i class="icon ion-search placeholder-icon"></i>
+            </label>
+        </div>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <list-loader loading="loading"></list-loader>
+
+        <ion-list>
+            <ion-item
+                class="no-padding"
+                ng-repeat="cuisine in cuisines | filter:{ name: parameters.name}">
+            <cuisine disabled="true" ng-click="choose(cuisine)" cuisine-model="cuisine"></cuisine>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+
+</ion-modal-view>

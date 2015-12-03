@@ -1,0 +1,36 @@
+.invite-image-wrapper{
+    background-color: $tastd-green;
+    padding: 10px 0;
+    img {
+        margin: 0 auto;
+        display:block;
+        max-width: 30%;
+    }
+}
+
+.score-legend{
+    text-align: center;
+    article{
+        padding: 10px 20px;
+        h1 {
+            font-size: 24px;
+            line-height: 24px;
+            color: $tastd-green;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            padding: 0;
+        }
+        .icon {
+            font-size: 16px;
+            position: relative;
+            top: -1px;
+        }
+        p {
+            font-size: $font-size-large;
+            line-height: $font-size-large;
+            color: $dark;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

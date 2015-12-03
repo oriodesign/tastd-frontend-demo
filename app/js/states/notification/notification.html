@@ -1,0 +1,29 @@
+<ion-view>
+    <ion-content>
+
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="ctrl.doRefresh()">
+        </ion-refresher>
+
+        <div ng-if="!ctrl.loading && ctrl.pushMessages.length === 0" class="padding">
+            <p class="color-oil">{{ 'notification.no_result' | translate }}</p>
+        </div>
+
+        <list-loader loading="ctrl.loading"></list-loader>
+
+        <ion-list>
+            <notification
+                ng-repeat="pushMessage in ctrl.pushMessages"
+                push-message="pushMessage">
+            </notification>
+        </ion-list>
+
+        <ion-infinite-scroll
+            ng-if="ctrl.pushMessages.$metadata.hasNextPage"
+            on-infinite="ctrl.loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+</ion-view>

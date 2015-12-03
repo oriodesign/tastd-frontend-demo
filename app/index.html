@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Tastd</title>
+
+    <link href="css/app.css" rel="stylesheet">
+    <script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
+</head>
+
+<body ng-controller="AppCtrl">
+
+    <div ui-view class="slide-left-right"></div>
+    <div id="fb-root"></div>
+
+    <!-- build:jslib js/tastd.lib.min.js -->
+    <!-- vendor modules -->
+    <script src="lib/lodash/dist/lodash.min.js"></script>
+    <script src="lib/q/q.js"></script>
+    <script src="lib/moment/min/moment-with-locales.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script><!-- ionic + angularjs bundle -->
+    <script src="lib/angular-filter/dist/angular-filter.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="lib/angular-translate/angular-translate.min.js"></script>
+    <script src="lib/angular-gravatar/build/md5.min.js"></script>
+    <script src="lib/angular-gravatar/build/angular-gravatar.min.js"></script>
+    <script src="lib/angular-restmod/dist/angular-restmod-bundle.js"></script>
+    <script src="lib/angular-ui-utils/validate.js"></script>
+    <script src="lib/angularjs-slider/rzslider.js"></script>
+    <script src="lib/angular-moment/angular-moment.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- include ng-cordova just before cordova.js -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
+    <!-- cordova scripts (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- <script src="lib/ngCordova/dist/ng-cordova-mocks.js"></script> -->
+    <script src="js/facebookConnectPlugin.js"></script>
+
+
+    <!-- to generate app-parameters.js see grunt ngconstant task -->
+    <script src="app-parameters.js"></script>
+
+    <!-- build:js({app/.tmp,app}) js/tastd.app.min.js -->
+    <script src="app-helper.js"></script>
+
+    <script src="app.js"></script>
+    <script src="app-config.js"></script>
+    <script src="js/rest-error-factory.js"></script>
+    <script src="js/services/patch/ios9-webview.js"></script>
+
+    <script src="app-ctrl.js"></script>
+
+<!--:::::::::::::::::::::::::::::::::::::::
+    ::                                   ::
+    ::             LISTENERS             ::
+    ::                                   ::
+    ::::::::::::::::::::::::::::::::::::::: -->
+
+    <script src="js/listeners/back-button-listener.js"></script>
+    <script src="js/listeners/badge-resume-listener.js"></script>
+    <script src="js/listeners/configure-layout-listener.js"></script>
+    <script src="js/listeners/error-listener.js"></script>
+    <script src="js/listeners/push-register-listener.js"></script>
+    <script src="js/listeners/push-notification-listener.js"></script>
+    <script src="js/listeners/track-view-listener.js"></script>
+
+<!--:::::::::::::::::::::::::::::::::::::::
+    ::                                   ::
+    ::             ENTITIES              ::
+    ::                                   ::
+    ::::::::::::::::::::::::::::::::::::::: -->
+
+    <!-- Address -->
+    <script src="js/entities/address/address.js"></script>
+    <script src="js/entities/address/address-factory.js"></script>
+    <script src="js/entities/address/address-manager-factory.js"></script>
+
+    <!-- Cuisine -->
+    <script src="js/entities/cuisine/cuisine.js"></script>
+    <script src="js/entities/cuisine/cuisine-factory.js"></script>
+    <script src="js/entities/cuisine/cuisine-manager-factory.js"></script>
+
+    <!-- Device -->
+    <script src="js/entities/device/device.js"></script>
+    <script src="js/entities/device/device-factory.js"></script>
+    <script src="js/entities/device/device-manager-factory.js"></script>
+
+    <!-- Expertise -->
+    <script src="js/entities/expertise/expertise-manager-factory.js"></script>
+
+    <!-- Flag -->
+    <script src="js/entities/flag/flag.js"></script>
+    <script src="js/entities/flag/flag-factory.js"></script>
+    <script src="js/entities/flag/flag-manager-factory.js"></script>
+
+    <!-- Friend -->
+    <script src="js/entities/friend/friend.js"></script>
+    <script src="js/entities/friend/friend-factory.js"></script>
+    <script src="js/entities/friend/friend-manager-factory.js"></script>
+
+    <!-- Follower -->
+    <script src="js/entities/follower/follower.js"></script>
+    <script src="js/entities/follower/follower-factory.js"></script>
+
+    <!-- Geoname -->
+    <script src="js/entities/geoname/geoname.js"></script>
+    <script src="js/entities/geoname/geoname-factory.js"></script>
+    <script src="js/entities/geoname/geoname-manager-factory.js"></script>
+
+    <!-- Invite -->
+    <script src="js/entities/invite/invite.js"></script>
+    <script src="js/entities/invite/invite-factory.js"></script>
+
+    <!-- Leader -->
+    <script src="js/entities/leader/leader.js"></script>
+    <script src="js/entities/leader/leader-batch-factory.js"></script>
+    <script src="js/entities/leader/leader-factory.js"></script>
+
+    <!-- Message -->
+    <script src="js/entities/message/message.js"></script>
+    <script src="js/entities/message/message-factory.js"></script>
+    <script src="js/entities/message/messages-helper-service.js"></script>
+
+    <!-- Option -->
+    <script src="js/entities/option/option.js"></script>
+    <script src="js/entities/option/option-factory.js"></script>
+    <script src="js/entities/option/option-manager-factory.js"></script>
+
+    <!-- Photo -->
+    <script src="js/entities/photo/photo.js"></script>
+    <script src="js/entities/photo/photo-factory.js"></script>
+    <script src="js/entities/photo/photo-manager-factory.js"></script>
+
+    <!-- Place -->
+    <script src="js/entities/place/place-manager-factory.js"></script>
+
+    <!-- Push Message -->
+    <script src="js/entities/push-message/push-message.js"></script>
+    <script src="js/entities/push-message/push-message-factory.js"></script>
+    <script src="js/entities/push-message/push-message-manager-factory.js"></script>
+
+    <!-- Restaurant -->
+    <script src="js/entities/restaurant/restaurant.js"></script>
+    <script src="js/entities/restaurant/restaurant-factory.js"></script>
+    <script src="js/entities/restaurant/restaurant-manager-factory.js"></script>
+
+    <!-- RestMod-->
+    <script src="js/entities/restmod/restmod.js"></script>
+    <script src="js/entities/restmod/entity-manager-factory.js"></script>
+    <script src="js/entities/restmod/rest-base-factory.js"></script>
+    <script src="js/entities/restmod/restmod-config.js"></script>
+
+    <!-- Review -->
+    <script src="js/entities/review/review.js"></script>
+    <script src="js/entities/review/review-batch-factory.js"></script>
+    <script src="js/entities/review/review-factory.js"></script>
+    <script src="js/entities/review/review-manager-factory.js"></script>
+
+    <!-- Tag -->
+    <script src="js/entities/tag/tag.js"></script>
+    <script src="js/entities/tag/tag-factory.js"></script>
+    <script src="js/entities/tag/tag-manager-factory.js"></script>
+
+    <!-- User -->
+    <script src="js/entities/user/user.js"></script>
+    <script src="js/entities/user/change-password-factory.js"></script>
+    <script src="js/entities/user/connected-user-base-factory.js"></script>
+    <script src="js/entities/user/credential-factory.js"></script>
+    <script src="js/entities/user/user-factory.js"></script>
+    <script src="js/entities/user/user-manager-factory.js"></script>
+
+    <!-- Wish list -->
+    <script src="js/entities/wishlist/wishlist.js"></script>
+    <script src="js/entities/wishlist/wish-factory.js"></script>
+    <script src="js/entities/wishlist/wish-helper-factory.js"></script>
+
+
+<!--:::::::::::::::::::::::::::::::::::::::
+    ::                                   ::
+    ::             DIRECTIVES            ::
+    ::                                   ::
+    ::::::::::::::::::::::::::::::::::::::: -->
+
+
+    <script src="js/directives/cuisine/cuisine.js"></script>
+    <script src="js/directives/cuisine/cuisine-directive.js"></script>
+    <script src="js/directives/cuisine/select-cuisine-directive.js"></script>
+
+    <script src="js/directives/flash-message/flash-message-directive.js"></script>
+
+    <script src="js/directives/focus/focus-directive.js"></script>
+
+    <script src="js/directives/history/history.js"></script>
+    <script src="js/directives/history/back-directive.js"></script>
+
+    <script src="js/directives/loader/loader.js"></script>
+    <script src="js/directives/loader/list-loader-directive.js"></script>
+    <script src="js/directives/loader/progress-bar-directive.js"></script>
+
+    <script src="js/directives/map/map.js"></script>
+    <script src="js/directives/map/static-map-directive.js"></script>
+
+    <script src="js/directives/notification/notification.js"></script>
+    <script src="js/directives/notification/notification-directive.js"></script>
+
+    <script src="js/directives/photo/photo.js"></script>
+    <script src="js/directives/photo/dynlayout-gallery-directive.js"></script>
+    <script src="js/directives/photo/gallery-directive.js"></script>
+
+    <script src="js/directives/quickadd/quickadd.js"></script>
+    <script src="js/directives/quickadd/quickadd-directive.js"></script>
+
+    <script src="js/directives/review/review.js"></script>
+    <script src="js/directives/review/review-tags-property-directive.js"></script>
+    <script src="js/directives/review/review-text-property-directive.js"></script>
+
+    <script src="js/directives/tag/tag.js"></script>
+    <script src="js/directives/tag/tag-list-directive.js"></script>
+    <script src="js/directives/tag/tag-selector-directive.js"></script>
+
+    <script src="js/directives/user/user.js"></script>
+    <script src="js/directives/user/ion-quickfollow-directive.js"></script>
+    <script src="js/directives/user/ion-user-avatar-directive.js"></script>
+    <script src="js/directives/user/ion-user-geoscore-directive.js"></script>
+    <script src="js/directives/user/ion-user-score-directive.js"></script>
+    <script src="js/directives/user/user-follow-button-directive.js"></script>
+    <script src="js/directives/user/user-signature-directive.js"></script>
+
+    <script src="js/directives/wall/wall.js"></script>
+    <script src="js/directives/wall/wall-directive.js"></script>
+
+    <script src="js/directives/security/security.js"></script>
+    <script src="js/directives/security/has-roles-directive.js"></script>
+
+    <script src="js/directives/restaurant/restaurant.js"></script>
+    <script src="js/directives/restaurant/restaurant-directive.js"></script>
+    <script src="js/directives/restaurant/restaurant-list-directive.js"></script>
+    <script src="js/directives/restaurant/restaurant-edit-directive.js"></script>
+
+<!--:::::::::::::::::::::::::::::::::::::::
+    ::                                   ::
+    ::             SERVICES              ::
+    ::                                   ::
+    ::::::::::::::::::::::::::::::::::::::: -->
+
+    <script src="js/services/analytics/analytics-factory.js"></script>
+    <script src="js/services/analytics/analytics.js"></script>
+
+    <script src="js/services/cache/cache.js"></script>
+    <script src="js/services/cache/cache-factory.js"></script>
+    <script src="js/services/cache/my-cache-factory.js"></script>
+    <script src="js/services/cache/my-leaders-helper-factory.js"></script>
+    <script src="js/services/cache/my-reviewed-helper-factory.js"></script>
+    <script src="js/services/cache/my-wished-helper-factory.js"></script>
+
+    <script src="js/services/config/config.js"></script>
+    <script src="js/services/config/config-provider.js"></script>
+    <script src="js/services/config/parameters-service.js"></script>
+
+    <script src="js/services/contacts/contacts.js"></script>
+    <script src="js/services/contacts/contact-manager-factory.js"></script>
+
+    <script src="js/services/event/event.js"></script>
+    <script src="js/services/event/event-dispatcher-factory.js"></script>
+    <script src="js/services/event/event-listener-factory.js"></script>
+    <script src="js/services/event/tastd-event-constant.js"></script>
+
+    <script src="js/services/facebook/facebook.js"></script>
+    <script src="js/services/facebook/facebook-async-init.js"></script>
+    <script src="js/services/facebook/facebook-connect-provider.js"></script>
+
+    <script src="js/services/flag/flag.js"></script>
+    <script src="js/services/flag/flag-marker-overlay-factory.js"></script>
+    <script src="js/services/flag/infobox-overlay-factory.js"></script>
+    <script src="js/services/flag/me-overlay-factory.js"></script>
+    <script src="js/services/flag/flag-parameters-bag-factory-factory.js"></script>
+
+    <script src="js/services/flash-message/flash-message.js"></script>
+    <script src="js/services/flash-message/flash-message-manager-factory.js"></script>
+
+    <script src="js/services/geocode/geocode.js"></script>
+    <script src="js/services/geocode/http-geocode-api-factory.js"></script>
+    <script src="js/services/geocode/http-geocode-config-constant.js"></script>
+    <script src="js/services/geocode/user-geolocation-factory.js"></script>
+
+    <script src="js/services/google/google.js"></script>
+    <script src="js/services/google/google-geocoder-factory.js"></script>
+    <script src="js/services/google/as-google-overlay-factory.js"></script>
+    <script src="js/services/google/google-constant.js"></script>
+    <script src="js/services/google/google-overlay-factory.js"></script>
+
+    <script src="js/services/http/http.js"></script>
+    <script src="js/services/http/http-api-factory-provider.js"></script>
+    <script src="js/services/http/http-auth-api-factory.js"></script>
+    <script src="js/services/http/http-disconnected-interceptor-config.js"></script>
+    <script src="js/services/http/http-timeout-interceptor-config.js"></script>
+
+    <script src="js/services/layout/layout.js"></script>
+    <script src="js/services/layout/layout-config-factory.js"></script>
+    <script src="js/services/layout/layout-manager-factory.js"></script>
+
+    <script src="js/services/loader/loader-factory.js"></script>
+
+    <script src="js/services/log/log.js"></script>
+    <script src="js/services/log/exception-handler-provider.js"></script>
+    <script src="js/services/log/log-config.js"></script>
+    <script src="js/services/log/log-stack-factory.js"></script>
+    <script src="js/services/log/log-handler-factory.js"></script>
+
+    <script src="js/services/map/map.js"></script>
+    <script src="js/services/map/map-service-factory.js"></script>
+    <script src="js/services/map/geocode-map-factory.js"></script>
+
+    <script src="js/services/notification/notification.js"></script>
+    <script src="js/services/notification/notification-badge-factory.js"></script>
+
+    <script src="js/services/photo/photo-upload-factory.js"></script>
+
+    <script src="js/services/price/price.js"></script>
+    <script src="js/services/price/price-manager-factory.js"></script>
+    <script src="js/services/price/foreign-exchange-factory.js"></script>
+
+    <script src="js/services/prototype/prototype.js"></script>
+
+    <script src="js/services/ranking/ranking.js"></script>
+    <script src="js/services/ranking/ranking-state-helper-factory.js"></script>
+
+    <script src="js/services/review/review-extra-fields-factory.js"></script>
+
+    <script src="js/services/share/share.js"></script>
+    <script src="js/services/share/share-service-factory.js"></script>
+
+    <script src="js/services/security/authorization/authorization.js"></script>
+    <script src="js/services/security/authorization/is-granted-directive.js"></script>
+    <script src="js/services/security/authorization/security-authorization-voter-constant.js"></script>
+    <script src="js/services/security/credential/credential.js"></script>
+    <script src="js/services/security/credential/credential-auth-checker-factory.js"></script>
+    <script src="js/services/security/credential/tastd-email-signup-credential-service.js"></script>
+    <script src="js/services/security/credential/tastd-facebook-credential-service.js"></script>
+    <script src="js/services/security/firewall/firewall-config.js"></script>
+    <script src="js/services/security/firewall/firewall.js"></script>
+    <script src="js/services/security/firewall/http-firewall-buffer-factory.js"></script>
+    <script src="js/services/security/firewall/http-firewall-factory.js"></script>
+    <script src="js/services/security/firewall/state-firewall-provider.js"></script>
+    <script src="js/services/security/security-config.js"></script>
+    <script src="js/services/security/security-events-constant.js"></script>
+    <script src="js/services/security/security-provider.js"></script>
+    <script src="js/services/security/security-run.js"></script>
+    <script src="js/services/security/security.js"></script>
+    <script src="js/services/security/signin/email-signin-ctrl.js"></script>
+    <script src="js/services/security/signin/facebook-signin-ctrl.js"></script>
+    <script src="js/services/security/signin/signin.js"></script>
+    <script src="js/services/security/signup/facebook-signup-ctrl.js"></script>
+    <script src="js/services/security/signup/signup.js"></script>
+    <script src="js/services/security/token/http-auth-token-manager-provider.js"></script>
+    <script src="js/services/security/token/token.js"></script>
+    <script src="js/services/security/voter/user-voter-factory.js"></script>
+
+    <script src="js/services/storage/storage.js"></script>
+    <script src="js/services/storage/simple-local-storage-factory.js"></script>
+
+    <script src="js/services/translations/translations-config.js"></script>
+    <script src="js/services/translations/translations-en.js"></script>
+    <script src="js/services/translations/translations-it.js"></script>
+
+    <script src="js/services/utility/utility.js"></script>
+    <script src="js/services/utility/json-util-factory.js"></script>
+    <script src="js/services/utility/base64-util-factory.js"></script>
+    <script src="js/services/utility/class-factory.js"></script>
+    <script src="js/services/utility/debug-json-directive.js"></script>
+    <script src="js/services/utility/debug-json-provider.js"></script>
+    <script src="js/services/utility/fake-type-provider.js"></script>
+    <script src="js/services/utility/map-distance-factory.js"></script>
+    <script src="js/services/utility/MD5-util-factory.js"></script>
+    <script src="js/services/utility/ng-model-debounce-directive.js"></script>
+    <script src="js/services/utility/platform-factory.js"></script>
+
+    <script src="js/services/validator/ionic/ionic.js"></script>
+    <script src="js/services/validator/ionic/ionic-validate-on-submit-directive.js"></script>
+    <script src="js/services/validator/ionic/ionic-validate-on-submit-popup-service.js"></script>
+
+    <script src="js/services/validator/validator.js"></script>
+    <script src="js/services/validator/validator-messages-constant.js"></script>
+    <script src="js/services/validator/validator-translations-config.js"></script>
+    <script src="js/services/validator/validator-violated-context-factory.js"></script>
+    <script src="js/services/validator/validator-violated-field-factory.js"></script>
+    <script src="js/services/validator/validator-violation-context-provider.js"></script>
+    <script src="js/services/validator/validator-manager-factory.js"></script>
+
+
+<!--:::::::::::::::::::::::::::::::::::::::
+    ::                                   ::
+    ::             FILTERS               ::
+    ::                                   ::
+    ::::::::::::::::::::::::::::::::::::::: -->
+
+    <script src="js/filters/filters.js"></script>
+    <script src="js/filters/clean-url-filter.js"></script>
+    <script src="js/filters/custom-json-filter.js"></script>
+    <script src="js/filters/ordinal-filter.js"></script>
+    <script src="js/filters/purge-scope-filter.js"></script>
+
+    <!--:::::::::::::::::::::::::::::::::::
+    ::                                   ::
+    ::             MODALS                ::
+    ::                                   ::
+    ::::::::::::::::::::::::::::::::::::::: -->
+
+    <script src="js/modals/address/address-modal-factory.js"></script>
+
+    <script src="js/modals/autocomplete/autocomplete.js"></script>
+    <script src="js/modals/autocomplete/autocomplete-modal-factory.js"></script>
+
+    <script src="js/modals/cuisine/cuisine.js"></script>
+    <script src="js/modals/cuisine/cuisine-modal-factory.js"></script>
+    <script src="js/modals/cuisine/multiple-cuisines-modal-factory.js"></script>
+
+    <script src="js/modals/geo-guru/geo-guru.js"></script>
+    <script src="js/modals/geo-guru/geo-guru-modal-factory.js"></script>
+
+    <script src="js/modals/geoname/geoname-modal-factory.js"></script>
+
+    <script src="js/modals/fields/fields.js"></script>
+    <script src="js/modals/fields/input-text-modal-factory.js"></script>
+    <script src="js/modals/fields/input-date-modal-factory.js"></script>
+    <script src="js/modals/fields/textarea-modal-factory.js"></script>
+
+    <script src="js/modals/filters/filters-modal-factory.js"></script>
+
+    <script src="js/modals/user/multiple-users-modal-factory.js"></script>
+
+    <script src="js/modals/tag/tag.js"></script>
+    <script src="js/modals/tag/tag-modal-factory.js"></script>
+
+    <script src="js/modals/review/review-extra-fields-modal-factory.js"></script>
+
+<!--:::::::::::::::::::::::::::::::::::::::
+    ::                                   ::
+    ::             POPUPS                ::
+    ::                                   ::
+    ::::::::::::::::::::::::::::::::::::::: -->
+
+    <script src="js/popups/popups.js"></script>
+    <script src="js/popups/disconnected-popup-factory.js"></script>
+    <script src="js/popups/alert-popup-factory.js"></script>
+    <script src="js/popups/confirm-popup-factory.js"></script>
+    <script src="js/popups/duplicated-restaurant-popup-factory.js"></script>
+    <script src="js/popups/inaccurate-address-popup-factory.js"></script>
+
+<!--:::::::::::::::::::::::::::::::::::::::
+    ::                                   ::
+    ::             STATES                ::
+    ::                                   ::
+    ::::::::::::::::::::::::::::::::::::::: -->
+
+
+    <!-- states/invite -->
+    <script src="js/states/invite/invite.js"></script>
+    <script src="js/states/invite/invite-home-ctrl.js"></script>
+
+    <!-- states/landing -->
+    <script src="js/states/landing/landing.js"></script>
+    <script src="js/states/landing/landing-ctrl.js"></script>
+
+    <!-- states/map -->
+    <script src="js/states/map/map.js"></script>
+    <script src="js/states/map/map-ctrl.js"></script>
+
+    <!-- states/notification -->
+    <script src="js/states/notification/notification.js"></script>
+    <script src="js/states/notification/notification-ctrl.js"></script>
+
+    <!-- states/on-boarding -->
+    <script src="js/states/on-boarding/on-boarding.js"></script>
+    <script src="js/states/on-boarding/on-boarding-intro-ctrl.js"></script>
+    <script src="js/states/on-boarding/on-boarding-friends-ctrl.js"></script>
+    <script src="js/states/on-boarding/on-boarding-suggestions-ctrl.js"></script>
+    <script src="js/states/on-boarding/on-boarding-top-gurus-ctrl.js"></script>
+    <script src="js/states/on-boarding/on-boarding-top-restaurants-ctrl.js"></script>
+
+    <!-- states/private -->
+    <script src="js/states/private/private.js"></script>
+
+    <!-- states/public -->
+    <script src="js/states/public/public.js"></script>
+
+    <!-- states/ranking -->
+    <script src="js/states/ranking/ranking.js"></script>
+    <script src="js/states/ranking/ranking-reorder-ctrl.js"></script>
+
+    <!-- states/restaurant -->
+    <script src="js/states/restaurant/restaurant.js"></script>
+    <script src="js/states/restaurant/restaurant-create-ctrl.js"></script>
+    <script src="js/states/restaurant/restaurant-edit-ctrl.js"></script>
+    <script src="js/states/restaurant/restaurant-error-ctrl.js"></script>
+    <script src="js/states/restaurant/restaurant-search-ctrl.js"></script>
+    <script src="js/states/restaurant/restaurant-search-web-ctrl.js"></script>
+    <script src="js/states/restaurant/restaurant-view-ctrl.js"></script>
+    <script src="js/states/restaurant/reviews-ctrl.js"></script>
+
+    <!-- states/settings -->
+    <script src="js/states/settings/settings.js"></script>
+    <script src="js/states/settings/account-ctrl.js"></script>
+    <script src="js/states/settings/log-ctrl.js"></script>
+    <script src="js/states/settings/feedback-ctrl.js"></script>
+    <script src="js/states/settings/password-ctrl.js"></script>
+    <script src="js/states/settings/settings-ctrl.js"></script>
+    <script src="js/states/settings/notifications-ctrl.js"></script>
+    <script src="js/states/settings/language-ctrl.js"></script>
+
+    <!-- states/signin -->
+    <script src="js/states/signin/signin.js"></script>
+    <script src="js/states/signin/signin-ctrl.js"></script>
+
+    <!-- states/signup -->
+    <script src="js/states/signup/signup.js"></script>
+    <script src="js/states/signup/signup-ctrl.js"></script>
+    <script src="js/states/signup/signup-fb-ctrl.js"></script>
+
+    <!-- states/user -->
+    <script src="js/states/user/user.js"></script>
+    <script src="js/states/user/user-search.js"></script>
+    <script src="js/states/user/user-edit.js"></script>
+    <script src="js/states/user/user-ctrl.js"></script>
+    <script src="js/states/user/user-followers-ctrl.js"></script>
+    <script src="js/states/user/user-following-ctrl.js"></script>
+    <script src="js/states/user/user-password-reset.js"></script>
+    <script src="js/states/user/user-password-reset-confirm.js"></script>
+
+    <!-- states/wall -->
+    <script src="js/states/wall/wall.js"></script>
+    <script src="js/states/wall/wall-ctrl.js"></script>
+
+    <script src="templates/templates.js"></script>
+
+    <script src="//localhost:35729/livereload.js"></script>
+
+    <!-- endbuild -->
+
+    <script>
+
+        // Manual angular bootstrap
+        window.AppHelper.readyForAngular(function (APP_NAME) {
+            angular.element(document).ready(function() {
+                angular.bootstrap(document, [APP_NAME]);
+            });
+        });
+
+        // Load facebook SDK
+        window.AppHelper.loadFacebookSdk();
+
+
+    </script>
+
+</body>
+</html>

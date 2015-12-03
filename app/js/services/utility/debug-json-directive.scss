@@ -1,0 +1,73 @@
+.debug-json {
+
+  font-family: monospace, serif;
+
+  $debug-json-flash-color:rgb(219, 160, 229);
+  $debug-json-flashy-color:rgb(219, 112, 229);
+  $debug-json-code-bg: #383838;
+  $debug-json-grey-color:#525252;
+  $debug-json-light-color: #fef8ff;
+  $debug-json-dark-color: #353535;
+  $debug-json-darker-color:#383838;
+
+  width:95%;
+  margin: 0 auto;
+
+  .debug-json-toggle {
+    display:block; text-align: left; cursor:pointer;
+    background: $debug-json-grey-color;
+    color: $debug-json-light-color;
+    padding: 4px;
+    font-size: $font-size-small;
+    font-weight: bold;
+    border: 1px $debug-json-dark-color solid;
+    border-bottom:0;
+  }
+
+  .debug-json-content-info {
+    background: $debug-json-grey-color;
+    font-size: $font-size-small;
+    color: $debug-json-light-color;
+    border-bottom: 1px $debug-json-dark-color solid;
+    text-align: right;
+  }
+
+  .debug-json-content {
+    overflow-y: auto;
+    max-height:500px;
+
+    font-size: $font-size-small;
+
+    border-left: 1px $debug-json-dark-color solid;
+    border-right: 1px $debug-json-dark-color solid;
+    border-bottom: 1px $debug-json-dark-color solid;
+
+    pre {
+      color: $debug-json-flash-color;
+      background: $debug-json-darker-color;
+      padding: 12px;
+    }
+
+    &::-webkit-scrollbar {
+      display: initial!important;
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #525252;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $debug-json-flash-color;
+      display: initial!important;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $debug-json-flashy-color;
+    }
+  }
+
+}
+
+
+

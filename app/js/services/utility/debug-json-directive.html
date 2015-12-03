@@ -1,0 +1,18 @@
+<div class="debug-json" ng-if="DebugJson.options.debug"
+     style="margin-top: 8px; margin-bottom:8px"><!-- DEBUG JSON -->
+    <a class="debug-json-toggle" ng-click="hide = !hide">
+        <span ng-show="hide">show debug for "{{ label }}"</span>
+        <span ng-show="!hide">hide debug for "{{ label }}"</span>
+        <br>
+    </a>
+    <div ng-hide="hide">
+        <div class="debug-json-content-info">
+            <span ng-bind="contentInfo.__toString()"></span>
+        </div>
+        <div
+            class="debug-json-content">
+            <pre>{{ content | customJsonFilter }}</pre>
+        </div>
+    </div>
+
+</div>

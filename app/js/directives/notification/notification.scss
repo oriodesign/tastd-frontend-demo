@@ -1,0 +1,27 @@
+.item-notification {
+    p {
+        font-size: $font-size-small !important;
+        overflow: visible;
+        text-overflow: clip;
+        white-space: normal;
+        line-height: 18px;
+
+        a {
+            display: inline-block;
+        }
+    }
+    h3 {
+        font-size: $font-size-base !important;
+        line-height: 24px;
+        margin: 0;
+        a {
+            display: inline-block;
+        }
+    }
+
+    &.seen{
+        opacity: 0.9;
+        color: $gray;
+        background-color: $silver;
+    }
+}

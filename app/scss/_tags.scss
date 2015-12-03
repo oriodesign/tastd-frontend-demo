@@ -1,0 +1,47 @@
+.new-tastd-tag {
+    display: inline-block;
+    background: white;
+    border: 1px solid white;
+    height: 30px;
+    line-height: 16px;
+    border-radius: 5px;
+    font-size: $font-size-small;
+    padding: 5px 10px;
+    margin: 0 5px 5px 0;
+    color: $gray;
+
+    &.selected {
+        border: 1px solid $tastd-green;
+        color: $tastd-green;
+
+    }
+
+    &.tag-group-best_for{
+        border: 1px solid #aa4056;
+        color: #aa4056;
+    }
+    &.tag-group-entertainment{
+        border: 1px solid #587795;
+        color:  #587795;
+    }
+    &.tag-group-vibe{
+        border: 1px solid #62854d;
+        color: #62854d;
+    }
+    &.tag-group-drinks{
+        border: 1px solid #3d8d71;
+        color: #3d8d71;
+    }
+    &.tag-group-other_tags{
+        border: 1px solid #4f7f89;
+        color: #4f7f89;
+    }
+    &.tag-group-special_mention{
+        border: 1px solid orange;
+        color: orange;
+    }
+    &.tag-group-location{
+        border: 1px solid #ad6731;
+        color: #ad6731;
+    }
+}

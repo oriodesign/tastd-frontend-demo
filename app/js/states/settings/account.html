@@ -1,0 +1,39 @@
+<ion-view>
+
+    <ion-content >
+
+        <form name="ctrl.form">
+            <label class="item item-input">
+                <input type="text"
+                       name="first name"
+                       ng-model="ctrl.user.firstName"
+                       ng-required="true"
+                       placeholder="{{ 'user.first_name' | translate }}">
+            </label>
+
+            <label class="item item-input">
+                <input type="text"
+                       name="last name"
+                       ng-model="ctrl.user.lastName"
+                       ng-required="true"
+                       placeholder="{{ 'user.last_name' | translate }}">
+            </label>
+
+            <label class="item item-input">
+                <input type="text"
+                       name="email"
+                       ng-model="ctrl.user.email"
+                       ng-required="true"
+                       placeholder="{{ 'user.email' | translate }}">
+            </label>
+
+        </form>
+
+        <div class="padding text-right">
+            <a translate class="secondary-link" ng-click="ctrl.delete()">{{'settings.delete_account' | translate}}</a>
+        </div>
+
+
+    </ion-content>
+
+</ion-view>

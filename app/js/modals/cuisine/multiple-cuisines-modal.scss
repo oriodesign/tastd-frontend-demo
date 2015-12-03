@@ -1,0 +1,18 @@
+.multiple-cuisines-modal{
+    .select-all-cuisines {
+        margin-bottom: 15px;
+        .cuisine-avatar{
+            background: $tastd-green;
+            &.disabled {
+                background: $light-gray;
+            }
+        }
+        .cuisine-name {
+            text-transform: uppercase;
+        }
+    }
+    .icon-checkmark-round {
+        position: relative;
+        top: 2px;
+    }
+}

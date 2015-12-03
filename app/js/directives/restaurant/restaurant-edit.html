@@ -1,0 +1,68 @@
+<form name="restaurantEditForm">
+
+    <div ng-if="!hidePhoto"
+        class="restaurant-header-picture text-center"
+         ng-style="ctrl.getPhotoStyle()">
+
+        <div ng-if="!restaurant.uploadedPicture"
+             ng-click="ctrl.uploadPhoto()">
+        </div>
+        <button type="button" id="restoUploadBtn"
+                class="button icon ion-camera"
+                ng-click="ctrl.uploadPhoto()"></button>
+    </div>
+
+    <ion-list>
+
+        <!-- cuisine -->
+        <select-cuisine cuisines="cuisines" item="restaurant"></select-cuisine>
+
+        <!-- name -->
+        <label class="item item-input">
+          <input type="text"
+                 name="name"
+                 ng-model="restaurant.name"
+                 ng-required="true"
+                 placeholder="Name">
+        </label>
+
+        <!-- city -->
+        <div class="item item-input" ng-click="ctrl.city()">
+
+            <div class="fake-input"
+               ng-class="{'placeholder' : !restaurant.geoname.formattedName}">
+              {{ restaurant.geoname.formattedName || 'Select city' }}
+            </div>
+
+        </div>
+
+        <!-- address -->
+        <div class="item item-input" ng-click="ctrl.address(restaurant.geoname, restaurant.address)">
+
+            <div class="fake-input"
+               ng-class="{'placeholder' : !restaurant.address}">
+              {{ restaurant.address || 'Select address' }}
+            </div>
+
+        </div>
+
+        <!-- website-->
+        <label class="item item-input">
+            <input type="text"
+                 name="website"
+                 ng-blur="ctrl.prependProtocol()"
+                 ng-model="restaurant.website"
+                 placeholder="Website">
+        </label>
+
+        <!-- phone number -->
+        <label class="item item-input">
+            <input type="tel"
+                 name="tel"
+                 ng-model="restaurant.phone"
+                 placeholder="Phone number">
+        </label>
+
+    </ion-list>
+
+</form>

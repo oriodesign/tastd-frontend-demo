@@ -1,0 +1,11 @@
+<div ng-if="ctrl.manager.active" class="flash-messages-container">
+    <div class="flash-messages-container-inner">
+        <div class="flash-messages-reset" ng-click="ctrl.reset($event)">
+            <i class="icon icon-circle-close"></i>
+        </div>
+        <div ng-class="message.category" class="flash-message" ng-repeat="message in ctrl.manager.messages">
+            <div>{{ message.content }}</div>
+        </div>
+
+    </div>
+</div>

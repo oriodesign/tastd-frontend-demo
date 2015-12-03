@@ -1,0 +1,77 @@
+//
+// Colors
+//
+// Define the base palette for tastd app
+// Write all colors here (never in ionic-variables directly or in other files)
+//
+
+$silver: #EDEDED;
+$light-gray: #cdcbcc;
+$gray: #6F858E;
+$slate: #98b3be;
+$oil: #404d53;
+$tastd-green: #4aa099;
+$tastd-dark-green: #2B615D;
+$facebook-blue: #3b5998;
+$red: #D05872;
+$yellow-star: #FFBB4B;
+
+.pane, .view, ion-view .pane {
+    color: $silver;
+}
+
+.color-yellow-star {
+    color: $yellow-star !important;
+}
+
+.color-tastd-green {
+    color: $tastd-green !important;
+}
+
+.color-red {
+    color: $red !important;
+}
+
+.color-gray{
+    color: $gray !important;
+}
+
+.color-light-gray {
+    color: $light-gray !important;
+}
+
+.color-silver{
+    color: $silver !important;
+}
+
+.bg-tastd-green {
+    background: $tastd-green !important;
+}
+
+.bg-facebook-blue {
+    background: $facebook-blue !important;
+}
+
+.bg-white {
+    background: white !important;
+}
+
+.bg-oil {
+    background: $oil !important;
+}
+
+.color-oil {
+    color: $oil !important;
+}
+
+.bg-silver {
+    background-color: $silver !important;
+}
+
+.bg-white {
+    background-color: white !important;
+}
+
+.bg-gray {
+    background-color: $gray !important;
+}

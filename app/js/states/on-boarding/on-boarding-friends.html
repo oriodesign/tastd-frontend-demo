@@ -1,0 +1,28 @@
+<ion-view class="quick-add-gurus">
+
+    <ion-content>
+
+        <ion-list class="padless new-list list-users">
+
+            <div class="text-center padding color-oil bg-white"
+                 ng-show="!ctrl.friends.length && !ctrl.friendsLoading"
+                 translate="on_boarding.no_facebook_friends">
+            </div>
+
+            <list-loader loading="ctrl.friendsLoading"></list-loader>
+
+            <user-signature
+                class="item-icon-right"
+                ng-repeat="user in ctrl.friends"
+                user="user">
+            </user-signature>
+
+        </ion-list>
+
+    </ion-content>
+
+    <button ng-click="ctrl.done()" class="button standard-bottom-button">
+        {{ 'button.next' | translate }}
+    </button>
+
+</ion-view>

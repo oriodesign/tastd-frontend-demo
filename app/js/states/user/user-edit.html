@@ -1,0 +1,96 @@
+<ion-view class="user-edit">
+
+    <ion-content >
+
+      <div class="padding text-center userEditAvatar">
+        <ion-user-avatar user="ctrl.user"></ion-user-avatar>
+
+        <button type="button" class="button icon ion-camera"
+                ng-click="ctrl.uploadPhoto()"></button>
+      </div>
+
+      <form id="editProfileForm" name="ctrl.editProfileForm"
+            ionic-validate-on-submit="ctrl.update(ctrl.user)"
+            ionic-validate-on-submit-options="ctrl.validateOptions">
+
+          <div class="padding">
+
+              <div class="list">
+
+                  <!-- FIRST NAME -->
+                  <label class="item item-input">
+                      <input name="firstName"
+                             type="text"
+                             autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false"
+                             placeholder="{{ 'user.first_name' | translate }}*"
+                             ng-model="ctrl.user.firstName"
+                             ng-minlength="2"
+                             ng-required="true">
+                  </label>
+
+                  <!-- LAST NAME -->
+                  <label class="item item-input">
+                      <input type="text"
+                             name="lastName"
+                             autocomplete="off" autocorrect="off" autocapitalize="on" spellcheck="false"
+                             placeholder="{{ 'user.last_name' | translate }}*"
+                             ng-model="ctrl.user.lastName"
+                             ng-minlength="2"
+                             ng-required="true">
+                  </label>
+
+                  <!-- CITY -->
+                  <div class="item item-input" ng-click="ctrl.changeGeoname()">
+                      <div class="fake-input-text">{{ ctrl.user.geoname.formattedName || 'user.choose_a_city'|translate}}</div>
+                  </div>
+
+                  <!-- BIRTH YEAR -->
+                  <label class="item item-input item-select">
+                      <select
+                             name="birthYear"
+                             class="ltr full-width"
+                             ng-class="{placeholder: !ctrl.user.birthYear }"
+                             ng-options="year for year in ctrl.years"
+                             ng-model="ctrl.user.birthYear">
+                          <option value="">{{ 'user.birth_year' | translate }}</option>
+                      </select>
+                  </label>
+
+                  <!-- HEADLINE -->
+                  <label class="item item-input">
+                      <input type="text"
+                             maxlength="30"
+                             name="headline"
+                             placeholder="{{ 'user.how_i_define_myself' | translate }}"
+                             ng-minlength="5"
+                             ng-model="ctrl.user.headline">
+                  </label>
+
+
+
+                  <input ng-show="false"
+                          ng-model=" ctrl.user.geoname"
+                          name="city"
+                          ng-required="true">
+
+                  <!-- ABOUT -->
+                  <label class="item item-input">
+                      <textarea
+                             name="about"
+                             placeholder="{{ 'user.about_me' | translate }}"
+                             ng-minlength="1"
+                             class="textarea-height-base"
+                             ng-model="ctrl.user.about"
+                             ></textarea>
+                  </label>
+
+              </div>
+          </div>
+      </form>
+
+      <div class="padding" debug-json="ctrl.user"></div>
+
+    </ion-content>
+
+</ion-view>
+

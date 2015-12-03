@@ -1,0 +1,30 @@
+$badge-size: 24px;
+
+.badge {
+    &.ignore-empty:empty {
+        display: inline-block;
+    }
+}
+
+.badge.badge-score {
+    font-weight: normal;
+    font-size: $font-size-base;
+    color: white;
+    background-color: $tastd-green;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    min-width: 24px;
+}
+
+// invert colors
+.bar-stable .badge.badge-score {
+    background-color: white;
+    color: $tastd-green;
+}
+
+.item .badge.badge-score {
+    position: inherit;
+    display: inline;
+}

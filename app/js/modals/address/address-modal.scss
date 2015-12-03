@@ -1,0 +1,48 @@
+#modal-address-map {
+    z-index: 1000;
+    width: 100%;
+    height: calc(100% - #{$bar-height});
+    position: absolute;
+    top: 88px;
+}
+
+.platform-ios.platform-cordova #modal-address-map {
+    top: 88px + 22px;
+}
+
+.header-modal-address-inner {
+    height: $bar-height !important;
+    padding: 6px;
+}
+
+.map-pan-loading{
+    visibility: hidden;
+    position: absolute;
+    height: 16px;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 1001;
+
+    .bar {
+        width: 1%;
+        height: 16px;
+        background-color: $tastd-dark-green;
+        -webkit-transition: width 1s, background-color 1s;
+        transition: width 1s, background-color 1s;
+    }
+
+    &.active {
+        visibility: visible;
+
+        .bar {
+            width: 100%;
+            background-color: $tastd-green;
+        }
+    }
+}
+
+.center-on-me-address {
+    bottom: 30px !important;
+    z-index: 10000;
+}

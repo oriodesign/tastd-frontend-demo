@@ -1,0 +1,50 @@
+
+.settings-header {
+    height: 40px;
+    padding-left: 15px;
+    font-weight: bold;
+    p {
+        font-size: $font-size-small;
+        color: white;
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+.item .icon-chevron-right {
+    color: $gray;
+    font-size: 18px;
+}
+
+.small-settings-header, .settings-header {
+    background-color: $silver;
+    p {
+        color: $oil;
+    }
+}
+
+.small-settings-header {
+    height: 20px;
+}
+
+/*
+* account page
+*/
+
+ion-list.settings-account .item.item-divider {
+    font-size: $font-size-base;
+    line-height: 24px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.settings-account-buttons button {
+    min-width: 60%;
+}
+
+.language-settings-view {
+    .language-selector {
+        width: 100%;
+    }
+}

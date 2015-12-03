@@ -1,0 +1,37 @@
+<div class="tag-list">
+
+
+    <!-- EMPTY CASE -->
+
+    <!-- BUTTON MODE  (showButton == true) -->
+
+    <div ng-if="(!tags || tags.length==0) && showButton && enableEdit"
+        class="add-item-link" ng-class="buttonClass"
+        ng-click="ctrl.editTags()">
+      <div class="add-item-icon ion-plus-circled resto-avatar">  </div>
+      <div class="add-item-label">{{'Add tags' | translate}}</div>
+    </div>
+
+
+    <!-- LIST MODE -->
+    <div ng-if="!showButton && (!tags || tags.length==0) && enableEdit"
+        ng-click="ctrl.editTags()" ng-class="listClass">
+        <span class="empty-field">{{"Add tags" | translate}}</span>
+        <i class="icon icon-edit icon-right"></i>
+    </div>
+
+
+
+    <!-- SHOW TAGS -->
+    <div ng-if="tags.length>0" ng-click="ctrl.editTags()" ng-class="listClass">
+        <span class="multiple-lines">
+            <span ng-repeat="group in groupedTags" class="tag-group">
+                <span class="group-name"><b>{{group[0].groupName}}</b>: </span>
+                <span ng-repeat="tag in group">{{::tag.name}}{{$last? '' : ', '}}</span>
+            </span>
+        </span>
+        <i ng-if="enableEdit" class="icon icon-edit icon-right"></i>
+    </div>
+
+
+</div>

@@ -1,0 +1,60 @@
+.quickadd-center {
+    &.badge {
+        position: static;
+        top: auto;
+    }
+    .icon {
+        padding-right: 0;
+        width: 50%;
+        padding-left: 0 !important;
+    }
+}
+
+.quickadd-container{
+    &:not(.extended){
+        height: $quickadd-icon-size;
+        width: ($quickadd-icon-size + ($quickadd-padding * 2)) * 2;
+        .icon{
+            position: absolute;
+        }
+    }
+    display: inline-block;
+    position: relative;
+    font-size: $quickadd-icon-size;
+    .icon{
+        display: inline-block;
+        padding: $quickadd-padding;
+        &:not(.active):before{
+            -webkit-text-stroke: 1px $gray;
+            color: transparent;
+        }
+        &.icon-bookmark.active span{
+            color: $yellow-star;
+        }
+        &.icon-heart.active span{
+            color: $red;
+        }
+        span {
+            color: $gray;
+            -webkit-text-stroke: 0px $gray;
+        }
+    }
+    .icon-heart{
+        right: 0;
+    }
+
+    &.extended {
+        display: block;
+        .icon{
+            padding-right: 0;
+        }
+        .extended-text{
+            font-size: $font-size-small;
+            font-family: $font-family-base;
+            position: relative;
+            padding-left: 7px;
+            top: -2px;
+        }
+
+    }
+}

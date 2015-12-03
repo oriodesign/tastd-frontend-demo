@@ -1,0 +1,18 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        <div class="buttons">
+            <button class="button"
+                ng-click="done()">{{'button.cancel' | translate }}</button>
+        </div>
+        <h1 class="title">{{'ADD TAGS' | translate}}</h1>
+        <div class="buttons">
+            <button
+                class="button"
+                ng-click="done()">{{'button.done' | translate }}
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content class="has-header">
+    	<tag-selector tags="tags" selected-tags="selectedTags" enable-add="true"></tag-selector>
+    </ion-content>
+</ion-modal-view>

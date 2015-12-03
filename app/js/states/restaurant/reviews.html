@@ -1,0 +1,36 @@
+<ion-view class="reviews-view">
+
+    <ion-content >
+
+        <list-loader loading="ctrl.loading"></list-loader>
+
+
+        <span ng-repeat="review in ctrl.myFollowingReviews" class="review-block">
+          <div class="padding">
+              <user-signature user="review.user" hide-quick-follow="true" class="no-item"
+                              ng-click="ctrl.$state.go('user', {userId : review.user.id })">
+              </user-signature>
+          </div>
+          <dynlayout-gallery photos="review.photos" user="review.user"></dynlayout-gallery>
+
+          <div class="padding">
+            <span ng-style="{color : '#' + review.cuisine.color}">{{::review.position}}{{::review.position | ordinal}}
+                {{'restaurant.place_in' | translate}} {{::review.cuisine.name}}</span>
+
+              <tag-list tags="review.tags"
+                        list-class="'tags'">
+              </tag-list>
+              <span class="comment">{{::review.comment}}</span>
+          </div>
+
+        </span>
+
+        <ion-infinite-scroll
+            ng-if="ctrl.myFollowingReviews.$metadata.hasNextPage"
+            on-infinite="ctrl.loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+</ion-view>

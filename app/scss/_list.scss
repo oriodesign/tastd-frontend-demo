@@ -1,0 +1,59 @@
+//
+// List
+//
+// Tastd List and Ionic List element override
+//
+
+.list {
+    background: $silver;
+}
+
+// Padless lists
+
+ion-list.padless {
+    .item-avatar > img:first-child, .item-content > img:first-child {
+        top: 0px;
+    }
+    .item-avatar .item-content {
+        padding-bottom: 0px;
+    }
+    .item-padding p {
+        padding: 16px;
+        text-align: center;
+    }
+    .item-padding.secondary {
+        background-color: $silver;
+        p {
+            font-size: $font-size-small;
+            font-weight: bold;
+        }
+    }
+}
+
+.list-right-editing .item-right-editable .item-content, .item-right-editing.item-right-editable .item-content {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+.list-item-divider {
+    padding-left: 20px;
+    height: 36px;
+    line-height: 36px;
+    font-size: $font-size-base;
+    border-bottom: 4px solid $positive;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    color: $oil;
+}
+
+.restaurant-position-badge{
+    z-index: 100 !important;
+    right: 55px !important;
+}
+
+.transparent-reorder {
+    background: transparent !important;
+}

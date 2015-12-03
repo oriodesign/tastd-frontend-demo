@@ -1,0 +1,228 @@
+//
+// Button
+//
+// Tastd buttons and ionic buttons override
+//
+
+$square-medium-button-size: 36px;
+
+.rounded-button {
+    background-color: $tastd-dark-green;
+    color: white;
+    border-radius: 20px;
+    display: inline-block;
+    min-width: 130px;
+    text-align: center;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: $font-size-small;
+    .icon {
+        font-size: $font-size-base;
+        padding-right: 6px;
+    }
+    &.active {
+        color: $tastd-green;
+        background-color: white;
+    }
+}
+
+.button-base-width-wrapper {
+    text-align: center;
+}
+
+.block-button {
+    display: block;
+    width: 100%;
+}
+
+.button-width-base{
+    min-width: 160px;
+}
+
+.button-width-small{
+    min-width: 135px;
+}
+
+.button-width-full{
+    width: 100%;
+}
+
+.button,
+.bar .button,
+ion-view .bar .button,
+.bar .button.button-clear,
+.bar-positive .button.button-clear {
+    font-weight: bold;
+    font-size: $font-size-small;
+}
+
+.button {
+    text-transform: uppercase;
+    border: none;
+}
+
+.button-translucent, .bar .button-translucent {
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.square-medium-button {
+    height: $square-medium-button-size;
+    width: $square-medium-button-size;
+    min-height: $square-medium-button-size;
+    min-width: $square-medium-button-size;
+    line-height: $square-medium-button-size;
+    &::before, &.icon::before {
+        line-height: $square-medium-button-size;
+        font-size: 18px;
+        margin-left: -2px;
+    }
+}
+
+.rect-medium-button{
+    height: $square-medium-button-size;
+    min-height: $square-medium-button-size;
+    min-width: $square-medium-button-size;
+    line-height: $square-medium-button-size;
+}
+
+.item-options .button.square-medium-button {
+  height: auto;
+  border-radius: 0;
+  padding-top: 0;
+  margin-top: 7px;
+}
+
+
+.button.button-clear{
+    font-size: $font-size-small !important;
+}
+
+.button-no-after::after {
+    position: static !important;
+    content: '' !important;
+}
+
+// center ver-hor button content with flexbox model
+ion-option-button.button.flex-center {
+    display: -webkit-inline-flex;
+    -webkit-align-items: center;
+}
+
+ion-option-button.button.flex-center:before {
+    margin: 0 auto;
+}
+
+ion-option-button.button-silver{
+    background-color: darken($silver, 20%);
+    color: $oil;
+    box-shadow: 0 0 0 white;
+    &:active, &:focus, &.activated{
+        background-color: $oil;
+        color: $light;
+        box-shadow: 0 0 0 white;
+    }
+}
+
+.button-positive.button-follow,
+.button-positive.button-unfollow {
+    width: 60%;
+    border-radius: 2px;
+    border: 1px solid $tastd-green;
+}
+
+.button-positive.button-follow {
+    background-color: transparent;
+    color: $tastd-green;
+}
+
+.button.button-unfollow .icon:before,
+.button.button-follow .icon:before{
+    font-size: 8px !important;
+    padding-right: 3px;
+}
+
+.button-positive.button-follow:hover {
+    color: $tastd-green;
+}
+
+.button-positive.button-follow.activated {
+    background-color: $tastd-green;
+    color: white;
+}
+
+.platform-android #navbar-back-button {
+    display: none;
+}
+
+.button.footer-button {
+    background: $tastd-green;
+    position:absolute;
+    bottom: 44px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.standard-bottom-button {
+    background-color: $gray;
+    color: white;
+    width: 100%;
+    display: block;
+    position: absolute;
+    min-height: 0;
+    bottom: 0;
+    z-index: 100;
+    &.with-bar-below {
+        bottom: $bar-height;
+    }
+}
+
+.composite-button {
+    height: $bar-height;
+    text-align: center;
+    line-height: $bar-height;
+    font-size: $font-size-small;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    border: 1px solid white;
+    .label {
+        margin-left: $bar-height;
+        display:block;
+        height: $bar-height;
+    }
+    i {
+        position: absolute;
+        left: 0;
+        font-size: 24px;
+        line-height: $bar-height;
+        width: 44px;
+    }
+    .vertical-line {
+        position: absolute;
+        left: 44px;
+        display: block;
+        width: 1px;
+        background: white;
+        height: $bar-height - 8px;
+        top: 4px;
+    }
+}
+
+.facebook-button {
+    background: $facebook-blue;
+}
+
+.transparent-dark-button {
+    background: rgba(0,0,0,0.5);
+}
+
+.transparent-button {
+    font-size: small;
+    height: $bar-height;
+    line-height: $bar-height;
+    display: block;
+    text-align: center;
+}

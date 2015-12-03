@@ -1,0 +1,27 @@
+.progress-bar{
+    position: relative;
+    background: white;
+
+    .loading-bar-wrapper{
+        padding: 2px;
+        background-color: $silver;
+        border-radius: 5px;
+    }
+
+    .loading-bar {
+        background-color: $tastd-green;
+        border-radius: 5px;
+        height: 10px;
+        display: block;
+        padding: 2px 0;
+        min-width: 2%;
+    }
+
+    .text {
+        padding: 2px 0 0 0;
+        color: $oil;
+        display: block;
+        font-size: $font-size-small;
+        line-height: 14px;
+    }
+}

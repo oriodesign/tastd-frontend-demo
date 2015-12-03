@@ -1,0 +1,19 @@
+<ion-modal-view class="photo-modal-template">
+
+    <ion-content scroll="false">
+
+      <span class="close-photo-modal icon-close" ng-click="close()"></span>
+
+      <div class="slider-container">
+        <user-signature ng-if="user" user="user" light-theme="true" hide-quick-follow="true"></user-signature>
+        <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="false" active-slide="photoIndex">
+          <ion-slide ng-repeat="photo in photos">
+            <img ng-src="{{::photo.src}}">
+            <span class="icon-delete" ng-if="delete" ng-click="delete(photo)"></span>
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+
+    </ion-content>
+
+</ion-modal-view>

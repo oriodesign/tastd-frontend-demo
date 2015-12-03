@@ -1,0 +1,102 @@
+.on-boarding-intro {
+    background: $tastd-green;
+    text-align:center;
+
+    .vertical-align-middle {
+        vertical-align: middle !important;
+    }
+
+    .table-wrapper {
+        padding: 30px;
+        height: calc(100% - #{$bar-height});
+    }
+
+    table {
+        height: 100%;
+        width: 100%;
+    }
+
+    .scroll-content {
+        background: $tastd-green;
+    }
+
+    h1 {
+        color: white;
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+    img {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        color: white;
+        font-size: $font-size-large;
+    }
+    button {
+        position: absolute;
+        bottom: 0;
+        background: $gray;
+    }
+}
+
+.bar.bar-subheader-twolines {
+    .title.font-size-small {
+        line-height: $font-size-small + 4px;
+        top: 0.5 * ($bar-height - 2 * ($font-size-small + 4px));
+        white-space: normal;
+    }
+}
+
+.taller-subheader {
+    .bar-subheader {
+        height: 80px;
+    }
+
+    .bar.bar-subheader-twolines .title.font-size-small {
+        height: 68px;
+    }
+
+}
+
+.icon-aside {
+    font-size: $font-size-large;
+    line-height: $font-size-large;
+    position: relative;
+}
+
+#invite-msg-preview-modal {
+    background-color: white;
+
+    .mail-contents {
+        font-style: italic;
+        margin-top: 25px;
+    }
+}
+
+.quick-add-restaurants, .quick-add-gurus{
+    .bar-subheader{
+        .title{
+            white-space: initial;
+            line-height: initial;
+            display: table;
+            margin: 0;
+            padding: 0 20px;
+            width: 100%;
+        }
+        .subtitle{
+            color: $gray;
+        }
+        .title-inner{
+            vertical-align: middle;
+            display: table-cell;
+        }
+    }
+}
+
+.has-subheader-inside-view,
+.platform-ios.platform-cordova .has-subheader-inside-view{
+    top: $bar-height !important;
+}

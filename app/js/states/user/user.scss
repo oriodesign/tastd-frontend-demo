@@ -1,0 +1,129 @@
+$profile-row-height: 52px;
+
+.user-view {
+    background: white;
+    .top-profile-wrapper {
+        position: relative;
+        font-size: $font-size-small;
+        .user-avatar{
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            left: 10px;
+            top: 6px;
+            background-color: white;
+        }
+        .profile-row {
+            padding-left: 110px;
+            white-space: nowrap;
+            font-weight: bold;
+            height: $profile-row-height;
+            line-height: $profile-row-height;
+            &.tastd-green {
+                background-color: $tastd-green;
+            }
+        }
+        .profile-row-inner {
+            @include display-flex();
+            height: $profile-row-height;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin-right: 15px;
+        }
+        .profile-item {
+            display: block !important;
+            margin: auto !important;
+            height: 30px;
+            line-height: 30px;
+            &.rounded-button {
+                padding: 0 10px;
+                flex-grow: 3;
+            }
+        }
+        .number {
+            color: $oil;
+        }
+        .user-info-bar-item {
+            line-height: $profile-row-height;
+            display: block;
+            text-transform: uppercase;
+            padding-right: 16px;
+            float:left;
+        }
+        .ion-user-score{
+            color: white;
+            padding-right: 10px;
+            font-weight: normal;
+            font-size: $font-size-large;
+        }
+    }
+    .description-wrapper {
+        padding: 16px;
+        color: $oil;
+        .about-space {
+            height: 5px;
+        }
+        h2 {
+            font-size: $font-size-base;
+        }
+        p {
+            font-size: $font-size-small;
+            line-height: $line-height-small;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .tabs .tab-item {
+        font-size: $font-size-small;
+    }
+    .list {
+        .item {
+            font-size: $font-size-base;
+        }
+    }
+}
+
+.fake-input-text {
+    line-height: 34px;
+    font-size: $font-size-base;
+}
+
+/*
+* container for user edit avatar
+*/
+.userEditAvatar {
+    .ion-camera {
+        position: absolute;
+        right: $font-size-base;
+    }
+    img.user-avatar {
+        max-height: 100px;
+    }
+}
+
+/*
+* just signed up stuff
+*/
+
+.justSignedUpBtns {
+    button {
+        min-width: 80%;
+    }
+    a {
+        font-style: italic;
+    }
+}
+
+.user-search-view {
+    .user-signature{
+        &.medal::before{
+            content: "";
+            background-image: url(../img/medaglia.png);
+            width: $item-medal-width;
+            height: $item-medal-height;
+            position: absolute;
+            left: 0px;
+            background-size: $item-medal-width $item-medal-height;
+        }
+    }
+}

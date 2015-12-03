@@ -1,0 +1,114 @@
+<ion-view>
+    <ion-content class="content-bg user-view">
+
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="ctrl.doRefresh()">
+        </ion-refresher>
+
+        <div class="top-profile-wrapper">
+            <ion-user-avatar user="ctrl.user"></ion-user-avatar>
+
+            <!-- First row -->
+            <div class="profile-row tastd-green">
+
+                <div class="profile-row-inner">
+                    <!-- SCORE -->
+                    <ion-user-score
+                        class="profile-item"
+                        user="ctrl.user"></ion-user-score>
+
+                    <!-- BECOME A GURU -->
+                    <div
+                        ui-sref="inviteHome"
+                        ng-if="ctrl.isMe"
+                        class="rounded-button profile-item">
+                        {{ 'user.become_a_top_guru' | translate }}
+                    </div>
+
+                    <!-- FOLLOW BUTTON -->
+                    <user-follow-button
+                        ng-if="!ctrl.isMe"
+                        class="profile-item"
+                        user="ctrl.user"
+                        ng-click="ctrl.toggleFollow()">
+                    </user-follow-button>
+                </div>
+
+            </div>
+
+            <!-- Second row -->
+            <div class="profile-row">
+                <a ng-if="ctrl.user" ui-sref="userFollowing({ userId : ctrl.user.id })" class="user-info-bar-item">
+                    <span class="number" ng-bind="ctrl.user.leadersCount">0</span>
+                    <span class="label" translate="user.gurus"></span>
+                </a>
+                <a ng-if="ctrl.user" ui-sref="userFollowers({ userId : ctrl.user.id })" class="user-info-bar-item">
+                    <span class="number" ng-bind="ctrl.user.followersCount">0</span>
+                    <span class="label" translate="followers"></span>
+                </a>
+            </div>
+        </div>
+
+        <div ng-if="ctrl.user.headline || ctrl.user.about" class="silver-line"></div>
+
+        <div ng-if="ctrl.user.headline || ctrl.user.about" class="description-wrapper">
+            <h2 ng-if="ctrl.user.headline">{{ctrl.user.headline}}</h2>
+            <div ng-if="ctrl.user.headline && ctrl.user.about" class="about-space"></div>
+            <p ng-if="ctrl.user.about"> {{ctrl.user.about}} </p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs tabs-static tabs-striped position-static tabs-light tabs-color-positive">
+            <a class="tab-item" ng-class="{ active: !ctrl.showWall }"
+               ng-click="ctrl.showWall= false">{{ 'button.lists' | translate }}</a>
+            <a class="tab-item" ng-class="{ active: ctrl.showWall }"
+               ng-click="ctrl.showWall= true">{{ 'button.feed' | translate }}</a>
+        </div>
+
+        <!-- CITIES -->
+        <div ng-if="!ctrl.showWall">
+
+            <list-loader loading="ctrl.expertiseLoading"></list-loader>
+
+            <!-- it's me and there isn't any restaurant -->
+            <div ng-if="!ctrl.expertiseLoading && !ctrl.expertise.length && ctrl.isMe"
+                 class="padding text-center color-oil">
+                <p translate>ranking.you_no_restaurants</p>
+                <button translate class="button button-positive button-width-base bg-gray"
+                        ui-sref="restaurantSearch">
+                    ranking.review_first_restaurant
+                </button>
+            </div>
+
+            <!-- it's someone else and they have no restaurant -->
+            <div ng-if="!ctrl.expertiseLoading && !ctrl.expertise.length && !ctrl.isMe"
+                 class="padding text-center color-oil">
+                <p translate>ranking.user_no_restaurants</p>
+            </div>
+
+            <!-- Expertises -->
+            <ion-list>
+                <ion-item class="item item-not-complex"
+                          ng-click="ctrl.goToCity(city)"
+                          ng-repeat="city in ctrl.expertise">
+                    {{ city.name }}
+                    <span class="item-note">{{city.count}} </span>
+                </ion-item>
+            </ion-list>
+
+
+        </div>
+
+        <!-- WALL -->
+        <div ng-if="ctrl.showWall">
+            <wall
+                reviews="ctrl.reviews"
+                page="user_news"
+                me="ctrl.me"
+                hide-signature="true">
+            </wall>
+        </div>
+
+    </ion-content>
+</ion-view>

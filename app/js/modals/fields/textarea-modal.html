@@ -1,0 +1,32 @@
+<ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button
+            class="button button-clear button-primary"
+            ng-click="cancel()" translate>button.cancel</button>
+        <h1 class="title">Edit</h1>
+        <button
+            class="button button-clear button-primary"
+            ng-click="done()" translate>button.done</button>
+    </ion-header-bar>
+
+
+
+    <ion-content>
+
+
+
+        <div class="padding">
+
+            <h3 class="modal-field-title">{{ title }}</h3>
+
+            <form>
+                <label>
+                    <textarea class="modal-textarea" ng-model="parameters.text"></textarea>
+                </label>
+            </form>
+        </div>
+
+    </ion-content>
+
+</ion-modal-view>

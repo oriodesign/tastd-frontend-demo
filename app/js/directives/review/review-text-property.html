@@ -1,0 +1,15 @@
+<div>
+    <ion-item
+        class="review-text-property no-padding"
+        ng-if="review[field.propertyName]"
+        ng-click="edit()">
+        <div>
+            <div class="title-wrapper white-space-normal">
+                <span class="title">{{ field.title }}</span>
+            </div>
+            <div class="text-wrapper white-space-normal">
+                <span class="text">{{review[field.propertyName]}}</span>
+            </div>
+        </div>
+    </ion-item>
+</div>

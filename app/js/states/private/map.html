@@ -1,0 +1,17 @@
+<!-- MAP -->
+<div class="map-global-wrapper">
+    <div class="map-fake-shadow"></div>
+    <div id="map" data-tap-disabled="true"></div>
+    <!-- LOADER -->
+    <ion-spinner
+        icon="android"
+        id="map-spinner"
+        class="spinner-light"
+        ng-if="mapIsLoading">
+    </ion-spinner>
+
+    <!-- CENTER ON ME -->
+    <div ng-click="centerOnMe()"
+         class="icon ion-navigate center-on-me">
+    </div>
+</div>

@@ -1,0 +1,103 @@
+<ion-view>
+
+    <ion-content >
+
+        <div has-roles="ROLE_EDITOR">
+            <div class="settings-header">
+                <p translate>settings.menu.extra_editor</p>
+            </div>
+            <a
+                ui-sref="settings.log"
+                ion-item nav-clear class="item item-icon-right">
+                <span translate class="color-oil">log</span>
+                <i class="icon icon-chevron-right"></i>
+            </a>
+        </div>
+
+    	<div class="settings-header">
+            <p translate>settings.menu.account</p>
+    	</div>
+
+        <div class="color-oil">
+
+            <a ui-sref="settings.account"
+               ion-item nav-clear class="item item-icon-right">
+                <span translate>settings.edit_account.page_title</span>
+                <i class="icon icon-chevron-right"></i>
+            </a>
+
+            <a ui-sref="settings.password"
+               ion-item nav-clear class="item item-icon-right">
+                <span translate>settings.password.page_title</span>
+                <i class="icon icon-chevron-right"></i>
+            </a>
+
+            <a ui-sref="settings.notifications"
+               ion-item nav-clear class="item item-icon-right">
+                <span translate>settings.notification.page_title</span>
+                <i class="icon icon-chevron-right"></i>
+            </a>
+
+            <a ui-sref="settings.language"
+               ion-item nav-clear class="item item-icon-right">
+                <span translate>settings.language.page_title</span>
+                <i class="icon icon-chevron-right"></i>
+            </a>
+
+        </div>
+
+
+    	<div class="settings-header">
+            <p translate>settings.menu.information_and_support</p>
+    	</div>
+
+        <div class="color-oil">
+
+            <a ui-sref="settings.feedback"
+               ion-item nav-clear class="item item-icon-right">
+                <span translate>settings.feedback.page_title</span>
+                <i class="icon icon-chevron-right"></i>
+            </a>
+
+            <a ng-click="ctrl.goToTerms()"
+               ion-item nav-clear class="item item-icon-right">
+                <span translate>settings.terms_and_conditions</span>
+                <i class="icon icon-chevron-right"></i>
+            </a>
+
+            <a ng-click="ctrl.goToPrivacy()"
+               ion-item nav-clear class="item item-icon-right">
+                <span translate>settings.privacy_policy</span>
+                <i class="icon icon-chevron-right"></i>
+            </a>
+
+        </div>
+
+    	<div class="small-settings-header"></div>
+
+        <div class="color-oil">
+
+            <a href="itms-apps://itunes.apple.com/app/id982825377"
+               ion-item nav-clear class="item item-icon-right">
+                <span translate>settings.rate_tastd</span>
+                <i class="icon icon-chevron-right"></i>
+            </a>
+
+        </div>
+
+    	<div class="small-settings-header"></div>
+
+        <div class="color-oil">
+
+            <a ng-click="ctrl.logout()"
+               ion-item nav-clear class="item">
+                <span translate>button.logout</span>
+            </a>
+
+        </div>
+
+
+        <div style="height: 128px"></div>
+    </ion-content>
+
+</ion-view>

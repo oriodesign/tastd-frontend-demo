@@ -1,0 +1,19 @@
+<ion-view class="restaurant-create">
+
+
+
+    <ion-content>
+
+        <list-loader loading="ctrl.loading"></list-loader>
+
+        <restaurant-edit
+            ng-if="ctrl.restaurant"
+            hide-photo="true"
+            restaurant="ctrl.restaurant"
+            form="ctrl.form"
+            cuisines="ctrl.cuisines">
+        </restaurant-edit>
+
+    </ion-content>
+
+</ion-view>

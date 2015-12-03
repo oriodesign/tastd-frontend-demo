@@ -1,0 +1,62 @@
+<ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button
+            class="button button-clear button-primary"
+            ng-click="cancel()" translate>button.cancel</button>
+        <h1 class="title">Search</h1>
+        <button
+            class="button button-clear button-primary"
+            ng-click="done()" translate>button.done</button>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <div class="padding">
+
+            <list-loader loading="loading"></list-loader>
+
+            <span
+                class="new-tastd-tag"
+                ng-class="{ 'selected': isSelected(tag) }"
+                ng-click="toggle(tag)"
+                ng-repeat="tag in tags track by tag.id">
+                {{ tag.name }}
+            </span>
+
+
+
+
+            <div ng-if="canCreateNewTags">
+
+                <div class="space-20"></div>
+                <div class="gray-line"></div>
+                <div class="space-20"></div>
+
+                <p>{{ 'modal.tag.new_tag' | translate }}</p>
+
+                <div
+
+                    class="list list-inset">
+                    <label class="item item-input">
+                        <input placeholder="{{ 'modal.tag.new_tag.placeholder' | translate }}" type="text" name="newTag" class="input" ng-model="newTag.name">
+                    </label>
+                </div>
+
+                <div
+                    ng-if="newTag.name.trim() !== ''"
+                    ng-click="saveNewTag()"
+                    class="button button-block">
+                    {{ 'button.save' | translate }}
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+    </ion-content>
+
+</ion-modal-view>

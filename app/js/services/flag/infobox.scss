@@ -1,0 +1,33 @@
+$infobox-height: 45px;
+
+.infobox-resto {
+	background-color: white;
+	padding-right: $font-size-base;
+	box-shadow: 3px 3px 5px #888888;
+	white-space: nowrap;
+	height: $infobox-height;
+	z-index: 50;
+}
+
+.infobox-text {
+	display: inline-block;
+	line-height: 14px;
+	vertical-align: 11px;
+}
+
+.infobox-name {
+	font-size: $font-size-base;
+	color: $oil;
+}
+
+.infobox-cuisine {
+	font-size: $font-size-small;
+}
+
+.infobox-picture {
+	width: $infobox-height;
+	height: $infobox-height;
+	display: inline-block;
+	margin-right: $font-size-base / 2;
+}
+

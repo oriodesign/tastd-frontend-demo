@@ -1,0 +1,16 @@
+<ion-view class="language-settings-view">
+
+    <ion-content >
+
+
+        <div class="color-oil">
+            <label class="item item-input item-select">
+                <select ng-model="ctrl.language" ng-change="ctrl.save()" class="ltr full-width"
+                    ng-options="option.label for option in ctrl.languages track by option.id">
+                </select>
+            </label>
+
+        </div>
+    </ion-content>
+
+</ion-view>

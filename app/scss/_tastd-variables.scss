@@ -1,0 +1,28 @@
+//
+// Tastd
+//
+// Tastd Specific variables (not ionic)
+//
+
+// INPUT
+$input-standard-height: 30px;
+
+// LAYOUT
+$layout-standard-padding: 15px;
+
+// loading image size
+$loading-image-size: 48px;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+$cuisine-avatar-side: 50px;
+$restaurant-avatar-side: $cuisine-avatar-side;
+
+$user-avatar-listitem-diam: 50px;
+
+$quickadd-icon-size: 16px;
+$quickadd-padding: 17px;
+
+$item-medal-width: 15px;
+$item-medal-height: 29px;

@@ -1,0 +1,121 @@
+//
+// Input
+//
+// Input and forms
+//
+
+// @TODO find wtf is the cause of that black line around inputs
+.item-input input {
+    border: 0 solid white !important;
+    -webkit-appearance: none !important;
+    outline: none !important;
+    padding: 0;
+    margin: 0;
+    display: block;
+    padding-top: 2px;
+    padding-left: 0;
+    height: 34px;
+    color: $oil;
+    vertical-align: middle;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+}
+
+.item-select {
+  min-height: 47px;
+  text-align: left;
+
+  select.ltr {
+    direction: ltr !important;
+  }
+
+  .placeholder {
+    color: $gray;
+  }
+}
+
+select.full-width {
+  width: 100%;
+  max-width: none;
+  padding: 10px 48px 10px 16px;
+}
+
+.item-input textarea {
+    border: 0 solid white !important;
+    -webkit-appearance: none !important;
+    outline: none !important;
+    padding: 0;
+    margin: 0;
+    display: block;
+    padding-top: 2px;
+    padding-left: 0;
+    height: 34px;
+    color: $oil;
+    vertical-align: middle;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+}
+
+.popup-body textarea {
+  padding: 5px;
+  color: $oil;
+  border: 0 solid white !important;
+  -webkit-appearance: none !important;
+  outline: none !important;
+}
+
+.textarea-height-base{
+    min-height: 120px;
+}
+
+.textarea-height-xsmall{
+    min-height: 45px;
+}
+
+.textarea-height-small{
+    min-height: 80px;
+}
+
+// fake input
+.fake-input {
+    height: 34px;
+    font-size: $font-size-base;
+    line-height: 34px;
+    color: $oil;
+}
+
+// fake placeholder
+.placeholder {
+  color: $gray;
+}
+
+textarea, input{
+  &::-webkit-input-placeholder {
+    color: $gray;
+  }
+}
+
+.input-label-full {
+    @extend .input-label;
+    max-width: inherit;
+    width: inherit;
+}
+
+.toggle input:checked + .track {
+  border-color: $tastd-green;
+  background-color: $tastd-green;
+}
+
+.modal-textarea{
+    width: 100%;
+    font-size: $font-size-base;
+    color: $gray;
+    min-height: 120px;
+    padding: 5px 15px !important;
+}
+.modal-input-text{
+    width: 100%;
+    font-size: $font-size-base;
+    padding: 5px 15px !important;
+    color: $gray;
+}

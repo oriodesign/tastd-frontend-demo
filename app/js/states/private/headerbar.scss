@@ -1,0 +1,128 @@
+$header-height: $bar-height;
+$notification-badge-size: 14px;
+$header-input-height: 30px;
+
+.platform-ios.platform-cordova {
+    .main-header {
+        height: $header-height + $ios-statusbar-height;
+    }
+    .left-block, .right-block, .center-block{
+        top: $ios-statusbar-height;
+    }
+}
+
+.main-header {
+    color: white;
+    background-color: $tastd-green;
+    height: $header-height;
+    line-height: $header-height;
+    position: relative;
+    display: block;
+    width: 100%;
+
+    .left-block {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: $header-height;
+        width: $header-height;
+    }
+
+    .right-block {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: $header-height;
+        width: $header-height;
+    }
+
+    .center-block {
+        position: absolute;
+        margin: 0 $header-height;
+        text-align: center;
+        width: calc(100% - 88px);
+        line-height: $header-height;
+    }
+
+    .navbar-page-title{
+        font-size: $font-size-large;
+        text-transform: uppercase;
+        height: $header-height;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .header-title {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+
+    .header-button {
+        height: $header-height;
+        width: $header-height;
+        line-height: $header-height;
+        text-align: center;
+        display: none;
+        &.active {
+            display: block;
+        }
+        .icon {
+            line-height: $header-height;
+            font-size: 20px;
+        }
+        .ion-arrow-left-c {
+            font-size: 28px;
+        }
+    }
+
+    .back-button {
+        height: $header-height;
+    }
+
+    .notification-badge-counter{
+        background-color: $yellow-star;
+        color: white;
+        border-radius: $notification-badge-size;
+        height: $notification-badge-size;
+        line-height: $notification-badge-size;
+        width: $notification-badge-size;
+        position: absolute;
+        top: 7px;
+        right: 5px;
+        font-size: $font-size-small;
+    }
+
+    .navbar-geo-guru{
+        padding-top: ($header-height - $header-input-height) / 2;
+        padding-bottom: ($header-height - $header-input-height) / 2;
+    }
+
+    .navbar-ranking-title {
+        .geoname {
+            font-size: $font-size-base;
+            padding-top: 7px;
+            height: 23px;
+            line-height: 23px;
+        }
+        .guru {
+            font-size: $font-size-small;
+            height: 14px;
+            line-height: 14px;
+        }
+    }
+
+    .navbar-geo-guru-inner{
+        background-color: $tastd-dark-green;
+        border-radius: 15px;
+        height: $header-input-height;
+        line-height: $header-input-height;
+        padding: 0 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+}

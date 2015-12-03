@@ -1,0 +1,45 @@
+.platform-ios.platform-cordova .photo-modal-template ion-content .close-photo-modal {
+    top: 22px;
+}
+
+// photo modal
+.photo-modal-template{
+	background: none !important;
+	ion-content{
+        background: rgba(0,0,0,0.87) !important;
+		height: 101%;
+		.close-photo-modal{
+			display: block;
+			color: white;
+			position: absolute;
+			right: 0;
+            top: 0;
+            height: $bar-height;
+            width: $bar-height;
+            line-height: $bar-height;
+			text-align: center;
+            z-index: 1000;
+		}
+		.slider-container{
+			position: relative;
+			top: 50%;
+			transform: translate(0, -50%);
+			-webkit-transform: translate(0, -50%);
+			ion-slide img{
+				width: 100%;
+			}
+			.icon-delete{
+				position: absolute;
+				top: 18px;
+				right: 18px;
+				background: rgba(255, 255, 255, 0.2);
+				padding: 8px;
+				color: white;
+			}
+		}
+		.user-signature{
+		  	background-color: inherit;
+  			border: inherit;
+		}
+	}
+}

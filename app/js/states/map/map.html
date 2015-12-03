@@ -1,0 +1,68 @@
+<ng-include src="'js/states/private/filtersbar.html'"></ng-include>
+
+<ion-view class="mapList">
+
+    <!-- HEADER BAR -->
+    <div ng-class="{'filter-list-active': ctrl.flagParametersBag.isDirty()}">
+
+        <ion-content padding="false" class="map-has-header">
+
+
+
+            <div ng-if="!ctrl.mapMode">
+
+                <ion-refresher
+                    pulling-text="Pull to refresh..."
+                    on-refresh="ctrl.doRefresh()">
+                </ion-refresher>
+
+                <list-loader loading="ctrl.loading"></list-loader>
+
+
+                <div class="map-list-no-results" ng-if="!ctrl.loading">
+                    <!-- No results with filter -->
+                    <div class="no-results-inner" ng-if="ctrl.flags.length === 0 && ctrl.noResultMessageIsFilter()">
+                        <div>
+                            <p>{{'home.no_result_with_filters' | translate}}</p>
+                        </div>
+                    </div>
+                    <!-- No results without filter -->
+                    <div class="no-results-inner" ng-if="ctrl.flags.length === 0 && !ctrl.noResultMessageIsFilter()">
+                        <div>
+                            <p>{{'home.no_result_without_filters' | translate}}</p>
+                            <button
+                                class="button button-block bg-gray"
+                                ui-sref="userSearch">
+                                {{ 'home.no_result_without_filters.button' | translate }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <ion-list
+                    ng-if="ctrl.entered"
+                    can-swipe="false"
+                    class="padless list-restaurants">
+
+                    <!-- http://stackoverflow.com/questions/26694073/ionic-dynamic-list-divider -->
+
+                    <restaurant-list
+                        page="{{ctrl.page}}"
+                        list="ctrl.flags"
+                        reorder="ctrl.isReordable"
+                        geoname="ctrl.flagParametersBag.geoname"
+                        show-address="true">
+                    </restaurant-list>
+
+                </ion-list>
+
+                <ion-infinite-scroll
+                    ng-if="ctrl.flags.$metadata.hasNextPage"
+                    on-infinite="ctrl.loadMoreItems()"
+                    distance="1%">
+                </ion-infinite-scroll>
+            </div>
+
+        </ion-content>
+    </div>
+</ion-view>

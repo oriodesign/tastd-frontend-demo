@@ -1,0 +1,42 @@
+// dynlayout-gallery-directive
+.dynlayout-gallery-container{
+	display: block;
+	text-align: center;
+
+	.photo-wrapper{
+		display: inline-block;
+		height: 0;
+		vertical-align: middle;
+
+		&.photo-full{
+			width: 100%;
+			padding-bottom: 101%;
+		}
+		&.photo-half, &.photo-half-l, &.photo-half-r{
+			width: 49.5%;
+			padding-bottom: 50.5%;
+		}
+		&.photo-third, &.photo-third-l, &.photo-third-r{
+			width: 32.6%;
+			padding-bottom: 33.6%;
+		}
+
+		&.photo-half-l, &.photo-third-l{
+			float: left;
+			.gallery-photo{
+				float: left;
+			}
+		}
+		&.photo-half-r, &.photo-third-r{
+			float: right;
+			.gallery-photo{
+				float: right;
+			}
+		}
+		.gallery-photo{
+			width: 100%;
+			// vertical-align: middle;
+		}
+
+	}
+}

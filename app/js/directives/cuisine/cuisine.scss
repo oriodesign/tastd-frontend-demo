@@ -1,0 +1,74 @@
+.cuisine {
+    min-height: 34px;
+}
+
+.item-input .cuisine-name {
+    color: #111;
+    font-size: $font-size-base;
+    line-height: 34px;
+}
+
+.select-cuisine {
+    .icon-cuisine {
+        font-size: $button-small-icon-size + 4;
+        vertical-align: middle;
+        color: white;
+    }
+    .icon-checkmark-round {
+        font-size: 18px !important;
+        vertical-align: middle;
+        color: white;
+    }
+    .cuisine-icon-box {
+        background: $silver;
+        width: $cuisine-avatar-side;
+        height: $cuisine-avatar-side;
+        float: left;
+        margin-right: $font-size-base;
+        text-align: center;
+    }
+    .fake-input {
+        height: $cuisine-avatar-side;
+        font-size: $font-size-base;
+        line-height: $cuisine-avatar-side;
+        color: #a8a8a8;
+    }
+    .placeholder .required-marker {
+        display: none;
+    }
+}
+
+ion-list.padless.list-cuisines {
+    .item-content, .item {
+        padding: 0px;
+    }
+
+    // restore padding for .item-divider
+    .item-divider {
+        padding-top: ceil($item-padding / 2);
+        padding-bottom: ceil($item-padding / 2);
+    }
+}
+
+// since the cuisine list in the ranking browser has
+// no padding, we add some on the .item-content
+ion-list.padless.list-cuisines.list-cuisines-ranking {
+    .item-content {
+        padding-left: $font-size-base;
+    }
+}
+
+.cuisine-avatar {
+    background: $light-gray;
+    float: left;
+    text-align: center;
+    display: block;
+    height: $cuisine-avatar-side;
+    width: $cuisine-avatar-side;
+}
+
+.cuisine-name {
+    float: left;
+    margin-left: $font-size-base;
+    line-height: $cuisine-avatar-side;
+}

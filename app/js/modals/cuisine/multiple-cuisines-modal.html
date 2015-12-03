@@ -1,0 +1,45 @@
+<ion-modal-view class="multiple-cuisines-modal">
+
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button
+            class="button button-clear button-primary"
+            ng-click="cancel()" translate>button.cancel</button>
+        <h1 class="title">Search</h1>
+        <button
+            class="button button-clear button-primary"
+            ng-click="done()" translate>button.done</button>
+    </ion-header-bar>
+
+    <ion-content class="padding has-header">
+
+        <ion-list>
+            <ion-item
+                class="no-padding select-all-cuisines"
+                ng-click="selectAll()" >
+                <div>
+                    <div class="cuisine-avatar" ng-class="{'disabled' : !isAllSelected()}">
+                        <i class="icon" ng-class="!isAllSelected() ? {'icon-cuisine':true}: {'icon-checkmark-round':true}"></i>
+                    </div>
+                    <div class="cuisine-name ng-binding" translate>filter.all_cuisines</div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+        <list-loader loading="loading"></list-loader>
+
+        <ion-list>
+            <ion-item
+                class="no-padding"
+                ng-repeat="cuisine in cuisines"
+                ng-click="toggle(cuisine)">
+                <div class="cuisine">
+                    <div class="cuisine-avatar" ng-style="!cuisine.selected? {} : {background:'#'+ cuisine.color }">
+                        <i ng-class="!cuisine.selected || icon ? {'icon-cuisine':true}: {'icon-checkmark-round':true}" class="icon"></i></div>
+                    <div class="cuisine-name">{{ cuisine.name }}</div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+
+</ion-modal-view>

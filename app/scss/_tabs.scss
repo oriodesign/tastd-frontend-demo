@@ -1,0 +1,25 @@
+.tabs-striped.tabs-color-positive .tab-item{
+    color: $oil;
+}
+
+
+.tabs-striped{
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+.tabs-static {
+    position: static !important;
+    .tab-item{
+        margin-top: 0 !important;
+        border-bottom-width: 2px !important;
+        border-top-width: 0 !important;
+        max-width: none;
+    }
+}
+
+.tabs-only-icons {
+    .icon {
+        font-size: 18px;
+        line-height: 44px;
+    }
+}

@@ -1,0 +1,174 @@
+//
+// Items
+//
+// List elements
+//
+
+ion-item {
+    min-height: 52px;
+}
+
+.item, .tag-list .item-transparent{
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+.tastd-item-text-wrap {
+    color: $oil;
+}
+
+.tastd-item-title {
+    font-size: $font-size-small;
+    color: $gray;
+}
+
+.tastd-item-subtitle {
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+}
+
+.item-not-complex .item-content{
+  padding: 16px !important;
+}
+
+.compact-item {
+    padding: 10px;
+}
+
+.item.activated {
+    background-color: $light;
+}
+
+.item-options {
+    background-color: darken($silver, 20%);
+    padding: 0 7px;
+}
+
+.item.item-selected p{
+  color: $light;
+}
+
+.item-right-edit.visible.active {
+  opacity: 1;
+  -webkit-transform: translate3d(35px, 0, 0);
+  -moz-transform:  translate3d(35px, 0, 0);
+   transform:  translate3d(35px, 0, 0);
+}
+
+.item.bottom-border {
+  border-bottom: 1px solid $silver;
+}
+
+.item-selected.bottom-border {
+  border-bottom: 1px solid $light;
+}
+
+.item.item-dark, .item.item-green{
+  border: none;
+}
+
+.ranking-cities, .ranking-city, .wishlist-cities, .wishlist-city{
+    .item-note{
+        width: 26px;
+        height: 26px;
+        border-radius: 5px;
+        line-height: 26px;
+        text-align: center;
+        color: $gray;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        margin-top: -13px;
+    }
+}
+
+.ion-item-row {
+    min-height: 50px;
+    padding: 0;
+    .col:not(:first-child){
+        border-left: 1px solid $silver;
+    }
+    .col {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding: 16px 15px 16px 15px;
+        position: relative;
+    }
+    .text-with-icon-right {
+        margin-right: 26px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+    }
+}
+
+.user-select-wrapper{
+    position: relative;
+}
+
+.user-select-wrapper .user-signature img:first-child.user-avatar{
+    left: 11px !important;
+}
+
+.user-select-wrapper.selected .user-selected-overlay{
+    display: block;
+}
+
+.user-selected-overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    line-height: 70px;
+    z-index: 5;
+    opacity: 0.5;
+    color: white;
+    background-color: $tastd-green;
+}
+
+.extra-field-title {
+    font-size: $font-size-base;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+.extra-field-item{
+    padding: 5px 15px !important;
+    background-color: white;
+    font-size: $font-size-small;
+    &.active {
+        background-color: $silver;
+    }
+    .title {
+        color: $oil;
+        display: block;
+    }
+    .description {
+        color: $gray;
+        display: block;
+    }
+    .sign {
+        position: absolute;
+        right: 15px;
+        color: $gray;
+        font-size: 30px;
+        top: 15px;
+    }
+    &.active .plus {
+        display: none;
+    }
+    &.active .minus {
+        display: block;
+    }
+    .plus {
+        display: block;
+    }
+    .minus {
+        display: none;
+    }
+
+}
+

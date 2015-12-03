@@ -1,0 +1,76 @@
+$filter-bar-height: $bar-height;
+$filter-recap-list-height: 24px;
+
+.filters-bar {
+    height: $filter-bar-height;
+    @include base-box-shadow;
+    padding: 0 !important;
+
+    .filters-bar-inner {
+        position: relative;
+        height: $filter-bar-height;
+        line-height:  $filter-bar-height;
+        width: 100%;
+    }
+
+    .filter-bar-button {
+        height: $filter-bar-height;
+        width: $filter-bar-height;
+        text-align: center;
+        font-size: 17px;
+        line-height: $filter-bar-height;
+        position: absolute;
+        top: 0;
+    }
+
+    .wishlist-button {
+        left: $filter-bar-height;
+        color: white; ;
+        &.active .icon {
+            color: $yellow-star;
+            -webkit-text-stroke: 1px $yellow-star;
+        }
+    }
+    .favourite-button {
+        left: 0;
+        color: white; ;
+        &.active .icon {
+            color: $red;
+            -webkit-text-stroke: 1px $red;
+        }
+    }
+    .filter-button {
+        color: $slate;
+        right: 0;
+
+        &.active {
+            $color: $tastd-green;
+        }
+    }
+
+    &.filter-list-active {
+        height: $filter-bar-height + $filter-recap-list-height;
+        .filters-bar-inner {
+            height: $filter-bar-height + $filter-recap-list-height;
+        }
+        .filters-recap-wrapper{
+            display: block;
+        }
+    }
+
+    .filters-recap-wrapper{
+        display:none;
+        padding: 0 15px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: $silver;
+        color: $gray;
+        line-height: $filter-recap-list-height;
+        height: $filter-recap-list-height;
+        font-size: $font-size-small;
+    }
+
+}
+
+

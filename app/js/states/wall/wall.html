@@ -1,0 +1,28 @@
+<ion-view>
+    <ion-content>
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="ctrl.doRefresh()">
+        </ion-refresher>
+        <list-loader loading="ctrl.loading"></list-loader>
+
+        <div class="wall-no-results" ng-if="!ctrl.loading && ctrl.reviews.length === 0">
+            <p>{{  'wall.no_results' | translate }}</p>
+            <button
+                ui-sref="userSearch"
+                class="button button-block bg-gray">
+                {{  'wall.no_results_button' | translate }}
+            </button>
+        </div>
+
+        <button
+            has-roles="ROLE_EDITOR"
+            ui-sref="onBoardingIntro"
+            class="button button-positive button-block bg-gray">On Boarding</button>
+
+        <wall reviews="ctrl.reviews"
+              page="wall"
+              me="ctrl.me">
+        </wall>
+    </ion-content>
+</ion-view>

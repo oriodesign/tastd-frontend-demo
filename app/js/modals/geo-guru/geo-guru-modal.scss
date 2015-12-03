@@ -1,0 +1,54 @@
+$fake-input-height: 30px;
+
+.geo-guru-modal-form-wrapper {
+    padding: 10px;
+}
+
+.geo-guru-modal-form-wrapper-inner {
+    position: relative;
+    height: ($fake-input-height * 2) + 10px;
+}
+
+.geo-modal-guru-top-margin {
+    height: 135px;
+}
+
+.platform-ios.platform-cordova .geo-modal-guru-top-margin {
+    height: 135px + 22px;
+}
+
+.fake-modal-input {
+    background-color: $tastd-dark-green;
+    color: white;
+    height: $fake-input-height;
+    line-height: $fake-input-height;
+    border-radius: $fake-input-height;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.fake-modal-input-inner{
+    padding: 0 15px;
+}
+
+.real-modal-input{
+    height: $fake-input-height !important;
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    input {
+        padding: 0;
+        line-height: $fake-input-height !important;
+        height: $fake-input-height !important;
+    }
+}
+
+.top-input {
+    top: 0;
+}
+
+.bottom-input {
+    bottom: 0;
+}

@@ -1,0 +1,29 @@
+//
+// Shadows
+//
+// Define text-shadows and box-shadows
+//
+
+@mixin no-box-shadow {
+    box-shadow: 0 0 0 white !important;
+}
+
+@mixin base-box-shadow {
+    box-shadow: 0 3px 2px -1px rgba(0, 0, 0, 0.3)
+}
+
+@mixin inverse-base-box-shadow {
+    box-shadow: 0 -3px 2px -1px rgba(0, 0, 0, 0.3);
+}
+
+@mixin center-base-text-shadow {
+    text-shadow: 0 0 1px rgba(0,0,0,0.3);
+}
+
+@mixin center-strong-text-shadow {
+    text-shadow: 0 0 1px rgba(0,0,0,0.8);
+}
+
+.base-box-shadow {
+    @include base-box-shadow;
+}

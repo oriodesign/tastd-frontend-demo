@@ -1,0 +1,125 @@
+<ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-positive">
+
+        <button
+            class="button button-clear button-primary"
+            ng-click="cancel()">{{ 'button.cancel' | translate }}</button>
+
+        <button
+            class="button"
+            ng-if="!editingGeoname && !editingGuru"
+            ng-click="done()">
+            {{ 'button.done' | translate }}
+        </button>
+
+    </ion-header-bar>
+
+    <ion-header-bar class="bar-subheader bar-positive no-padding height-auto">
+
+        <div class="geo-guru-modal-form-wrapper">
+            <div class="geo-guru-modal-form-wrapper-inner">
+
+                <div
+                    class="fake-modal-input top-input"
+                    ng-if="!editingGeoname"
+                    ng-click="editGeoname()">
+                    <div class="fake-modal-input-inner">
+                        {{ result.geoname.asciiName }}
+                    </div>
+                </div>
+
+                <label
+                    ng-if="editingGeoname"
+                    class="real-modal-input  top-input item item-input search-box">
+                    <input
+                        type="search"
+                        focus-me="editingGeoname"
+                        placeholder="{{ ('search' ) | translate }}"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        ng-change="searchGeoname()"
+                        spellcheck="false"
+                        ng-model="parameters.geoname">
+                    <i class="icon ion-search placeholder-icon"></i>
+                </label>
+
+                <div
+                    class="fake-modal-input bottom-input"
+                    ng-if="!editingGuru"
+                    ng-click="editGuru()">
+                    <div class="fake-modal-input-inner">
+                        {{ result.guru.fullName || ('user.all_gurus'| translate) }}
+                    </div>
+                </div>
+
+                <label
+                    ng-if="editingGuru"
+                    class="real-modal-input bottom-input item item-input search-box">
+                    <input
+                        type="search"
+                        focus-me="editingGuru"
+                        placeholder="{{ ('search' ) | translate }}"
+                        autocomplete="off"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        ng-change="searchGuru()"
+                        spellcheck="false"
+                        ng-model="parameters.guru">
+                    <i class="icon ion-search placeholder-icon"></i>
+                </label>
+            </div>
+        </div>
+    </ion-header-bar>
+
+    <ion-content class="padding top-0">
+
+        <div class="geo-modal-guru-top-margin"></div>
+
+        <ion-list ng-if="editingGeoname">
+            <ion-item
+                ng-repeat="geoname in geonames"
+                ng-click="chooseGeoname(geoname)">
+                {{geoname.formattedName}}
+            </ion-item>
+        </ion-list>
+
+
+        <ion-list ng-if="editingGuru">
+
+            <ion-item ng-if="gurus.length > 0" ng-click="chooseAllGurus()">
+                {{ 'user.all_gurus' | translate }}
+            </ion-item>
+
+            <user-signature
+                class="bottom-border"
+                ng-repeat="guru in gurus"
+                hide-quick-follow="true"
+                ng-click="chooseGuru(guru)"
+                user="guru"
+                current-geoname="result.geoname">
+            </user-signature>
+
+            <div ng-if="gurus.length === 0 && !guruLoading">
+                <p>{{ 'modal.geo_guru.no_gurus.text' | translate }}</p>
+                <button
+                    class="button button-block button-positive bg-gray"
+                    ng-click="addNewGuru()"
+                    >{{'modal.geo_guru.no_gurus.button' | translate}}</button>
+            </div>
+
+
+        </ion-list>
+
+        <list-loader loading="isLoading()"></list-loader>
+
+        <ion-infinite-scroll
+            ng-if="thereIsNextPage()"
+            on-infinite="loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+</ion-modal-view>

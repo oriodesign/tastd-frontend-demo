@@ -1,0 +1,16 @@
+<ion-view>
+
+    <ion-content >
+
+        <div class="color-oil">
+
+            <ion-toggle ng-model="ctrl.notifications.recap"
+                        ng-checked="ctrl.notifications.recap"
+                        ng-change="ctrl.save()">
+              {{ 'settings.notifications.weekly_email_update' | translate }}
+            </ion-toggle>
+
+        </div>
+    </ion-content>
+
+</ion-view>

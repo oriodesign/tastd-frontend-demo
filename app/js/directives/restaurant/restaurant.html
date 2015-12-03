@@ -1,0 +1,54 @@
+<div class="item-wrapper border-color-cuisine"
+        ng-style="{'border-left-color': '#'+item.color }">
+    <ion-item
+        ng-click="ctrl.onClick()"
+        ng-class="{'with-distance': !!distance }"
+        ng-if="!showQuickadd">
+        <div
+            ng-if="!fromWeb"
+            class="resto-avatar"
+            ng-style="{'background-image': 'url(' + ctrl.getBackgroundImageString () + ')'}">
+        </div>
+        <div
+            ng-if="fromWeb"
+            class="resto-avatar"
+            ng-style="{'background-image': 'url(img/thumb_web.png)'}">
+        </div>
+        <div class="resto-name text-ellipsis">
+            <span
+                ng-if="item.position != undefined"
+                ng-style="{color: '#'+item.color }">{{item.position}}.
+            </span>
+            <span>{{item.name}}</span>
+        </div>
+        <div
+            ng-if="!showAddress"
+            class="resto-cuisine text-ellipsis"
+            ng-style="{color: '#'+(item.color || item.cuisine.color)}"> {{item.cuisineName || item.cuisine.name}}
+        </div>
+        <div
+            ng-if="showAddress"
+            class="resto-address text-ellipsis">{{item.geoname ? item.geoname.asciiName + ',' : ''}} {{item.address || item.formattedaddress}}
+
+        </div>
+        <div class="distance" ng-if="distance"> ({{distance}})</div>
+        <span
+            ng-if="(!hideQuickadd)"
+            class="badge icon active ignore-empty"
+            ng-click="ctrl.toggleQuickadd($event);"
+            ng-class="ctrl.getIconClass()">
+        </span>
+    </ion-item>
+
+    <ion-item ng-if="showQuickadd" class="quickadd-block">
+        <quickadd
+            ng-if="(!hideQuickadd)"
+            restaurant="restaurant"
+            page="{{page}}"
+            extended-version="true">
+        </quickadd>
+        <span class="badge icon" ng-class="{'icon-minus':showQuickadd, 'icon-plus': !showQuickadd}" ng-click="ctrl.toggleQuickadd($event);">
+            <span><!-- To avoid empty bug --></span>
+        </span>
+    </ion-item>
+</div>

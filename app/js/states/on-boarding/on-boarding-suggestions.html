@@ -1,0 +1,34 @@
+<ion-view class="quick-add-restaurants">
+
+    <ion-content class="has-footer">
+
+        <div class="text-center padding color-oil"
+             ng-show="!ctrl.flags.length && !ctrl.loading"
+             translate="on_boarding.no_restaurants">
+        </div>
+
+        <ion-list class="padless list-restaurants">
+
+
+            <restaurant item="flag"
+                        page="on_boarding"
+                        ng-repeat="flag in ctrl.flags"
+                        show-address="true"
+                        prevent-select="true">
+            </restaurant>
+
+        </ion-list>
+
+        <ion-infinite-scroll
+            ng-if="ctrl.flags.$metadata.hasNextPage"
+            on-infinite="ctrl.loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+    <button ng-click="ctrl.done()" class="button standard-bottom-button">
+        {{ 'button.next' | translate }}
+    </button>
+
+</ion-view>

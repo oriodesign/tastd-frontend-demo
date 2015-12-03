@@ -1,0 +1,91 @@
+// gallery-directive
+.gallery-container{
+	display: block;
+	text-align: center;
+
+    .icon-camera {
+        background-color: white;
+        color: $light-gray;
+        border-radius: 45px;
+        line-height: 45px;
+        height: 45px;
+        width: 45px;
+        display: inline-block;
+    }
+
+	.photo-block{
+		clear: both;
+		position: relative;
+		text-align: center;
+	}
+	.gallery-photo{
+		width: 100%;
+	}
+	.gallery-add-button{
+		position: absolute;
+		width: 100%;
+		padding-bottom: 100%;
+		height: 0;
+		left: 0;
+		.add-button-background{
+			display: inline-block;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			background: white;
+		}
+	}
+	.photo-container{
+		height: 0px;
+		position: relative;
+		width: 32.6%;
+		padding-bottom: 33.6%;
+		display: inline-block;
+
+		&.photo-l{
+			position: absolute;
+			left: 0px;
+			.gallery-photo{
+				float: left;
+			}
+		}
+
+		&.photo-r{
+			position: absolute;
+			right: 0px;
+			.gallery-photo{
+				float: right;
+			}
+		}
+
+		.icon-circle-check, .icon-delete, .icon-circle-add{
+			color: $positive;
+			font-size: 34px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+		}
+
+		.icon-circle-check{
+			opacity: 0;
+		}
+
+		&.selected {
+			.gallery-photo{
+				opacity: 0.3;
+			}
+			.icon-circle-check{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.square-box i{
+    font-size: 30px;
+}

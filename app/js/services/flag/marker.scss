@@ -1,0 +1,45 @@
+$markerWidth: 30px;
+$markerHeight: 30px;
+
+.google-marker-wrap {
+    height: $markerHeight;
+    width: $markerWidth;
+    position: relative;
+    text-align: center;
+
+    .number{
+        @include center-strong-text-shadow;
+        font-family: $font-family-sans-serif;
+        font-weight: bold;
+        line-height: $markerWidth;
+        position: relative;
+        top: -1px;
+    }
+
+    .icon-heart:before{
+        @include center-strong-text-shadow;
+    }
+
+    .icon-marker {
+        font-size: $markerHeight + 1px;
+        -webkit-text-stroke-width: 1px;
+        width: $markerWidth;
+        text-align: center;
+    }
+}
+
+.google-marker-overlay {
+    display: block;
+    border: none;
+    height: $markerHeight;
+    width: $markerWidth;
+    top: 0;
+    left: 0;
+    line-height: $markerHeight;
+    font-size: $font-size-base;
+    text-align: center;
+    color: $light;
+    position: absolute;
+    z-index: 10;
+    -webkit-text-stroke: inherit;
+}

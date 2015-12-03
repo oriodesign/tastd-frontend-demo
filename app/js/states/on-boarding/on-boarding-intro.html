@@ -1,0 +1,19 @@
+<ion-view class="on-boarding-intro">
+    <ion-content>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <td class="vertical-align-middle">
+                        <h1>{{ 'on_boarding.intro.title' | translate }}<br/>
+                            {{ ctrl.name }}</h1>
+                        <img src="img/tutorial01.png">
+                        <p>{{ 'on_boarding.intro.description' | translate }}</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <button ng-click="ctrl.next()" class="button standard-bottom-button">
+            {{ 'button.next' | translate }}
+        </button>
+    </ion-content>
+</ion-view>

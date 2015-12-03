@@ -1,0 +1,17 @@
+<span class="quickadd-container" ng-class="{'extended' : extendedVersion}">
+    <span ng-if="!ctrl.isReviewActive(ctrl.restaurantId)"
+          class="icon icon-bookmark"
+          ng-click="ctrl.toggleWish(ctrl.restaurantId);  $event.stopPropagation(); ctrl.quickAddDone();"
+          ng-class="{'active' : ctrl.isWishActive(ctrl.restaurantId)}">
+    	<span ng-if="extendedVersion" class="extended-text">
+    		{{ctrl.isWishActive(ctrl.restaurantId)? 'restaurant.added_to_wishlist' : 'restaurant.add_to_my_wishlist' | translate}}
+    	</span>
+    </span>
+    <span class="icon icon-heart"
+          ng-click="ctrl.toggleReview(ctrl.restaurantId);  $event.stopPropagation(); ctrl.quickAddDone();"
+          ng-class="{'active' : ctrl.isReviewActive(ctrl.restaurantId)}">
+    	<span ng-if="extendedVersion" class="extended-text">
+    		{{ctrl.isReviewActive(ctrl.restaurantId)? 'restaurant.added_to_favorites' : 'restaurant.add_to_my_favorites' | translate}}
+    	</span>
+    </span>
+</span>

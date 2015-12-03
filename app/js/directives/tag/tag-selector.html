@@ -1,0 +1,36 @@
+<span class="tag-selector">
+
+    <div ng-repeat="(groupId, group) in grouped track by $index" class="tags-group-wrapper">
+        <div class="group-name">{{group.groupName}}</div>
+        <div class="tags-group">
+
+            <span class="tag-item" ng-class="{active: isActive(tag)}" ng-click="select(tag)" ng-repeat="tag in group track by $index">
+                <span class="tag-item-inner">
+                    {{tag.name}}
+                    <span ng-if="!tag.highlight" class="custom"></span>
+                </span>
+            </span>
+
+            <span ng-if="enableAdd" class="tag-item tag-add">
+                <input ng-blur="addTag(group)"
+                        ng-keyup="keyup($event, group)"
+                        class="" type="text"
+                        ng-focus="newItems[groupId].focused=true"
+                        ng-model="newItems[groupId].name"
+                        ng-class="{focused : newItems[groupId].focused}"
+                        name="new-tag"
+                        placeholder="...">
+                </input>
+            </span>
+        </div>
+
+      <div>
+        <div class="silver-line"></div>
+      </div>
+
+    </div>
+
+    <div debug-json="tags"></div>
+    <div debug-json="selectedTags"></div>
+
+</span>

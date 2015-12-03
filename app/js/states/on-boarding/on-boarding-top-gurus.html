@@ -1,0 +1,37 @@
+<ion-view class="quick-add-gurus">
+
+    <ion-content>
+
+        <ion-list class="padless new-list list-users">
+
+            <div class="text-center padding color-oil bg-white"
+                 ng-show="!ctrl.gurus.length && !ctrl.loading"
+                 translate="on_boarding.no_gurus">
+            </div>
+
+            <list-loader loading="ctrl.loading"></list-loader>
+
+            <user-signature
+                class="item-icon-right"
+                ng-repeat="user in ctrl.gurus"
+                user="user"
+                current-geoname="ctrl.me.geoname">
+            </user-signature>
+
+        </ion-list>
+
+        <div debug-json="ctrl.gurus"></div>
+
+        <ion-infinite-scroll
+            ng-if="ctrl.gurus.$metadata.hasNextPage"
+            on-infinite="ctrl.loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+    <button ng-click="ctrl.done()" class="button standard-bottom-button">
+        {{ 'button.next' | translate }}
+    </button>
+
+</ion-view>

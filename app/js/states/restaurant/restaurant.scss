@@ -1,0 +1,301 @@
+$resto-pic-height: 200px;
+
+.restaurant-view {
+    ion-item {
+        font-size: $font-size-small;
+    }
+    .tag-list div {
+        font-size: $font-size-small;
+    }
+    .add-item-icon {
+        margin: 0;
+    }
+    .restaurant-info-wrapper{
+        padding: 0 15px;
+    }
+    .list-section-title{
+        padding: 0 0 0 15px;
+    }
+}
+
+.restaurant-tabs {
+    .tab-item {
+        font-size: $font-size-small !important;
+    }
+}
+
+.restaurant-create, .restaurant-view, .restaurant-edit{
+    .restaurant-header-picture {
+        width: 100%;
+        height: 100%;
+        min-height: 200px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: -5px;
+        display: inline-block;
+    }
+
+    .restPicture {
+        width: 100%;
+        height: $resto-pic-height;
+        margin-bottom: -5px;
+        display: inline-block;
+        &:not(:first-child) {
+            padding-left: 1px;
+        }
+        .inner-rest-picture {
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        .icon.ion-image {
+            font-size: $resto-pic-height / 2;
+            color: #999;
+            line-height: $resto-pic-height;
+        }
+    }
+}
+
+.restaurant-create, .restaurant-edit{
+     .select-cuisine {
+        .input-label-full{
+            display: none;
+        }
+        .placeholder .required-marker{
+            display: inline;
+        }
+    }
+}
+
+a.reportError {
+    color: #555;
+    font-style: italic;
+}
+
+#restoUploadBtn {
+    position: absolute;
+    right: $font-size-base;
+    top: $resto-pic-height - 70px;
+}
+
+#cost-box-input-label{
+    line-height: $font-size-base;
+}
+
+.restaurant-create{
+    .spaced-button{
+        margin-left: 1px;
+    }
+}
+
+.restaurant-review, .review-edit{
+    textarea{
+        height: 45px;
+    }
+}
+
+.restaurant-view{
+    .empty-field{
+        color: $gray;
+    }
+    .dynamic-footer-button{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        .button{
+            width: 100%;
+            height: 100%;
+        }
+        &.width-half{
+            position: relative;
+            width: 50%;
+            float: left;
+            padding: 1px;
+        }
+    }
+    .phone, .website{
+        color: $tastd-green;
+        text-decoration: underline;
+    }
+    ion-list .item.item-divider {
+        .icon{
+            margin-right: 4px;
+        }
+        @extend .list-item-divider;
+        padding: 0 0 0 20px;
+    }
+    .guru-images{
+        padding: 5px 2%;
+        .user-avatar {
+            width: 13%;
+            margin: 0.6%;
+            float: left;
+        }
+    }
+    .more-avatar {
+        background-color: $tastd-green;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        i {
+            line-height: $user-avatar-listitem-diam;
+            color: white;
+        }
+    }
+    .header-pictures{
+        position: relative;
+        height: $resto-pic-height;
+        .icon-next{
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translate(0, -50%);
+            -webkit-transform: translate(0, -50%);
+        }
+    }
+
+    .map{
+        padding: 0;
+        max-height: 54px;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        &.expanded{
+            max-height: 300px;
+            img{
+                // hide bottom google maps signature
+                margin-bottom: -10px;
+                margin-top: initial;
+                transform: initial;
+                -webkit-transform: initial;
+            }
+        }
+        img{
+            vertical-align: middle;
+            width: 100%;
+            height: initial;
+            // centering the marker through margin-top
+            margin-top: 27px;
+            transform: translate(0, -50%);
+            -webkit-transform: translate(0, -50%);
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+        }
+    }
+    textarea{
+        color: $item-default-text;
+    }
+}
+
+.restaurant-view, .restaurant-review, .review-edit{
+    .multiple-lines{
+        display: inline-block;
+        width: 90%;
+        overflow: initial;
+        white-space: initial;
+    }
+    .icon.icon-right {
+        color: $slate;
+        font-size: $button-icon-size - 2;
+        position: absolute;
+        right: 15px;
+    }
+    .col .icon.icon-right {
+        top: 15px;
+    }
+
+}
+
+// reviews
+.reviews-view{
+    .tags, .comment{
+        display: block;
+        color: $dark;
+        font-size: $font-size-small;
+    }
+    .review-block{
+        display: block;
+        background: white;
+        border-bottom: 5px solid $silver;
+    }
+}
+
+.tag-friends-wrapper {
+    padding: 0;
+    .user-avatar{
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+    }
+}
+
+.review-item-inner-wrapper {
+    padding: 5px 15px;
+    .review-item-label {
+        padding: 0;
+        font-weight: bold;
+    }
+    .review-item-content {
+        padding: 0;
+        white-space: normal;
+    }
+}
+
+.review-visit-item{
+    .col {
+        padding: 10px 0 10px 15px;
+    }
+    padding: 0 !important;
+    font-size: $font-size-small;
+
+    .visit-count {
+
+    }
+    .title {
+        font-weight: bold;
+        padding-left: 0;
+    }
+    .date {
+        line-height: 30px;
+    }
+    .text{
+        padding-right: 10px;
+        line-height: 30px;
+        height: 30px;
+        display: block;
+    }
+    .number {
+        font-size: $font-size-base;
+        line-height: 30px;
+        height: 30px;
+        display: block;
+        float: left;
+        margin-right: 10px;
+    }
+    .control{
+        margin-right: 10px;
+        line-height: 30px;
+        font-size: 30px;
+        height: 30px;
+        width: 30px;
+        float: left;
+        color: $tastd-green;
+        border-radius: 30px;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+.add-extra-field-button{
+    color: white;
+    background-color: $gray;
+    .plus {
+        font-size: 26px;
+        padding-right: 15px;
+    }
+}

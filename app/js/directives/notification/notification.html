@@ -1,0 +1,61 @@
+<div class="item item-avatar item-notification" ng-class="{seen: pushMessage.seen}">
+
+    <img ng-src="{{pushMessage.notification.content.image}}" />
+
+    <article ng-if="pushMessage.notification.name=='leader.review'">
+        <h3>
+            <a ui-sref="user({userId: pushMessage.notification.content.user})">
+                {{pushMessage.notification.content.userFullName}}
+            </a>
+        </h3>
+        <p>{{ 'notification.added' | translate }} <a ui-sref="restaurantView({restaurantId: pushMessage.notification.content.restaurant})">
+            {{pushMessage.notification.content.restaurantName}}</a>
+            {{ 'notification.to_favorites' | translate }}</p>
+    </article>
+
+    <article ng-if="pushMessage.notification.name=='leader.wish'">
+        <h3>
+            <a ui-sref="user({userId: pushMessage.notification.content.user})">
+                {{pushMessage.notification.content.userFullName}}
+            </a>
+        </h3>
+        <p>{{ 'notification.added' | translate }} <a ui-sref="restaurantView({restaurantId: pushMessage.notification.content.restaurant})">
+            {{pushMessage.notification.content.restaurantName}}</a>
+            {{ 'notification.to_wishlist' | translate }} </p>
+    </article>
+
+
+    <article ng-if="pushMessage.notification.name=='new.follower'">
+        <h3>
+            <a ui-sref="user({userId: pushMessage.notification.content.follower})">
+                {{pushMessage.notification.content.followerFullName}}
+            </a>
+        </h3>
+        <p>{{ 'notification.started_following_you' | translate }}</p>
+    </article>
+
+    <article ng-if="pushMessage.notification.name=='new.facebook.friend'">
+        <h3>
+            <a ui-sref="user({userId: pushMessage.notification.content.user})">
+                {{pushMessage.notification.content.userFullName}}
+            </a>
+        </h3>
+        <p>{{ 'notification.started_using_tastd' | translate }}</p>
+    </article>
+
+    <article ng-if="pushMessage.notification.name=='leader.follows'">
+        <h3><a ui-sref="user({userId: pushMessage.notification.content.follower})">
+            {{pushMessage.notification.content.followerFullName}}
+        </a>
+        </h3>
+        <p>{{ 'notification.started_following' | translate }}
+            <a ui-sref="user({userId: pushMessage.notification.content.leader})">
+                {{pushMessage.notification.content.leaderFullName}}</a></p>
+    </article>
+
+    <div
+        class="color-gray font-size-xsmall"
+        am-time-ago="pushMessage.notification.created">
+    </div>
+
+</div>

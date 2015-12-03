@@ -1,0 +1,55 @@
+.wall-element {
+    background-color: white;
+    border-bottom: 5px solid $silver;
+
+    .wall-inner{
+        padding-top: 15px;
+        border-left-width: 5px;
+        border-left-style: solid;
+
+        div[ion-user-headline] {
+            font-size: $font-size-small;
+            margin-top: -6px;
+        }
+        p {
+            margin-bottom: 5px;
+        }
+    }
+
+    .wall-user,
+    .wall-event, .divider {
+        padding-left: 15px;
+    }
+
+    .wall-user {
+        padding-bottom: 10px;
+    }
+
+    .wall-event {
+        font-size: $font-size-small;
+        line-height: $font-size-small;
+    }
+
+    .icon-stroke-add-gurus, .icon-circle-check{
+        right: 0;
+    }
+
+    .wall-position {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 6px;
+        font-size: $font-size-small;
+    }
+
+    .wall-tags {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: $font-size-small;
+    }
+
+    .wall-comment {
+        font-size: $font-size-small;
+        padding-left: 15px;
+    }
+
+}

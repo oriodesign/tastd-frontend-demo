@@ -1,0 +1,38 @@
+<ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">{{ $options.title || 'Search' }}</h1>
+        <button class="button button-clear button-primary"
+                ng-click="$cancel()" translate>button.cancel</button>
+    </ion-header-bar>
+
+
+    <ion-header-bar class="bar-subheader bg-silver no-padding height-auto">
+        <div class="padding">
+                <label class="item item-input search-box">
+                    <input
+                        type="search"
+                        placeholder="{{ ( $options.searchPlaceholder || 'search' ) | translate }}"
+                        autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                        ng-model="$options.$q">
+                      <i class="icon ion-search placeholder-icon"></i>
+                </label>
+            </div>
+    </ion-header-bar>
+
+    <ion-content class="padding has-search-header">
+        <div debug-json="$results"></div>
+
+        <button ng-if="$options.button" class="button button-positive button-block bg-gray"
+              ng-click="$buttonCallback()">
+            {{$options.button.title | translate}}
+        </button>
+        <ion-list class="padless" ng-class="$options.listClass" ng-include="$options.templateUrl"></ion-list>
+        <ion-infinite-scroll
+            ng-if="$options.infiniteScroll && $results.$metadata.hasNextPage"
+            on-infinite="$loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+
+</ion-modal-view>

@@ -1,0 +1,23 @@
+<ion-list class="select-cuisine padless list-cuisines" ng-click="openModal()">
+  <span class="input-label-full font-size-base">Cuisine
+      <span class="required-marker color-red">*</span>
+  </span>
+  <div class="item no-border">
+    <div class="item-content">
+      <cuisine icon="true" cuisine-model="item.cuisine"></cuisine>
+      <div ng-if="!item.cuisine"
+           class="fake-input placeholder">
+          <div class="cuisine-icon-box">
+              <i class="icon icon-cuisine"></i>
+          </div>
+          Select cuisine <span class="required-marker color-red">*</span>
+      </div>
+      <input type="hidden"
+             name="cuisine"
+             ng-disabled="true"
+             ng-required="true"
+             ng-model="item.cuisine"
+             placeholder="Select a cuisine">
+    </div>
+  </div>
+</ion-list>

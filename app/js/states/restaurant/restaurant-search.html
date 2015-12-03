@@ -1,0 +1,81 @@
+<!-- TABS -->
+<div
+    style="z-index: 10;"
+    class="restaurant-tabs tabs-striped position-relative tabs-only-icons tabs-top tabs-background-light tabs-color-positive">
+    <div class="tabs tabs-static no-border">
+        <a class="tab-item" ng-click="ctrl.disableAroundMe()" ng-class="{active: !ctrl.isAroundMe }">
+            {{ 'restaurant.top' | translate }}
+        </a>
+        <a class="tab-item" ng-click="ctrl.activateAroundMe()" ng-class="{active: ctrl.isAroundMe }">
+            {{ 'restaurant.around_you' | translate }}
+        </a>
+    </div>
+</div>
+
+<ion-view>
+    <ion-content class="has-subheader-inside-view">
+        <ion-list class="standard-list" ng-if="!ctrl.isAroundMe">
+            <ion-item class="standard-item" ng-click="ctrl.changeGeoname()">
+                <span>
+                    {{ctrl.geoname.asciiName}}
+                </span>
+                <span class="tastd-item-title">
+                    ({{'button.city.change' | translate}})
+                </span>
+            </ion-item>
+        </ion-list>
+
+        <div class="standard-search-box">
+            <label class="item item-input search-box">
+              <input type="search"
+                     placeholder="{{ 'restaurant.restaurant_name' | translate }}"
+                     ng-change="ctrl.search()"
+                     ng-model="ctrl.searchCriteria.name"
+                     autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+              <i class="icon ion-search placeholder-icon"></i>
+            </label>
+        </div>
+
+
+
+        <ion-list
+            class="padless list-restaurants list">
+            <!-- TASTD RESTAURANTS -->
+            <restaurant
+                item="rest"
+                distance="ctrl.getDistance(rest)"
+                page="restaurant_search"
+                ng-repeat="rest in ctrl.restaurants track by rest.id"
+                show-address="true">
+            </restaurant>
+        </ion-list>
+
+        <ion-list ng-if="!ctrl.loading && ctrl.restaurants && !ctrl.restaurants.$metadata.hasNextPage">
+            <div ui-sref="restaurantSearchWeb({name:ctrl.searchCriteria.name})"
+                      class="item item-icon-right">
+                <span>{{ 'restaurant.search_on_the_web' | translate }}</span>
+                <i class="icon icon-chevron-right"></i>
+            </div>
+        </ion-list>
+
+        <list-loader loading="ctrl.loading || (ctrl.isAroundMe && ctrl.loadingCoordinates)"></list-loader>
+
+        <ion-list ng-if="ctrl.restaurants.length === 0 && !ctrl.loading">
+            <ion-item class="bg-silver color-gray">
+                <span>{{ 'no.results' | translate }}</span>
+            </ion-item>
+        </ion-list>
+
+        <ion-infinite-scroll
+            ng-if="ctrl.restaurants.$metadata.hasNextPage"
+            on-infinite="ctrl.loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+        <div style="height:44px"></div>
+
+    </ion-content>
+
+
+
+</ion-view>

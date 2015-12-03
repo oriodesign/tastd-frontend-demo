@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+	<file name="../app-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="4" column="13" severity="warning" message="&apos;AppHelper&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../app-helper.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="82" column="4" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="82" column="12" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="82" column="22" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="82" column="50" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="82" column="66" severity="warning" message="&apos;document&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../app.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="4" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="5" column="13" severity="warning" message="&apos;AppHelper&apos; is not defined." source="jshint.W117" />
+		<error line="115" column="9" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="143" column="24" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="144" column="17" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="149" column="42" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="150" column="17" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="174" column="24" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="228" column="47" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="259" column="31" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="275" column="37" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="327" column="28" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/alert/alert.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/alert/dismissable-alert-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="15" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/alert/dismissable-alert-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="7" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/autocomplete/autocomplete-modal-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="23" column="31" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="119" column="37" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="121" column="54" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="130" column="66" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/autocomplete/autocomplete.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/cuisine/cuisine-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/cuisine/cuisine.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/cuisine/select-cuisine-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/flag/flag-marker-overlay-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/flag/flag.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/flag/infobox-overlay-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/flag/me-overlay-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/geocode/autocomplete-geocode-modal-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/geocode/geocode.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/geocode/http-geocode-api-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="6" column="49" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/geocode/http-geocode-config-constant.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="11" column="20" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/geocode/http-reverse-geocode-api-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="6" column="56" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="17" column="20" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/geocode/user-geolocation-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/geoname/geoname.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/google/as-google-overlay-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="23" column="39" severity="warning" message="&apos;document&apos; is not defined." source="jshint.W117" />
+		<error line="89" column="30" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="103" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/google/google-constant.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="5" column="25" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/google/google-overlay-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/google/google.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/history/back-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/history/history-manager-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="28" column="21" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="77" column="32" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="130" column="21" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="193" column="24" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/history/history.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/list/restaurant-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="25" column="30" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/list/restaurant-list-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/list/restaurant.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/map/filter-gurus-modal-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="55" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="79" column="30" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="101" column="25" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="171" column="49" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/map/map-filters-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="231" column="47" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="388" column="50" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="148" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="189" column="21" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="198" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="276" column="20" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="305" column="31" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="322" column="34" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="350" column="20" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="373" column="26" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="374" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="376" column="30" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="386" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/map/map-service-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="26" column="22" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="109" column="50" severity="warning" message="&apos;document&apos; is not defined." source="jshint.W117" />
+		<error line="110" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="119" column="77" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="181" column="17" severity="warning" message="&apos;setTimeout&apos; is not defined." source="jshint.W117" />
+		<error line="194" column="43" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="230" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="242" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="270" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="277" column="40" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/map/map.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/map/static-map-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="6" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/no-results/no-results-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/no-results/no-results.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/notification/notification-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/notification/notification.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/photo/dynlayout-gallery-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="6" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="37" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="40" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="72" column="33" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/photo/gallery-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="112" column="90" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="134" column="75" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="145" column="78" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="172" column="81" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="11" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="27" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="80" column="41" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="158" column="25" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="167" column="29" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/photo/photo-upload-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="36" column="30" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="37" column="29" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/photo/photo.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/photo/user-signature-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="8" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/placeholder/placeholder-block-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="41" column="28" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="44" column="28" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="51" column="28" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="54" column="28" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="57" column="31" severity="warning" message="&apos;document&apos; is not defined." source="jshint.W117" />
+		<error line="59" column="28" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/placeholder/placeholder.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/popup/popup-modal-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/popup/popup.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/quickadd/quickadd-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="44" column="47" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="57" column="22" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="71" column="22" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/quickadd/quickadd.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/restaurant/restaurant-edit-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="34" column="29" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/restaurant/restaurant.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/security/has-roles-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="21" column="29" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/security/security.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/tag/tag-list-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="56" column="89" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="26" column="42" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="45" column="41" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/tag/tag-selector-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="11" column="31" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="29" column="38" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="32" column="38" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="36" column="38" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="41" column="21" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="53" column="28" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="69" column="40" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/tag/tag.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/user/ion-quickfollow-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/user/ion-user-avatar-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/user/ion-user-geoscore-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="18" column="36" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/user/ion-user-headline-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/user/ion-user-score-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/user/ion-user-username-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/user/user-follow-button-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/user/user-voter-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/user/user.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/wall/wall-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/directives/wall/wall.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/address/address-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/address/address.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/cuisine/cuisine-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/cuisine/cuisine-manager-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="20" column="30" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/cuisine/cuisine.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/device/device-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/device/device-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/device/device.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/flag/flag-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/flag/flag-manager-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/flag/flag.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/follower/follower-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/follower/follower.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/geoname/geoname-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/geoname/geoname-manager-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/geoname/geoname.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/invite/invite-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/invite/invite.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/leader/leader-batch-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/leader/leader-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/leader/leader.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/message/message-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/message/message.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/message/messages-helper-service.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/option/option-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/option/option.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/photo/photo-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/photo/photo.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/push-message/push-message-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/push-message/push-message-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/push-message/push-message.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/restaurant/restaurant-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/restaurant/restaurant-state-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="62" column="21" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="125" column="26" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/restaurant/restaurant.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/restmod/rest-base-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="32" column="29" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/restmod/restmod-config.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/restmod/restmod.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/review/review-batch-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/review/review-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/review/review-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="21" column="20" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/review/review.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/tag/tag-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/tag/tag.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/user/change-password-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/user/connected-user-base-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="11" column="20" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/user/credential-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/user/friend-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/user/user-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/user/user-helper-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/user/user.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/wishlist/wish-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/wishlist/wish-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/entities/wishlist/wishlist.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/filters/clean-url-filter.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/filters/custom-json-filter.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/filters/filters.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/filters/ordinal-filter.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/filters/purge-scope-filter.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="10" column="20" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="14" column="17" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="15" column="24" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/analytics/analytics-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="16" column="28" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="17" column="21" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="21" column="28" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="22" column="21" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="26" column="28" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="27" column="21" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="31" column="28" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="32" column="21" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="43" column="28" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="44" column="21" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="48" column="28" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="49" column="21" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/analytics/analytics.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/config/config-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/config/parameters-service.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="5" column="29" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/contacts/contacts-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="31" column="17" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="45" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="46" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/contacts/contacts.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/event/event-dispatcher-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/event/event-listener-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/event/event.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/event/tastd-event-constant.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/facebook/facebook-async-init.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="11" column="13" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="30" column="15" severity="warning" message="&apos;document&apos; is not defined." source="jshint.W117" />
+		<error line="42" column="4" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="42" column="22" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="42" column="32" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/facebook/facebook-connect-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="21" column="16" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="21" column="30" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="22" column="17" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="24" column="21" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="24" column="34" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="29" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="79" column="17" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="163" column="24" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="171" column="17" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="189" column="17" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/facebook/facebook.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/http/disconnected-popup-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/http/http-api-factory-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="14" column="16" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="15" column="34" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="24" column="24" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="33" column="37" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="65" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="76" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="90" column="30" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/http/http-auth-api-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/http/http-disconnected-interceptor-config.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/http/http-timeout-interceptor-config.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="8" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/http/http.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="16" column="71" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/json/json-util-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="19" column="41" severity="warning" message="&apos;document&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/json/json.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/log/exception-handler-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="9" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="10" column="13" severity="warning" message="&apos;AppHelper&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/log/log-config.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/log/log-handler-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/log/log.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/navigation/ac-state-history-service.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="57" column="9" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/notification/notification-badge-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/notification/notification.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/option-manager/option-manager-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="45" column="27" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="48" column="24" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="48" column="40" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="75" column="39" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="84" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/option-manager/option-manager.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/personal/cache-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="74" column="56" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="91" column="34" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="115" column="24" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="125" column="21" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="134" column="25" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/personal/my-cache-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/personal/my-leaders-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/personal/my-reviewed-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/personal/my-wished-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="8" column="33" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/personal/personal.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/prototype/prototype.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/ranking/ranking-state-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="72" column="19" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="75" column="27" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="90" column="27" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="98" column="13" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="109" column="20" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/ranking/ranking.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/authorization/authorization.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/authorization/is-granted-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/authorization/security-authorization-voter-constant.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/credential/base-credential-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/credential/client-signature-generator-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="45" column="39" severity="warning" message="&apos;navigator&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/credential/credential-auth-checker-service.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="36" column="49" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="37" column="13" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="104" column="25" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/credential/credential.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/credential/email-credential-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="16" column="24" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/credential/tastd-email-signup-credential-service.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="16" column="24" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/credential/tastd-facebook-credential-service.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="33" column="24" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/firewall/firewall-config.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/firewall/firewall.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/firewall/http-firewall-buffer-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/firewall/http-firewall-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/firewall/state-firewall-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="33" column="29" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="38" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="48" column="21" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="64" column="35" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="75" column="20" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/security-config.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/security-events-constant.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/security-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="134" column="29" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="135" column="29" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="148" column="21" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="156" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/security-run.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="56" column="13" severity="warning" message="&apos;location&apos; is not defined." source="jshint.W117" />
+		<error line="57" column="13" severity="warning" message="&apos;location&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/security.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/signin/email-signin-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/signin/facebook-signin-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/signin/signin.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/signup/facebook-signup-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/signup/signup.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/token/http-auth-token-manager-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="23" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/security/token/token.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/share/share-service-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="25" column="18" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="26" column="24" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/share/share.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/storage/simple-local-storage-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="20" column="24" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/storage/storage.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/translations/translations-config.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/tutorial/tutorial-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="43" column="13" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="62" column="21" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/tutorial/tutorial-spotlights-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/tutorial/tutorial-steps-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/tutorial/tutorial.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/MD5-util-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/base64-util-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/class-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/currency-util-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/debug-json-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="31" column="26" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="35" column="16" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/debug-json-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="12" column="23" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/fake-type-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="9" column="27" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="13" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="41" column="28" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="41" column="48" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="58" column="24" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="62" column="24" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="65" column="29" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="80" column="24" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/map-distance.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/ng-model-debounce-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/platform-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/utility/utility.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/validator/ionic/ionic-validate-on-submit-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="40" column="16" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="54" column="16" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/validator/ionic/ionic-validate-on-submit-popup-service.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="40" column="46" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/validator/ionic/ionic.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/validator/validator-messages-constant.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/validator/validator-translations-config.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="7" column="43" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/validator/validator-violated-context-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="17" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="18" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="32" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="33" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/validator/validator-violated-field-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="22" column="28" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/validator/validator-violation-context-provider.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="34" column="37" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/services/validator/validator.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/invite/invite-contacts-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/invite/invite-home-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="27" column="18" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="28" column="24" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/invite/invite.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/landing/landing.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/map/filters/cuisine-filters-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/map/filters/filters.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/map/filters/gurus-filters-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="55" column="22" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/map/filters/price-filters-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/map/filters/tag-filters-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/map/home-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/map/map-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/map/map-list-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/map/map.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/map/no-results-popup-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/notification/notification-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/notification/notification.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/on-boarding/on-boarding.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/on-boarding/quick-add-gurus-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="31" column="36" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/on-boarding/quick-add-restaurants-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="33" column="42" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/private/private.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/public/public.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/ranking/ranking-browser.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="60" column="28" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="76" column="28" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/ranking/ranking-view-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="261" column="39" severity="warning" message="Expected an assignment or function call and instead saw an expression." source="jshint.W030" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="33" column="37" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="81" column="39" severity="warning" message="&apos;document&apos; is not defined." source="jshint.W117" />
+		<error line="82" column="39" severity="warning" message="&apos;document&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/ranking/ranking.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/gallery-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/restaurant-aroundyou-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="4" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="25" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/restaurant-create-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="72" column="21" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="73" column="21" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/restaurant-edit-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/restaurant-error-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/restaurant-review-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/restaurant-search-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="4" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="39" column="23" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="45" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="115" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="117" column="17" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/restaurant-view-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="86" column="35" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="86" column="48" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="86" column="58" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="104" column="33" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="131" column="20" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="152" column="25" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="195" column="13" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="201" column="13" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/restaurant.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="169" column="68" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/review-edit.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/restaurant/reviews-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/settings/account-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/settings/feedback-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="21" column="13" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/settings/notifications-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/settings/password-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/settings/settings-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="24" column="13" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+		<error line="28" column="13" severity="warning" message="&apos;window&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/settings/settings.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/signin/signin.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/signup/signup-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/signup/signup.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/tutorial/pulsing-spotlight-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/tutorial/tutorial-step-directive.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/tutorial/tutorial.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/user/user-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/user/user-edit-on-boarding.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="30" column="32" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/user/user-edit.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="30" column="32" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/user/user-follow-list-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="27" column="26" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/user/user-followers-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="15" column="9" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/user/user-following-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="21" column="9" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/user/user-password-reset.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/user/user-search-state-helper-factory.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="29" column="24" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="29" column="33" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+		<error line="48" column="25" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/user/user-search.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="82" column="55" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="97" column="23" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/user/user.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/userfriends/search-contacts.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="16" column="36" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/userfriends/search-fb.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+		<error line="54" column="20" severity="warning" message="&apos;_&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/userfriends/userfriends.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/wall/wall-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/wall/wall.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/wishlist/wishlist-browser.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/wishlist/wishlist-view-ctrl.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+	<file name="../js/states/wishlist/wishlist.js">
+		<error line="1" column="1" severity="warning" message="Use the function form of &quot;use strict&quot;." source="jshint.W097" />
+		<error line="3" column="1" severity="warning" message="&apos;angular&apos; is not defined." source="jshint.W117" />
+	</file>
+</checkstyle>

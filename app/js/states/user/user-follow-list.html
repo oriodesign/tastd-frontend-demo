@@ -1,0 +1,44 @@
+<ion-view>
+    <ion-content >
+
+        <div class="padding">
+            <label class="item item-input search-box">
+                <input type="text"
+                     autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                     ng-model="ctrl.query.name"
+                     ng-change="ctrl.search()"
+                     ng-model-options="{ debounce: 800 }">
+                <i class="icon ion-search placeholder-icon"></i>
+            </label>
+        </div>
+
+        <list-loader loading="ctrl.loading"></list-loader>
+
+        <ion-list class="padless new-list list-users">
+            <ion-item
+                ng-if="ctrl.users.length === 0 && !ctrl.loading">
+                {{ctrl.noUsersMessage | translate}}
+            </ion-item>
+
+              <user-signature
+                  class="item-icon-right"
+                  ng-repeat="user in ctrl.users track by user.id"
+                  ng-click="ctrl.$state.go('user', {userId : user.id })"
+                  user="user" >
+              </user-signature>
+
+        </ion-list>
+
+
+        <div style="height: 88px"></div>
+
+        <ion-infinite-scroll
+            ng-if="ctrl.users.$metadata.hasNextPage"
+            on-infinite="ctrl.loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+
+
+
+    </ion-content>
+</ion-view>

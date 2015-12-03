@@ -1,0 +1,59 @@
+.tag-selector {
+    color: $oil;
+    .padding {
+        border-bottom: 1px solid $silver;
+    }
+    .tags-group-wrapper {
+        padding: 10px 10px 0 10px;
+    }
+    .group-name {
+        color: $gray;
+        font-size: $font-size-small;
+    }
+    .tag-item {
+        position: relative;
+        overflow: hidden;
+        font-size: $font-size-small;
+        background: white;
+        height: 36px;
+        line-height: 26px;
+        display: inline-block;
+        vertical-align: middle;
+        border-radius: 5px;
+        margin: 3px 6px 3px 0;
+
+        &.active {
+            background: $slate;
+            color: white;
+        }
+        &.tag-add {
+            input {
+                outline: none;
+                color: $oil;
+                border: 0 solid #FFF;
+                width: 40px;
+                height: 100%;
+                text-align: center;
+                transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+            }
+            input.focused {
+                width: 130px;
+            }
+        }
+        .tag-item-inner {
+            padding: 5px 15px;
+            display: inline-block;
+            .custom {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 0px;
+                height: 0px;
+                border-top: 10px solid $red;
+                border-left: 10px solid transparent;
+            }
+        }
+    }
+
+}

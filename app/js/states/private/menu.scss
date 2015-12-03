@@ -1,0 +1,56 @@
+$main-menu-height: $bar-height;
+
+.main-menu {
+    @include inverse-base-box-shadow;
+
+    display: none;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    height: $main-menu-height;
+    line-height: $main-menu-height;
+    background-color: white;
+    color: $gray;
+
+    &.active {
+        @include display-flex();
+    }
+
+    .main-menu-button {
+        @include flex(1);
+        display: block;
+        overflow: hidden;
+        max-width: 150px;
+        height: 100%;
+        text-align: center;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &.active {
+            color: $tastd-green;
+        }
+        &.active.rounded-icon .icon {
+            background-color: $tastd-green;
+            color: white;
+        }
+    }
+
+    .rounded-icon .icon {
+        height: $main-menu-height;
+        width: $main-menu-height;
+        border-radius: $main-menu-height;
+        background-color: $gray;
+        color: white;
+        display: inline-block;
+        line-height: $main-menu-height;
+    }
+
+    .icon {
+        font-size: 20px;
+        line-height: $main-menu-height;
+    }
+}

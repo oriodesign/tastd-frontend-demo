@@ -1,0 +1,42 @@
+<ion-modal-view>
+
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button
+            class="button button-clear button-primary"
+            ng-click="cancel()">{{ 'button.cancel' | translate }}</button>
+        <h1 class="title">{{ 'modal.review.add_field' | translate }}</h1>
+        <button
+            class="button button-clear button-primary"
+            ng-click="done()">{{ 'button.done' | translate }}</button>
+    </ion-header-bar>
+
+    <ion-content>
+
+        <ion-list>
+
+
+            <div ng-repeat="category in reviewExtraFields.categories">
+
+                <div ng-if="category.required===false">
+                    <div class="extra-field-title">
+                        {{ category.name }}
+                    </div>
+
+                    <ion-item
+                        class="extra-field-item"
+                        ng-class="{ 'active': field.active}"
+                        ng-repeat="field in category.fields"
+                        ng-click="toggle(field)">
+                        <span class="title">{{ field.title }}</span>
+                        <span class="description">{{ field.description }}</span>
+                        <span class="sign plus">+</span>
+                        <span class="sign minus">-</span>
+                    </ion-item>
+                </div>
+            </div>
+
+        </ion-list>
+
+    </ion-content>
+
+</ion-modal-view>

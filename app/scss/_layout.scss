@@ -1,0 +1,378 @@
+//
+// Layout
+//
+// Generic style and classes useful for layout and grid
+//
+
+.private-state {
+    ion-content {
+        bottom: $bar-height;
+    }
+    ion-content.has-double-footer{
+        bottom: $bar-height * 2;
+    }
+}
+
+.ion-view-container-with-extra-bar {
+    height: calc(100% - #{$bar-height});
+}
+
+.platform-cordova.platform-ios .ion-view-container-with-extra-bar {
+    height: calc(100% - #{$bar-height + 20px});
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-static {
+    position: static;
+}
+
+.no-min-height {
+    min-height: initial !important;
+}
+
+.position-absolute-center {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.display-block {
+    display: block !important;
+}
+
+.display-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.display-cell {
+    display: table-cell;
+    &.center {
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+.display-none {
+    display: none;
+}
+
+.scroll { height: 100%; }
+.scroll-content {
+  background: $silver;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-border{
+    border: none !important;
+}
+
+.height-auto {
+    height: auto !important;
+}
+
+.has-search-header {
+    top: 100px !important;
+}
+
+body.platform-ios.platform-cordova:not(.fullscreen) .has-search-header {
+    top: 124px !important;
+}
+
+.green-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $tastd-green;
+    margin: 0;
+    padding: 0;
+}
+
+.main-menu-list {
+    .transparent-white-line, .transparent-black-line{
+        margin: 0 16px;
+    }
+}
+
+.transparent-white-line {
+    display: block;
+    height: 1px;
+    opacity: 0.1;
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+
+.transparent-black-line {
+    display: block;
+    height: 1px;
+    opacity: 0.1;
+    background: black;
+    margin: 0;
+    padding: 0;
+}
+
+.gray-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $gray;
+    margin: 0;
+    padding: 0;
+}
+
+.slate-blue-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $slate;
+    margin: 0;
+    padding: 0;
+}
+
+.silver-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $silver;
+    margin: 0;
+    padding: 0;
+}
+
+.space-50 {
+    height: 50px;
+}
+
+.space-20 {
+    height: 20px;
+}
+
+.space-10 {
+    height: 10px;
+}
+
+.space-5 {
+    height: 5px;
+}
+
+.space-2 {
+    height: 2px;
+}
+
+.padding-bt-10 {
+    padding: 10px 0;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.padding-lr-10 {
+    padding: 0 10px;
+}
+
+.padding-left-10 {
+    padding-left: 10px;
+}
+
+.padding-right-10 {
+    padding-right: 10px;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid $oil;
+}
+
+@mixin triangle-down($color, $size) {
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+}
+
+.small.oil.triangle-down{
+    @include triangle-down($oil, 20px);
+}
+
+.vertical-centered{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+ion-view.mapList[style],ion-view.map[style] {
+    opacity: 1 !important;
+}
+
+.page-spinner {
+    margin: 5px 0;
+    display:block;
+    text-align: center;
+}
+
+.ion-item-spinner {
+    $ion-item-spinner-size: 20px;
+    width: $ion-item-spinner-size;
+    height: $ion-item-spinner-size;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    svg {
+        width: $ion-item-spinner-size;
+        height: $ion-item-spinner-size;
+    }
+}
+
+
+.list-section-title{
+    $list-section-title-height: 30px;
+    height: $list-section-title-height;
+    padding: 0 0 0 20px;
+    position: relative;
+
+    h1 {
+        color: $oil;
+        font-size: $font-size-base;
+        padding: 0;
+        margin: 0;
+        line-height: $list-section-title-height;
+        font-weight: bold;
+    }
+
+    .list-section-title-aside{
+        position: absolute;
+        right: 15px;
+        top: 0;
+        line-height: $list-section-title-height;
+        height: $list-section-title-height;
+        font-size: $font-size-small;
+        color: $gray;
+    }
+}
+
+.bordered-section {
+    border-left: 5px;
+    border-color: $tastd-green;
+    border-style: solid;
+}
+
+.border-width-1 {
+    border-width: 1px !important;
+}
+
+.top-0 {
+    top: 0 !important;
+}
+
+.bottom-0 {
+    bottom: 0!important;
+}
+
+.bar-subheader-inside-view {
+    display: block;
+    height: $bar-height;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+
+    label {
+        height: $input-standard-height;
+        line-height: $input-standard-height;
+        margin: (($bar-height - $input-standard-height) / 2) $layout-standard-padding;
+    }
+    label input {
+        height: $input-standard-height;
+        line-height: $input-standard-height;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.standard-search-box {
+    label {
+        height: $input-standard-height;
+        line-height: $input-standard-height;
+        margin: (($bar-height - $input-standard-height) / 2) $layout-standard-padding;
+    }
+    label input {
+        height: $input-standard-height;
+        line-height: $input-standard-height;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.standard-list .standard-item {
+    height: $bar-height;
+    line-height: $bar-height;
+    padding: 0 $layout-standard-padding;
+    margin: 0;
+    min-height: 0;
+}
+
+.standard-list {
+    height: $bar-height;
+    line-height: $bar-height;
+    padding: 0;
+    margin: 0;
+}
+
+
+.square-box{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: $light-gray;
+}
+.square-box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.square-content{
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+.square-content div {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.square-content span {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: white
+}

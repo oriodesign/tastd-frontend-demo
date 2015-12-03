@@ -1,0 +1,57 @@
+<ion-view class="ranking-view">
+
+  <ion-header-bar
+      class="bar-subheader bar-positive subheader-cuisine top-0"
+      align-title="left"
+      style="background-color: #{{ ctrl.cuisine.color }}">
+
+    <h1 class="title">
+      {{ctrl.cuisine.name}}
+    </h1>
+
+  </ion-header-bar>
+
+    <ion-content class="has-subheader-inside-view">
+
+        <ion-spinner class="page-spinner" ng-if="ctrl.pageLoading"></ion-spinner>
+
+        <div class="padding text-center color-oil"
+             ng-if="!ctrl.ranking.length">
+            {{ 'ranking.reorder.no_results' | translate }}
+        </div>
+
+        <ion-list ng-if="ctrl.ranking.length"
+                  show-reorder="ctrl.view.showItemReorder"
+                  class="padless list-restaurants">
+
+            <ion-item
+                class="transparent-reorder"
+                ng-repeat="review in ctrl.ranking track by review.id">
+
+                <div class="resto-avatar"
+                     ng-style="{'background-image': 'url({{review.restaurant.thumb}})'}">
+                </div>
+
+                <div class="resto-name">{{review.restaurant.name | limitTo: 18}}{{review.restaurant.name.length > 18 ? '..' : ''}}</div>
+                <div class="resto-address">{{review.restaurant.address}}</div>
+
+                <ion-reorder-button class="ion-navicon"
+                                    on-reorder="ctrl.moveItem(review, $fromIndex, $toIndex)">
+                </ion-reorder-button>
+
+                <span class="badge badge-assertive restaurant-position-badge" ng-if="review.position"
+                      style="background-color: #{{ ::review.cuisine.color }}">
+                      {{review.position}}
+                </span>
+            </ion-item>
+
+        </ion-list>
+
+        <ion-infinite-scroll
+            ng-if="ctrl.ranking.$metadata.hasNextPage"
+            on-infinite="ctrl.loadMore()"
+            distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>

@@ -1,0 +1,67 @@
+<ion-view>
+    <ion-content>
+        <ion-list class="standard-list">
+            <ion-item class="standard-item" ng-click="ctrl.changeGeoname()">
+                <span>
+                    {{ctrl.geoname.asciiName}}
+                </span>
+                <span class="tastd-item-title">
+                    ({{'button.city.change' | translate}})
+                </span>
+            </ion-item>
+        </ion-list>
+
+        <div class="standard-search-box">
+            <label class="item item-input search-box">
+                <input type="search"
+                       placeholder="{{ 'restaurant.restaurant_name' | translate }}"
+                       ng-change="ctrl.search()"
+                       ng-model="ctrl.searchCriteria.name"
+                       autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                <i class="icon ion-search placeholder-icon"></i>
+            </label>
+        </div>
+
+        <div class="text-center padding color-oil"
+             ng-show="!ctrl.places.length && !ctrl.searchCriteria.name">
+            <span translate>restaurant.search.select_city_and_search</span>
+        </div>
+
+        <list-loader loading="ctrl.loading"></list-loader>
+
+        <ion-list ng-if="ctrl.places.length === 0 && !ctrl.loading">
+            <ion-item class="bg-silver color-gray">
+                <span>{{ 'no.results' | translate }}</span>
+            </ion-item>
+        </ion-list>
+
+        <ion-list class="padless list-restaurants list">
+            <restaurant
+                item="place"
+                page="restaurant_search"
+                ng-repeat="place in ctrl.places"
+                hide-quickadd="true"
+                show-fallback-picture="true"
+                from-web="true"
+                on-click="ctrl.addNew(place)">
+            </restaurant>
+
+        </ion-list>
+
+
+        <ion-list ng-if="!ctrl.loading">
+            <div
+                ng-click="ctrl.addNew()"
+                class="item item-icon-right">
+                <span>{{ 'restaurant.search.not_in_list' | translate }}</span>
+                <i class="icon icon-chevron-right"></i>
+            </div>
+        </ion-list>
+
+        <div style="height:44px"></div>
+
+    </ion-content>
+
+
+
+</ion-view>
